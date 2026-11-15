@@ -1,0 +1,18 @@
+import 'package:another_flushbar/flushbar.dart';
+import 'package:flutter/material.dart';
+import 'package:movegui_core/consts/app_colors.dart';
+
+
+class MessageWidget {
+  static Future<dynamic> errorMessage(BuildContext context, String title, String message, Icon? icon,   FlushbarPosition flushbarPosition) {
+    return Flushbar(
+      title: title,
+      message: message, 
+      icon:icon,
+      duration: Duration(seconds: 3),
+      flushbarPosition: flushbarPosition, //.TOP,
+      messageColor: AppColors.onPrimary,
+      backgroundColor: AppColors.error,
+    ).show(context);
+  }
+}

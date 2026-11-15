@@ -1,0 +1,50 @@
+import 'package:intl/intl.dart';
+import 'package:movegui_core/enum/enum_establishment_type.dart';
+import 'package:movegui_core/models/adress_model.dart';
+import 'package:movegui_core/models/establishment/establishment_model.dart';
+import 'package:movegui_core/models/order_item_model.dart';
+import 'package:movegui_core/models/order_model.dart';
+
+abstract class EstablishmentOrderModel<
+  S extends EstablishmentModel,
+  T extends OrderItemModel
+>
+    extends OrderModel<T> {
+  final String storeId;
+   final EstablishmentType establishmentType;
+  DateTime? pickupDate;
+  DateTime? deliveryDate;
+  AdressModel? pickupAdress;
+  AdressModel? deliveryAdress;
+  bool? pickupOnStore = false;
+  bool? deliveryOnStore = false;
+  EstablishmentOrderModel({
+    required super.id,
+    required super.name,
+    required super.createdAt,
+    required super.customerId,
+    required super.total,
+    required super.items,
+    required this.storeId,
+    required this.deliveryDate,
+    required this.pickupDate,
+    required this.pickupAdress,
+    required this.deliveryAdress,
+    required this.establishmentType,
+    required super.status,
+    required super.currency,
+    required super.orderId,
+
+  });
+
+  @override
+  Map<String, dynamic> toJson() => {  
+    ...super.toJson(),
+    'storeId': storeId,
+    'pickupDate':  pickupDate == null ? '' : DateFormat('dd MMM yyyy', 'fr').format(pickupDate!),
+    'deliveryDate': deliveryDate == null ? '' : DateFormat('dd MMM yyyy', 'fr').format(deliveryDate!),      
+    'pickupAdress': pickupAdress?.toJson(),
+    'deliveryAdress': deliveryAdress?.toJson(),
+    'establishmentType': establishmentType.toJson(),
+  };
+}

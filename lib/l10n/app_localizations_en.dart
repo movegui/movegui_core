@@ -1,0 +1,1604 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for English (`en`).
+class AppLocalizationsEn extends AppLocalizations {
+  AppLocalizationsEn([String locale = 'en']) : super(locale);
+
+  @override
+  String get service_active_title => 'Service enabled';
+
+  @override
+  String get status_actif => 'Active';
+
+  @override
+  String get status_inactif => 'Inactive';
+
+  @override
+  String get service_deactive_title => 'Service disabled';
+
+  @override
+  String get service_active_descrip => 'The service will be visible and available for ordering.';
+
+  @override
+  String get service_deactive_descrip => 'The service will not be visible and will not be available for ordering.';
+
+  @override
+  String get delete_pressing_service_title => 'Delete Service';
+
+  @override
+  String get delete_pressing_service_question => 'Would you like to delete this Service ?';
+
+  @override
+  String get delete_pressing_title => 'Delete Dry Cleaner';
+
+  @override
+  String get delete_pressing_question => 'Would you like to delete this Dry Cleaner ?';
+
+  @override
+  String get commune_title => 'City';
+
+  @override
+  String get gender_masculin => 'Male';
+
+  @override
+  String get gender_female => 'Female';
+
+  @override
+  String get open_hours_title => 'Open Hours';
+
+  @override
+  String get open_hours_sub_title => 'Specify the days and times when the dry cleaner accepts orders.';
+
+  @override
+  String open_hours_open_title(Object category) {
+    return 'Le $category is open today';
+  }
+
+  @override
+  String open_hours_close_title(Object category) {
+    return 'Le $category is close today';
+  }
+
+  @override
+  String get store_services_title => 'Services';
+
+  @override
+  String get is_loding_text => 'Loading...';
+
+  @override
+  String get admin_bar_title => 'Admin Configuration';
+
+  @override
+  String get admin_add_bar_title => 'Add Admin';
+
+  @override
+  String get admin_all_bar_title => 'All Admins';
+
+  @override
+  String get admin_add_dashboard_title => 'Administrator Informations';
+
+  @override
+  String get admin_add_dashboard_sub_title => 'Add Administrators Informations details';
+
+  @override
+  String get employe_bar_title => 'Employe Configuration';
+
+  @override
+  String get employe_add_bar_title => 'Add Employe';
+
+  @override
+  String get employe_all_bar_title => 'All Employes';
+
+  @override
+  String get employe_all_bar_subtitle => 'Employees liste and Roles';
+
+  @override
+  String get employe_status_actf => 'Active';
+
+  @override
+  String get employe_status_non_actf => 'Inactive';
+
+  @override
+  String get employe_add_dashboard_title => 'Employe Informations';
+
+  @override
+  String get employe_add_dashboard_sub_title => 'Add Employes Informations details';
+
+  @override
+  String get manager_bar_title => 'Manager Configuration';
+
+  @override
+  String get manager_add_bar_title => 'Add Manager';
+
+  @override
+  String get manager_all_bar_title => 'All Manager';
+
+  @override
+  String get manager_status_actf => 'Active';
+
+  @override
+  String get manager_status_non_actf => 'Inactive';
+
+  @override
+  String get manager_add_dashboard_title => 'Manager Informations';
+
+  @override
+  String get manager_add_dashboard_sub_title => 'Add Manager Informations details';
+
+  @override
+  String get driver_bar_title => 'Driver Configuration';
+
+  @override
+  String get driver_add_bar_title => 'Add Driver';
+
+  @override
+  String get driver_all_bar_title => 'All Drivers';
+
+  @override
+  String get driver_status_actf => 'Actif';
+
+  @override
+  String get driver_status_non_actf => 'Inactif';
+
+  @override
+  String get pressing_bar_title => 'Configuration dry Cleaner ';
+
+  @override
+  String get pressing_service_washing => 'Washing';
+
+  @override
+  String get pressing_service_dry_cleaning => 'Dry Cleaning';
+
+  @override
+  String get pressing_service_ironing => 'Ironing';
+
+  @override
+  String get pressing_service_laundry => 'Laundry ';
+
+  @override
+  String get pressing_service_folding => 'Folding';
+
+  @override
+  String get pressing_service_stain_removal => 'Stain Removal';
+
+  @override
+  String get pressing_service_service_express => 'Service express';
+
+  @override
+  String get pressing_service_home_laundry => 'Home Laundry';
+
+  @override
+  String get pressing_service_work_clothing => 'Care of Work Clothing';
+
+  @override
+  String get pressing_service_delicate_fabrics => 'Care of Delicate Fabrics';
+
+  @override
+  String get pressing_service_washing_descrip => 'Washing clothes with water';
+
+  @override
+  String get pressing_service_dry_cleaning_descrip => 'Special cleaning for delicate fabrics';
+
+  @override
+  String get pressing_service_ironing_descrip => 'Remove wrinkles with an iron or a press';
+
+  @override
+  String get pressing_service_laundry_descrip => 'Full-service laundry and dry cleaning';
+
+  @override
+  String get pressing_service_folding_descrip => 'Clothes folded after washing';
+
+  @override
+  String get pressing_service_stain_removal_descrip => 'Stain removal';
+
+  @override
+  String get pressing_service_service_express_descrip => 'Same-day express cleaning';
+
+  @override
+  String get pressing_service_home_laundry_descrip => 'Sheets, blankets, curtains, etc...';
+
+  @override
+  String get pressing_service_work_clothing_descrip => 'Uniforms, Suits, Work Clothes';
+
+  @override
+  String get pressing_service_delicate_fabrics_descrip => 'Silk, Wool, Leather, Evening gowns, etc...';
+
+  @override
+  String get pressing_service_labelText => 'Product';
+
+  @override
+  String get pressing_service_hinterText => 'Product Name';
+
+  @override
+  String get pressing_service_price_labelText => 'Price';
+
+  @override
+  String get pressing_service_price_hinterText => 'Product Price';
+
+  @override
+  String get pressing_service_price_min_labelText => 'Minimum Price';
+
+  @override
+  String get pressing_service_price_min_hinterText => 'Minimum Product Price';
+
+  @override
+  String get pressing_service_price_max_labelText => 'Maximum Price';
+
+  @override
+  String get pressing_service_price_max_hinterText => 'Maximum Product Price';
+
+  @override
+  String get pressing_service_type_labelText => 'Type of Service';
+
+  @override
+  String get pressing_services_types_title => 'Types of Services';
+
+  @override
+  String get pressing_services_types_subtitle => 'Define the available service categories';
+
+  @override
+  String get pressing_services_types_all_title => 'All services types';
+
+  @override
+  String get pressing_services_types_all_descrip => 'All services types ';
+
+  @override
+  String get pressing_service_empty_title => 'No Service found';
+
+  @override
+  String get pressing_service_empty_subtitle => 'Please Create a new Service or update existing services.';
+
+  @override
+  String get pressing_problem_hours_non_configured => 'Schedules not configured';
+
+  @override
+  String get pressing_problem_service_non_configured => 'No services configured';
+
+  @override
+  String get pressing_proble_staff_employe => 'No Employe assigned';
+
+  @override
+  String get pressing_proble_staff_manager => 'No Manager assigned';
+
+  @override
+  String get pressing_proble_staff_owner => 'No Owner assigned';
+
+  @override
+  String get pressing_problem_incomplete_infos => 'Incompleted Dry Cleaning Informations';
+
+  @override
+  String get pressing_incomplete_no_problem_subtitle => 'All configurations are completed';
+
+  @override
+  String get pressing_service_configured => 'Dry Cleaners configured';
+
+  @override
+  String get tab_header_produit_title => 'Prodruct';
+
+  @override
+  String get tab_header_price_title => 'Price';
+
+  @override
+  String get tab_header_invoicing_title => 'Invoicing';
+
+  @override
+  String get tab_header_duration_title => 'Time limit';
+
+  @override
+  String get tab_header_status_title => 'Status';
+
+  @override
+  String get tab_header_actions => 'Actions';
+
+  @override
+  String get tab_header_name => 'Name';
+
+  @override
+  String get tab_header_problem => 'Problem';
+
+  @override
+  String get pressing_service_search_hinterText => 'Search for a service';
+
+  @override
+  String get pressing_service_estimated_duration_labelText => 'Estimated Duration';
+
+  @override
+  String get pressing_service_estimated_duration_hinterText => 'Ex. 24h';
+
+  @override
+  String get pressing_service_tarification_title => 'Tarification';
+
+  @override
+  String get pressing_service_info_title => 'Service Information';
+
+  @override
+  String get pressing_services_pricing_type_title => 'Pricing Type';
+
+  @override
+  String get pressig_details_title => 'Dry Cleaner Details';
+
+  @override
+  String get pressing_dashboard_title => 'Dry Cleaner Management';
+
+  @override
+  String get pressing_dashboard_sub_title => 'Global administration of MoveGui dry cleaners';
+
+  @override
+  String get pressing_add_dashboard_title => 'Dry Cleaner Information';
+
+  @override
+  String get pressing_add_dashboard_sub_title => 'Add the business details, contacts and services.';
+
+  @override
+  String get pressing_all_dashboard_title => 'Dry Cleaners Liste';
+
+  @override
+  String get pressing_all_dashboard_sub_title => 'View and manage registed Dry Cleaners';
+
+  @override
+  String get pressing_services_dashboard_title => 'Laundry  Services';
+
+  @override
+  String get pressing_services_dashboard_sub_title => 'Add the services, offerings, categories and tariffs proposed by the dry cleaner';
+
+  @override
+  String get pressing_service_add_dashboard_title => 'Add a Service';
+
+  @override
+  String get pressing_service_add_dashboard_sub_title => 'Add the services, offerings, categories and tariffs proposed by the dry cleaner';
+
+  @override
+  String get pressing_service_type_add_dashboard_title => 'Add a Service Type';
+
+  @override
+  String get pressing_service_type_add_dashboard_sub_title => 'Add the types of services offered by your dry cleaner';
+
+  @override
+  String get pressing_hours_open_sub_text => 'Dry Cleaner is open today';
+
+  @override
+  String get pressing_hours_close_sub_text => 'Dry cleaner is close today';
+
+  @override
+  String get restaurant_add_bar_title => 'Add Restaurant';
+
+  @override
+  String get restaurant_all_bar_title => 'All Restaurants';
+
+  @override
+  String get restaurant_bar_title => 'Configuration Restaurant';
+
+  @override
+  String store_add_bar_title(Object storeCategory) {
+    return 'Add a $storeCategory';
+  }
+
+  @override
+  String store_all_bar_title(Object storeCategory) {
+    return 'All the $storeCategory';
+  }
+
+  @override
+  String store_bar_title(Object storeCategory) {
+    return 'Configuration $storeCategory';
+  }
+
+  @override
+  String store_adress_hinter_text(Object storeCategory) {
+    return 'Please enter the adress of $storeCategory';
+  }
+
+  @override
+  String store_description_hinter_text(Object storeCategory) {
+    return 'Please enter the description $storeCategory';
+  }
+
+  @override
+  String store_email_hinter_text(Object storeCategory) {
+    return 'Please Enter the email of the $storeCategory';
+  }
+
+  @override
+  String store_name_hinter_text(Object storeCategory) {
+    return 'Please Enter the name of the $storeCategory';
+  }
+
+  @override
+  String store_name_label(Object storeCategory) {
+    return 'Name of the$storeCategory';
+  }
+
+  @override
+  String store_phone_hinter_text(Object storeCategory) {
+    return 'Please Enter the phone number of the $storeCategory';
+  }
+
+  @override
+  String store_add_success_message(Object storeCategory) {
+    return '$storeCategory addedd successfully';
+  }
+
+  @override
+  String store_edit_success_message(Object storeCategory) {
+    return '$storeCategory successfully updated';
+  }
+
+  @override
+  String store_type(Object storeCategory) {
+    return 'Type $storeCategory';
+  }
+
+  @override
+  String get store_open => 'Open';
+
+  @override
+  String get store_close => 'Close';
+
+  @override
+  String get store_opening => 'Ouverture';
+
+  @override
+  String get store_closure => 'Closure';
+
+  @override
+  String get store_information_title => 'Generales Informations';
+
+  @override
+  String get store_information_subtitle => 'name, description and  status';
+
+  @override
+  String get store_contact_title => 'Contact';
+
+  @override
+  String get store_contact_subtitle => 'email, phone, fax etc..';
+
+  @override
+  String get store_adress_title => 'Principal Adress';
+
+  @override
+  String get store_adress_subtitle => 'Localisation and Adress type';
+
+  @override
+  String get description_title => 'Description';
+
+  @override
+  String get description_hint_text => 'Please enter the Description';
+
+  @override
+  String get search_title => 'Search';
+
+  @override
+  String get company_adresse_label => 'Adress';
+
+  @override
+  String get company_label_phone => 'Phone';
+
+  @override
+  String get company_label_email => 'Email';
+
+  @override
+  String get success_send_message_title => 'Message send';
+
+  @override
+  String get success_send_message_message => 'Thank you for your message';
+
+  @override
+  String get success_registration_new_user => 'Your account has been successfully created';
+
+  @override
+  String get success_login_message => 'Login successful';
+
+  @override
+  String get success_login_reset_password => 'Lien envoyé avec Succes';
+
+  @override
+  String get login_forget_password_txt => 'Enter your email address and we will send you a link to reset your password ';
+
+  @override
+  String get error_send_mail_title => 'Authentication Error';
+
+  @override
+  String get error_send_mail_message => 'You must sign before using this functionnality';
+
+  @override
+  String get error_input_hint_message => 'Please write your message.';
+
+  @override
+  String get error_firebase_initialisation => 'FirebaseAuth initialization failed:';
+
+  @override
+  String get error_login_message => 'Login failed';
+
+  @override
+  String get error_register_title => 'Registration Error';
+
+  @override
+  String get error_register_with_phone_message => 'We were unable to register your phone number. Please try again !';
+
+  @override
+  String get error_application => 'We have more then one Super Admin';
+
+  @override
+  String get error_register_with_email_message => 'We were unable to register your email. Please try again !';
+
+  @override
+  String get error_authorization => 'Not Authorize';
+
+  @override
+  String get error_occur => 'An error Occured';
+
+  @override
+  String get error_send_formular => 'Please Complete the formular ';
+
+  @override
+  String get error_show_formular_title => 'Error Page';
+
+  @override
+  String get error_show_formular => 'An Error happen when loading the page';
+
+  @override
+  String get error_no_user_connected_title => 'Authentication Error';
+
+  @override
+  String get error_no_user_connected_message => 'No user is currently signed in.';
+
+  @override
+  String get error_duree_invalide => 'Invalid duration';
+
+  @override
+  String get tooltip_duree_invalide => 'Please enter a duration';
+
+  @override
+  String get label_login_facebook => 'Facebook';
+
+  @override
+  String get label_login_google => 'Google';
+
+  @override
+  String get btn_close_label => 'Close';
+
+  @override
+  String get btn_send_label => 'Send';
+
+  @override
+  String get btn_register_label => 'Register';
+
+  @override
+  String get btn_cancel_label => 'Annuler';
+
+  @override
+  String get btn_add_contact => 'Add a Contact';
+
+  @override
+  String get btn_add_adress => 'Add Adress';
+
+  @override
+  String get btn_update_adress => 'Update Adress';
+
+  @override
+  String get btn_add_pressing_service => 'Add a Service';
+
+  @override
+  String get btn_create => 'Create';
+
+  @override
+  String get btn_add_pressing => 'Add a Dry Cleaner';
+
+  @override
+  String get btn_add_admin => 'Add an Administrator';
+
+  @override
+  String get btn_add_owner => 'Add an Owner';
+
+  @override
+  String get btn_add_manager => 'Add a Manager';
+
+  @override
+  String get btn_add_employe => 'Add an Employé(e)';
+
+  @override
+  String get btn_all => 'Show All';
+
+  @override
+  String get btn_all_cleaners => 'My Dry Cleaners';
+
+  @override
+  String get btn_delete => 'Delete';
+
+  @override
+  String get btn_update => 'Update';
+
+  @override
+  String get btn_delete_adress => 'Delete the adress';
+
+  @override
+  String get btn_delete_contact => 'Delete the contact';
+
+  @override
+  String get btn_back => 'back';
+
+  @override
+  String get btn_types_services => 'Types of Services';
+
+  @override
+  String get btn_yes => 'Yes';
+
+  @override
+  String get btn_no => 'No';
+
+  @override
+  String get btn_configure => 'Configure';
+
+  @override
+  String get btn_manage => 'Manage';
+
+  @override
+  String get btn_see => 'See';
+
+  @override
+  String get verify_otp => 'Send Code';
+
+  @override
+  String get resend_code => 'Resend Code';
+
+  @override
+  String get form_contact_title => 'Contact Form:';
+
+  @override
+  String get input_hint_first_name => 'Firstname';
+
+  @override
+  String get input_hint_last_name => 'Lastname';
+
+  @override
+  String get input_hint_adress_email => 'Email Adress';
+
+  @override
+  String get input_hint_message => 'Your Message...';
+
+  @override
+  String get input_hint_adress => 'Address';
+
+  @override
+  String get input_hint_middle_name => 'Nickname';
+
+  @override
+  String get input_hint_quartier => 'District';
+
+  @override
+  String get input_hint_longitude => 'Longitude';
+
+  @override
+  String get input_hint_latitude => 'Latitude';
+
+  @override
+  String get input_hint_phone => 'Phone Number';
+
+  @override
+  String get input_hint_password => 'Password';
+
+  @override
+  String get input_hint_confirm_password => 'Confirm Password';
+
+  @override
+  String get input_hint_pressing_name => 'Dry Cleaner Name';
+
+  @override
+  String get input_hint_description_pressing => 'Description of the Dry Cleaner';
+
+  @override
+  String get input_hint_birthdate_error_msg => 'Please select your birthdate.';
+
+  @override
+  String get input_hint_birthdate => 'Select birthdate';
+
+  @override
+  String get input_hint_select_birthdate => 'Please select your birthdate';
+
+  @override
+  String get movegui_info_title => 'MoveGui – Motorcycle Delivery & Transport in Guinea';
+
+  @override
+  String get movegui_info_text_1 => 'MoveGui is an innovative company specialising in food delivery and motorcycle transport in Guinea.Our mission is to make delivery more accessible, more transparent and more affordable for everyone.';
+
+  @override
+  String get movegui_info_text_2 => 'We offer a fixed price for every journey, regardless of the distance, ensuring complete transparency for our customers.No more price surprises – just a fast, reliable and straightforward service..';
+
+  @override
+  String get movegui_info_text_3 => 'Thanks to our partnerships with local restaurants, we offer low-cost deliveries whilst supporting the local economy.MoveGui is the perfect blend of technology, accessibility and efficiency.';
+
+  @override
+  String get movegui_panel => 'Movegui Configuration Panel';
+
+  @override
+  String get movegui_panel_mobile => 'Configuration Panel';
+
+  @override
+  String get deactivate_button_title => 'Service Unavailable ';
+
+  @override
+  String get deactivate_button_message => 'Service currently unavailable';
+
+  @override
+  String get deactivate_button_attach_message => 'Coming soon';
+
+  @override
+  String get activate_button_attach_message => 'Enabled';
+
+  @override
+  String get module_courses_name => 'Races';
+
+  @override
+  String get module_restaurant_name => 'Restaurant';
+
+  @override
+  String get module_patisserie_name => 'Pastry shop';
+
+  @override
+  String get module_supermarche_name => 'Super Market';
+
+  @override
+  String get module_supplier_name => 'Supplier';
+
+  @override
+  String get module_pressing_name => 'Dry cleaning';
+
+  @override
+  String get pricingPerItem => 'Per item';
+
+  @override
+  String get pricingPerKg => 'Per kilogram';
+
+  @override
+  String get pricingFixed => 'Fixed';
+
+  @override
+  String get module_discovery_name => 'Discovery';
+
+  @override
+  String get module_boulangerie_name => 'Bakery';
+
+  @override
+  String get module_pharmacy_name => 'Pharmacy';
+
+  @override
+  String get module_beauty_name => 'Beauty & Care';
+
+  @override
+  String get module_store_name => 'Store';
+
+  @override
+  String get module_shop_name => 'Shop';
+
+  @override
+  String get module_wholesaler_name => 'Wholesaler';
+
+  @override
+  String get module_profession_name => 'Professions';
+
+  @override
+  String get module_fast_food_name => 'Fast Food';
+
+  @override
+  String get module_category_name => 'Category';
+
+  @override
+  String get module_ingredient_name => 'Ingredients';
+
+  @override
+  String get module_pastry_name => 'Pastry';
+
+  @override
+  String get module_product_name => 'Products';
+
+  @override
+  String get module_recipe_name => 'Recipes';
+
+  @override
+  String get module_super_market_name => 'Super Market';
+
+  @override
+  String get module_admin_name => 'Admin';
+
+  @override
+  String get module_employe_name => 'Employe';
+
+  @override
+  String get module_manager_name => 'Manager';
+
+  @override
+  String get module_deliver_name => 'Driver';
+
+  @override
+  String get module_owner_name => 'Owner';
+
+  @override
+  String get module_add_name => 'Add';
+
+  @override
+  String get module_services_name => 'Services';
+
+  @override
+  String get module_configuration_title => 'Configuration Modules';
+
+  @override
+  String get module_configuration_subtitle => 'Configure the global settings related to MoveGui pressings.';
+
+  @override
+  String get module_configuration_to_complete_title => 'Configuration to complete';
+
+  @override
+  String module_configuration_to_complete_subtitle(Object pressings) {
+    return 'Some $pressings need your attention.';
+  }
+
+  @override
+  String get module_configuration_item_pressing_title => 'Dry Cleaners';
+
+  @override
+  String get module_configuration_item_pressing_subtitle => 'Manage information and the status of dry cleaners.';
+
+  @override
+  String get module_configuration_item_pressing_type_service_title => 'Services Types Configured';
+
+  @override
+  String get module_configuration_item_pressing_type_service_subtitle => 'View the types of services that have been configured.';
+
+  @override
+  String get module_configuration_item_pressing_open_hours_title => 'Open Hours';
+
+  @override
+  String get module_configuration_item_pressing_open_hours_subtitle => 'Manage the dry cleaners\' hours of operation.';
+
+  @override
+  String get module_configuration_item_pressing_configured_services_title => 'Configured Services';
+
+  @override
+  String get module_configuration_item_pressing_configured_services_subtitle => 'Number of services offered by dry cleaners.';
+
+  @override
+  String get tooltip_add => 'Clic here to Add ';
+
+  @override
+  String get tooltip_all => 'Clic here to see All';
+
+  @override
+  String get notification_title => 'Notifications';
+
+  @override
+  String get home_title => 'Home';
+
+  @override
+  String get movegui_title => 'Movegui';
+
+  @override
+  String get command_title => 'Command';
+
+  @override
+  String get delivery_title => 'Delivey';
+
+  @override
+  String get courier_title => 'Courier';
+
+  @override
+  String get my_orders_title => 'Mes Commandes';
+
+  @override
+  String get my_deliveries_title => 'Mes Livraisons';
+
+  @override
+  String get profile_title => 'Profile';
+
+  @override
+  String get my_profile_title => 'My Profile';
+
+  @override
+  String get navigation_menu_tooltip => 'Navigation Menu';
+
+  @override
+  String get login_title => 'Login';
+
+  @override
+  String get register_title => 'Registration';
+
+  @override
+  String get forget_password_title => 'Forgetten Password';
+
+  @override
+  String get dashbord_title => 'Panneau de Configuration';
+
+  @override
+  String get register_admin_title => 'Admin Registration';
+
+  @override
+  String get register_employe_title => 'Employee Registration';
+
+  @override
+  String get register_manager_title => 'Manager Registration';
+
+  @override
+  String get register_driver_title => 'Deliver Registration';
+
+  @override
+  String get address_office_title => 'Office';
+
+  @override
+  String get address_neighbor_title => 'Neighbord';
+
+  @override
+  String get address_home_title => 'Home';
+
+  @override
+  String get address_other_title => 'Other';
+
+  @override
+  String get address_default_title => 'By default';
+
+  @override
+  String get dashboard_menu_overview => 'Overview';
+
+  @override
+  String get dashboard_menu_marketplace => 'Marketplace';
+
+  @override
+  String get dashboard_menu_establishments => 'Establishments';
+
+  @override
+  String get dashboard_menu_all_establishments => 'All establishments';
+
+  @override
+  String get dashboard_menu_pressings => 'Dry cleaners';
+
+  @override
+  String get dashboard_menu_all_pressings => 'All dry cleaners';
+
+  @override
+  String get dashboard_menu_add_pressing => 'Add a dry cleaner';
+
+  @override
+  String get dashboard_menu_service_types => 'Service types';
+
+  @override
+  String get dashboard_menu_orders => 'Orders';
+
+  @override
+  String get dashboard_menu_pharmacies => 'Pharmacies';
+
+  @override
+  String get dashboard_menu_stores => 'Stores';
+
+  @override
+  String get dashboard_menu_pending => 'Pending';
+
+  @override
+  String get dashboard_menu_suspended => 'Suspended';
+
+  @override
+  String get dashboard_menu_users => 'Users';
+
+  @override
+  String get dashboard_menu_all_users => 'All users';
+
+  @override
+  String get dashboard_menu_customers => 'Customers';
+
+  @override
+  String get dashboard_menu_owners => 'Owners';
+
+  @override
+  String get dashboard_menu_employees => 'Employees';
+
+  @override
+  String get dashboard_menu_couriers => 'Couriers';
+
+  @override
+  String get dashboard_menu_blocked_users => 'Blocked users';
+
+  @override
+  String get dashboard_menu_all_orders => 'All orders';
+
+  @override
+  String get dashboard_menu_new_orders => 'New';
+
+  @override
+  String get dashboard_menu_in_progress => 'In progress';
+
+  @override
+  String get dashboard_menu_completed => 'Completed';
+
+  @override
+  String get dashboard_menu_cancelled => 'Cancelled';
+
+  @override
+  String get dashboard_menu_disputes => 'Disputes';
+
+  @override
+  String get dashboard_menu_delivery_logistics => 'Delivery & logistics';
+
+  @override
+  String get dashboard_menu_missions => 'Missions';
+
+  @override
+  String get dashboard_menu_active_deliveries => 'Active deliveries';
+
+  @override
+  String get dashboard_menu_delivery_zones => 'Delivery zones';
+
+  @override
+  String get dashboard_menu_business_management => 'Business management';
+
+  @override
+  String get dashboard_menu_finances => 'Finance';
+
+  @override
+  String get dashboard_menu_financial_overview => 'Financial overview';
+
+  @override
+  String get dashboard_menu_transactions => 'Transactions';
+
+  @override
+  String get dashboard_menu_payments => 'Payments';
+
+  @override
+  String get dashboard_menu_commissions => 'Commissions';
+
+  @override
+  String get dashboard_menu_refunds => 'Refunds';
+
+  @override
+  String get dashboard_menu_subscriptions_billing => 'Subscriptions & billing';
+
+  @override
+  String get dashboard_menu_general_overview => 'Overview';
+
+  @override
+  String get dashboard_menu_offers => 'Plans';
+
+  @override
+  String get dashboard_menu_active_subscriptions => 'Active subscriptions';
+
+  @override
+  String get dashboard_menu_expired => 'Expired';
+
+  @override
+  String get dashboard_menu_invoices => 'Invoices';
+
+  @override
+  String get dashboard_menu_catalog_categories => 'Catalog & categories';
+
+  @override
+  String get dashboard_menu_business_types => 'Business types';
+
+  @override
+  String get dashboard_menu_categories => 'Categories';
+
+  @override
+  String get dashboard_menu_services => 'Services';
+
+  @override
+  String get dashboard_menu_product_categories => 'Product categories';
+
+  @override
+  String get dashboard_menu_products => 'Products';
+
+  @override
+  String get dashboard_menu_promotions_loyalty => 'Promotions & loyalty';
+
+  @override
+  String get dashboard_menu_promo_codes => 'Promo codes';
+
+  @override
+  String get dashboard_menu_campaigns => 'Campaigns';
+
+  @override
+  String get dashboard_menu_loyalty_program => 'Loyalty program';
+
+  @override
+  String get dashboard_menu_steering => 'Management';
+
+  @override
+  String get dashboard_menu_analytics_reports => 'Analytics & reports';
+
+  @override
+  String get dashboard_menu_geographic_areas => 'Geographic areas';
+
+  @override
+  String get dashboard_menu_support_claims => 'Support & claims';
+
+  @override
+  String get dashboard_menu_tickets => 'Tickets';
+
+  @override
+  String get dashboard_menu_claims => 'Claims';
+
+  @override
+  String get dashboard_menu_refund_requests => 'Refund requests';
+
+  @override
+  String get dashboard_menu_notifications => 'Notifications';
+
+  @override
+  String get dashboard_menu_send_notification => 'Send a notification';
+
+  @override
+  String get dashboard_menu_templates => 'Templates';
+
+  @override
+  String get dashboard_menu_history => 'History';
+
+  @override
+  String get dashboard_menu_administration => 'Administration';
+
+  @override
+  String get dashboard_menu_administrators => 'Administrators';
+
+  @override
+  String get dashboard_menu_roles_permissions => 'Roles & permissions';
+
+  @override
+  String get dashboard_menu_activity_log => 'Activity log';
+
+  @override
+  String get dashboard_menu_platform_settings => 'Platform settings';
+
+  @override
+  String get label_login_forget_password => 'Forgotten your password?';
+
+  @override
+  String get label_login => 'Login';
+
+  @override
+  String get label_login_web => 'SignIn';
+
+  @override
+  String get label_login_connect_using => 'Or connect using';
+
+  @override
+  String get label_login_invite => 'Invité ?';
+
+  @override
+  String get label_login_new_user => 'Nouveau ?';
+
+  @override
+  String get label_registration => 'Sign-up';
+
+  @override
+  String get label_enter_your_code => 'Enter your Code:';
+
+  @override
+  String get label_name => 'Name';
+
+  @override
+  String get lable_username => 'Username';
+
+  @override
+  String get label_adress => 'Adress';
+
+  @override
+  String get label_email => 'Email';
+
+  @override
+  String get label_phone => 'Phone';
+
+  @override
+  String get label_role => 'Role';
+
+  @override
+  String get label_firstname => 'Firstname';
+
+  @override
+  String get label_lastname => 'Lastname';
+
+  @override
+  String get label_district => 'District';
+
+  @override
+  String get label_municipality => 'Municipality';
+
+  @override
+  String get label_birthdate => 'Birthdate';
+
+  @override
+  String get exception_login_message => 'The Supplied User credential is incorrect, Please check your email address and password';
+
+  @override
+  String get tooltip_sign_in_with_google => 'Sign in with Google';
+
+  @override
+  String get tooltip_sign_in_with_facebook => 'Sign in with Facebook';
+
+  @override
+  String get tooltip_sign_in => 'Clic here to Connect';
+
+  @override
+  String get tooltip_forget_password => 'Click here to reset password :)';
+
+  @override
+  String get tooltip_registration => 'Cliquez ici pour vous enregistrer :)';
+
+  @override
+  String get tooltip_btn_send => 'Click here to submit your code';
+
+  @override
+  String get tooltip_btn_add_contact => 'Add a new Contact';
+
+  @override
+  String get tooltip_btn_add_pressing_service => 'Ajouter new Service';
+
+  @override
+  String get tooltip_search_pressing_service => 'Search for a service';
+
+  @override
+  String get tooltip_all_pressing_services_types => 'View all service types';
+
+  @override
+  String get tooltip_btn_update => 'Update';
+
+  @override
+  String get tooltip_more_actions => 'More Actions';
+
+  @override
+  String get tooltip_delete => 'Delete';
+
+  @override
+  String get profile_menu_invite_people => 'Invite a Friend';
+
+  @override
+  String get profile_menu_orders => 'Orders';
+
+  @override
+  String get profile_menu_message => 'Messages';
+
+  @override
+  String get profile_menu_important => 'Important';
+
+  @override
+  String get profile_menu_devices => 'Devices';
+
+  @override
+  String get profile_menu_account => 'Account';
+
+  @override
+  String get profile_menu_confidentiality => 'Privacy';
+
+  @override
+  String get profile_menu_discussions => 'Discussions';
+
+  @override
+  String get profile_menu_delete_account => 'Delete Account';
+
+  @override
+  String get profile_menu_logout => 'Logout';
+
+  @override
+  String get profile_menu_login => 'Login';
+
+  @override
+  String get menu_principal => 'Principal Menu';
+
+  @override
+  String get menu_preferency => 'Preferencies';
+
+  @override
+  String get add => 'Ajouter';
+
+  @override
+  String get add_all => 'View All';
+
+  @override
+  String get deactif => 'Deactivate';
+
+  @override
+  String get actif => 'Activate';
+
+  @override
+  String get complete => 'Complete';
+
+  @override
+  String get incomplete => 'Incomplete';
+
+  @override
+  String get menu_main => 'Home';
+
+  @override
+  String get menu_store_type => 'Store Types';
+
+  @override
+  String get menu_store_categories => 'Store Categories';
+
+  @override
+  String get menu_restaurant_type => 'Restaurant Type';
+
+  @override
+  String get menu_menu => 'Menus';
+
+  @override
+  String get day_lundi => 'Monday';
+
+  @override
+  String get day_mardi => 'Tuesday';
+
+  @override
+  String get day_mercredi => 'Wednesday';
+
+  @override
+  String get day_jeudi => 'Thursday';
+
+  @override
+  String get day_vendredi => 'Friday';
+
+  @override
+  String get day_samedi => 'Saturday';
+
+  @override
+  String get day_dimanche => 'Sunday';
+
+  @override
+  String get days => 'Days';
+
+  @override
+  String get last_orders => 'Last Orders';
+
+  @override
+  String get last_orders_subtitle => 'Last orders list';
+
+  @override
+  String get message_movegui_title => '<p>Welcome on Movegui</p>';
+
+  @override
+  String get message_movegui_link => 'Create a Password';
+
+  @override
+  String get message_movegui => 'Tahnks for trusting the MoveGui Team';
+
+  @override
+  String get dashbord_movegui_title => 'Dashboard MoveGui';
+
+  @override
+  String get dashbord_movegui_sub_title => 'Overview of orders, revenue and users';
+
+  @override
+  String get dashbord_orders_state_title => 'Order Status';
+
+  @override
+  String get dashbord_orders_pending => 'Pending';
+
+  @override
+  String get dashbord_orders_preparing => 'Preparing';
+
+  @override
+  String get dashbord_orders_delivering => 'Delivering';
+
+  @override
+  String get dashbord_orders_completed => 'Completed';
+
+  @override
+  String get dashbord_orders_cancelled => 'Cancelled';
+
+  @override
+  String get dashbord_orders_total => 'Total';
+
+  @override
+  String get dashboard_services_title => 'Our Services';
+
+  @override
+  String get read_all => 'Read All';
+
+  @override
+  String get shopping_cart_title => 'Shopping Cart';
+
+  @override
+  String get language_title => 'Language';
+
+  @override
+  String get help_title => 'Help';
+
+  @override
+  String get settings_title => 'Settings';
+
+  @override
+  String get standard_address => 'Standard Address';
+
+  @override
+  String get add_new_adress_title => 'Add new Address';
+
+  @override
+  String get max_adress_title => 'Maximum Adresses';
+
+  @override
+  String get max_adress_message => 'The maximum number of addresses is 5 per user. Please delete any others.';
+
+  @override
+  String get current_position => 'Current Position';
+
+  @override
+  String get my_position => 'My Position';
+
+  @override
+  String get owner_add_dashboard_title => 'Owners Informations';
+
+  @override
+  String get owner_add_dashboard_sub_title => 'Add the Owners informations details';
+
+  @override
+  String get add_slot_title => 'Add a time slot';
+
+  @override
+  String get static_module_item_pressing_title => 'Dry Cleaners';
+
+  @override
+  String get static_module_item_pressing_subtitle => 'Total Dry Cleaners';
+
+  @override
+  String get static_module_item_pressing_actifs_title => 'Actives';
+
+  @override
+  String get static_module_item_pressing_actifs_subtitle => 'Actives dry Cleaners';
+
+  @override
+  String get static_module_item_pressing_inactifs_title => 'Inactives';
+
+  @override
+  String get static_module_item_pressing_inactifs_subtitle => 'Inactives Dry Cleaners';
+
+  @override
+  String get static_module_item_pressing_configured_services_title => 'Configured Services';
+
+  @override
+  String get static_module_item_pressing_configured_services_subtitle => 'Total of services';
+
+  @override
+  String get static_module_item_pressing_incomplete_open_hours_title => 'Incomplete Open hours';
+
+  @override
+  String get static_module_item_pressing_incomplete_open_hours_subtitle => 'Dry Cleaners to complete';
+
+  @override
+  String get static_module_item_pressing_services_types_title => 'Services Types';
+
+  @override
+  String get static_module_item_pressing_services_types_subtitle => ' Total Services Types';
+
+  @override
+  String get static_module_item_pressing_services_types_actifs_subtitle => 'Active Services Types';
+
+  @override
+  String get static_module_item_pressing_services_types_inactifs_subtitle => 'Inactive Services Types';
+
+  @override
+  String get static_module_item_pressing_owners_title => 'Owners';
+
+  @override
+  String get static_module_item_pressing_owners_subtitle => 'Owners in total';
+
+  @override
+  String get static_module_item_pressing_managers_title => 'Managers';
+
+  @override
+  String get static_module_item_pressing_managers_subtitle => 'Manager in total';
+
+  @override
+  String get static_module_item_pressing_employes_title => 'Employees';
+
+  @override
+  String get static_module_item_pressing_employes_subtitle => 'Employees in total';
+
+  @override
+  String get static_module_item_pressing_total_services_title => 'Services';
+
+  @override
+  String get static_module_item_pressing_total_services_subtitle => 'Registed Services';
+
+  @override
+  String get static_module_item_pressing_services_actifs_subtitle => 'Services in total';
+
+  @override
+  String get static_module_item_pressing_services_inactifs_subtitle => 'Services in total';
+
+  @override
+  String get image_chose_image_text => 'Choose an Image';
+
+  @override
+  String get image_change_image_text => 'Change an Image';
+
+  @override
+  String get image_add_image_text => 'Add an Image';
+
+  @override
+  String get price_type_label => 'Pricing type';
+
+  @override
+  String get informations_title => 'Informations';
+
+  @override
+  String get informations_subtitle => 'Dry Cleaners general Informations';
+
+  @override
+  String recent_activity_description_created(Object establishmentName) {
+    return '$establishmentName was added succesfully';
+  }
+
+  @override
+  String recent_activity_description_updated(Object establishmentName) {
+    return '$establishmentName was updated succesfully';
+  }
+
+  @override
+  String get category_courses_name => 'Races';
+
+  @override
+  String get category_restaurant_name => 'Restaurant';
+
+  @override
+  String get category_patisserie_name => 'Pastry shop';
+
+  @override
+  String get category_supermarche_name => 'Super Market';
+
+  @override
+  String get category_supplier_name => 'Supplier';
+
+  @override
+  String get category_pressing_name => 'Dry cleaning';
+
+  @override
+  String get category_discovery_name => 'Discovery';
+
+  @override
+  String get category_boulangerie_name => 'Bakery';
+
+  @override
+  String get category_pharmacy_name => 'Pharmacy';
+
+  @override
+  String get category_beauty_name => 'Beauty & Care';
+
+  @override
+  String get categroy_store_name => 'Store';
+
+  @override
+  String get category_shop_name => 'Shop';
+
+  @override
+  String get category_wholesaler_name => 'Wholesaler';
+
+  @override
+  String get category_profession_name => 'Professions';
+
+  @override
+  String get category_fast_food_name => 'Fast Food';
+
+  @override
+  String get pressing_title => 'Dry Cleaning';
+
+  @override
+  String get pressing_subtitle => 'Manage your dry cleaning business, services, and orders with ease.';
+
+  @override
+  String get pressing_order_title => 'Dry Cleaning Order';
+
+  @override
+  String get pressing_service_title => 'Services';
+
+  @override
+  String get pressing_service_article_title => 'Article';
+
+  @override
+  String get pressing_service_article_qty => 'Qté';
+
+  @override
+  String get pressing_service_article_price => 'Prix';
+
+  @override
+  String get pressing_detail_title => 'Dry Cleaning Detail';
+
+  @override
+  String get pressing_detail_text_1 => 'Please note: Price to be confirmed by text message before washing!!!';
+
+  @override
+  String get pressing_detail_text_2 => 'The final price may vary depending on the condition of the clothes. Washing will begin once confirmation has been received via text message';
+}

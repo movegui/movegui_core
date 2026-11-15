@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+import 'package:movegui_core/enum/enum_establishment_category.dart';
+import 'package:movegui_core/formController/pressing_completion.dart';
+import 'package:movegui_core/formController/store_form_controller.dart';
+import 'package:movegui_core/models/pressing/pressing_model.dart';
+import 'package:movegui_core/models/pressing/pressing_service_model.dart';
+
+
+class PressingFormController extends StoreFormController<PressingModel> {
+     final formKey = GlobalKey<FormState>();
+ final List<PressingServiceModel>? services = [];
+
+        bool get isPressingCompleted => PressingCompletion.isComplete(
+        staff: staff,
+        services: services,
+        weeklyHours: weeklyHours,
+        );
+  EstablishmentCategory establishmentCategory =
+      EstablishmentCategory.pressing_etablishment;
+  
+
+  @override
+  Future<void> setData(PressingModel model) async {
+    await super.setData(model);
+  }
+
+
+  @override
+  bool isValid() {
+    final currentState = formKey.currentState;
+    if (currentState == null) {
+      return false;
+    }
+
+    if (!currentState.validate()) {
+      return false;
+    }
+
+    return name.text.isNotEmpty &&
+        phone.text.isNotEmpty &&
+        email.text.isNotEmpty &&
+        description.text.isNotEmpty &&
+        services!.isNotEmpty;
+
+  }
+}

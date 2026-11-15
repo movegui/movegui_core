@@ -1,0 +1,50 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
+import 'package:movegui_core/consts/theme_provider.dart';
+import 'package:movegui_core/models/adress_model.dart';
+import 'package:movegui_core/providers/address_provider.dart';
+import 'package:movegui_core/providers/appbar_title_provider.dart';
+import 'package:movegui_core/providers/establishment_provider.dart';
+import 'package:movegui_core/providers/shopping_provider.dart';
+import 'package:movegui_core/providers/user_provider.dart';
+import 'package:movegui_core/services/address_service.dart';
+import 'package:movegui_core/services/register_services.dart';
+
+final shoppingProviderState = ChangeNotifierProvider<ShoppingProvider>((ref) {
+  return ShoppingProvider();
+});
+
+final storeProviderState = ChangeNotifierProvider<EstablishmentProvider>((ref) {
+  return EstablishmentProvider();
+});
+
+final userProviderState = ChangeNotifierProvider<UserProvider>((ref) {
+  return UserProvider();
+});
+
+final appbarTitleProviderState = ChangeNotifierProvider<AppbarTitleProvider>((
+  ref,
+) {
+  return AppbarTitleProvider();
+});
+
+final addressProviderState = ChangeNotifierProvider<AddressProvider>((ref) {
+  return AddressProvider();
+});
+
+final themeProvider = ChangeNotifierProvider<ThemeProvider>(
+  (ref) => ThemeProvider(),
+);
+
+/*
+final previousRouteProviderState = ChangeNotifierProvider<PreviousRouteProvider>((ref) {
+  return PreviousRouteProvider();
+});
+*/
+
+final currentAddressProvider = FutureProvider<AdressModel?>((ref) async {
+  final service = getIt<AddressService>();
+  return service.getCurrentAddress(null);
+});
+
+// previousRouteProvider
