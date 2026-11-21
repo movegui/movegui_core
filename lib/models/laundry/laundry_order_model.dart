@@ -3,12 +3,12 @@
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/adress_model.dart';
 import 'package:movegui_core/models/establishment/establishment_order_model.dart';
-import 'package:movegui_core/models/pressing/pressing_model.dart';
-import 'package:movegui_core/models/pressing/pressing_order_item.dart';
+import 'package:movegui_core/models/laundry/laundry_model.dart';
+import 'package:movegui_core/models/laundry/laundry_order_item.dart';
 
-class PressingOrderModel
-    extends EstablishmentOrderModel<PressingModel, PressingOrderItem> {
-  PressingOrderModel({
+class LaundryOrderModel
+    extends EstablishmentOrderModel<LaundryModel, LaundryOrderItem> {
+  LaundryOrderModel({
     required super.id,
     required super.name,
     required super.createdAt,
@@ -29,12 +29,12 @@ class PressingOrderModel
   @override
   Map<String, dynamic> toJson() => {...super.toJson()};
 
-  factory PressingOrderModel.fromJson(
+  factory LaundryOrderModel.fromJson(
     Map<String, dynamic> json,
-  ) => PressingOrderModel(
+  ) => LaundryOrderModel(
     items:
         (json['items'] as List? ?? [])
-            .map((e) => PressingOrderItem.fromJson(e))
+            .map((e) => LaundryOrderItem.fromJson(e))
             .toList(),
     pickupDate:
         json['pickupDate'] != null ? DateTime.parse(json['pickupDate']) : null,

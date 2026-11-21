@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/types_model.dart';
 
 
-class PressingServiceTypeModel extends TypesModel {
+class LaundryServiceTypeModel extends TypesModel {
   PricingType? pricingType;
    int? servicesCount;
 
-  PressingServiceTypeModel({
+  LaundryServiceTypeModel({
     required this.pricingType,
     this.servicesCount,
     required super.id,
@@ -21,7 +22,7 @@ class PressingServiceTypeModel extends TypesModel {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is PressingServiceTypeModel &&
+      other is LaundryServiceTypeModel &&
           runtimeType == other.runtimeType &&
           id == other.id;
 
@@ -35,8 +36,8 @@ class PressingServiceTypeModel extends TypesModel {
     'servicesCount': servicesCount,
   };
 
-  factory PressingServiceTypeModel.fromJson(Map<String, dynamic> json) =>
-      PressingServiceTypeModel(
+  factory LaundryServiceTypeModel.fromJson(Map<String, dynamic> json) =>
+      LaundryServiceTypeModel(
         id: json['id'],
         name: json['name'],
         description: json['description'] ?? '',
@@ -45,7 +46,7 @@ class PressingServiceTypeModel extends TypesModel {
           orElse: () => PricingType.fixed,
         ),
         createdAt: json['createdAt'] != null
-            ? json['createdAt'].toDate()
+            ? Model.parseDateTime(json['createdAt'])
             : DateTime.now(),
         iconName: json['iconName'] ?? json['iconName'] ?? 'dry_cleaning',
         colorValue: json['colorValue'] ?? json['colorValue'] ?? 'disabled',
@@ -53,7 +54,7 @@ class PressingServiceTypeModel extends TypesModel {
         isActive: json['isActive'] ?? false,
       );
 
-  PressingServiceTypeModel copyWith({
+  LaundryServiceTypeModel copyWith({
     String? name,
     String? description,
     IconData? icon,
@@ -64,7 +65,7 @@ class PressingServiceTypeModel extends TypesModel {
     String? colorValue,
     PricingType? pricingType,
   }) {
-    return PressingServiceTypeModel(
+    return LaundryServiceTypeModel(
       id: id,
       name: name ?? this.name,
       description: description ?? this.description,

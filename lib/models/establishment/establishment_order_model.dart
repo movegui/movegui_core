@@ -2,8 +2,8 @@ import 'package:intl/intl.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/adress_model.dart';
 import 'package:movegui_core/models/establishment/establishment_model.dart';
-import 'package:movegui_core/models/order_item_model.dart';
-import 'package:movegui_core/models/order_model.dart';
+import 'package:movegui_core/models/order/order_item_model.dart';
+import 'package:movegui_core/models/order/order_model.dart';
 
 abstract class EstablishmentOrderModel<
   S extends EstablishmentModel,
@@ -47,4 +47,6 @@ abstract class EstablishmentOrderModel<
     'deliveryAdress': deliveryAdress?.toJson(),
     'establishmentType': establishmentType.toJson(),
   };
+
+
 }

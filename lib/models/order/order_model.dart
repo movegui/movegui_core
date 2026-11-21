@@ -1,7 +1,7 @@
 
 import 'package:movegui_core/enum/enum_order_status.dart';
 import 'package:movegui_core/models/model.dart';
-import 'package:movegui_core/models/order_item_model.dart';
+import 'package:movegui_core/models/order/order_item_model.dart';
 
 abstract class OrderModel<T extends OrderItemModel> extends Model {
    List<T> items;
@@ -32,5 +32,6 @@ abstract class OrderModel<T extends OrderItemModel> extends Model {
     'orderId': orderId,
     'currency': currency
   };
+
 }
 

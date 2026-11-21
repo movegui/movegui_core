@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:movegui_core/consts/app_colors.dart';
 import 'package:movegui_core/formController/form_controller.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:uuid/uuid.dart';
 
 class PressingServiceTypeFormController
-    extends FormController<PressingServiceTypeModel> {
+    extends FormController<LaundryServiceTypeModel> {
   final formKey = GlobalKey<FormState>();
   final name = TextEditingController();
   final description = TextEditingController();
@@ -44,7 +44,7 @@ class PressingServiceTypeFormController
   }
 
   @override
-  Future<void> setData(PressingServiceTypeModel model) async {
+  Future<void> setData(LaundryServiceTypeModel model) async {
     name.text = model.name;
     description.text = model.description ?? '';
     pricingType = model.pricingType ?? PricingType.perItem;

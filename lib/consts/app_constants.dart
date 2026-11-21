@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movegui_core/consts/constants.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/l10n/app_localizations.dart';
-import 'package:movegui_core/models/button_item.dart';
-import 'package:movegui_core/models/category_item.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model%20copy.dart';
-import 'package:movegui_core/widgets/web/tab_item.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
+import 'package:movegui_core/ui/web/tab_item.dart';
 
 
 import '../services/assets_manager.dart';
@@ -413,14 +411,14 @@ class AppConstants {
   ];
 
   
-  static Future<List<PressingServiceTypeModel>> getPressingServicesTypes(
+  static Future<List<LaundryServiceTypeModel>> getPressingServicesTypes(
     BuildContext context, {
     AppLocalizations? localizations,
   }
   ) async {
     final strings = localizations ?? AppLocalizations.of(context)!;
     return [
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '001',
         name: strings.pressing_service_delicate_fabrics,
         description: strings.pressing_service_delicate_fabrics_descrip,
@@ -431,7 +429,7 @@ class AppConstants {
         colorValue: 'purple',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '002',
         name: strings.pressing_service_folding,
         description: strings.pressing_service_folding_descrip,
@@ -442,7 +440,7 @@ class AppConstants {
         colorValue: 'indigo',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '003',
         name: strings.pressing_service_dry_cleaning,
         description: strings.pressing_service_dry_cleaning_descrip,
@@ -453,7 +451,7 @@ class AppConstants {
         colorValue: 'teal',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '004',
         name: strings.pressing_service_home_laundry,
         description: strings.pressing_service_home_laundry_descrip,
@@ -464,7 +462,7 @@ class AppConstants {
         colorValue: 'deepPurple',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '005',
         name: strings.pressing_service_ironing,
         description: strings.pressing_service_ironing_descrip,
@@ -475,7 +473,7 @@ class AppConstants {
         colorValue: 'orange',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '006',
         name: strings.pressing_service_laundry,
         description: strings.pressing_service_laundry_descrip,
@@ -486,7 +484,7 @@ class AppConstants {
         colorValue: 'blue',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '007',
         name: strings.pressing_service_service_express,
         description: strings.pressing_service_service_express_descrip,
@@ -497,7 +495,7 @@ class AppConstants {
         colorValue: 'amber',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '008',
         name: strings.pressing_service_stain_removal,
         description: strings.pressing_service_stain_removal_descrip,
@@ -508,7 +506,7 @@ class AppConstants {
         colorValue: 'red',
       ),
 
-      PressingServiceTypeModel(
+      LaundryServiceTypeModel(
         id: '009',
         name: strings.pressing_service_washing,
         description: strings.pressing_service_washing_descrip,

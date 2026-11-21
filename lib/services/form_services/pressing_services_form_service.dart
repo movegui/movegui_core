@@ -1,15 +1,16 @@
 
+import 'package:movegui_core/enum/enum_establishment_category.dart';
 import 'package:movegui_core/formController/pressing_service_form_controller.dart';
-import 'package:movegui_core/models/pressing/pressing_article_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model.dart';
+import 'package:movegui_core/models/laundry/laundry_product_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/services/form_services/form_service.dart';
 import 'package:movegui_core/services/form_services/pressing_article_form_service.dart';
 import 'package:movegui_core/services/form_services/pressing_services_type_form_service.dart';
 import 'package:uuid/uuid.dart';
 
 class PressingServicesFormService
-    extends FormService<PressingServiceModel, PressingServiceFormController> {
+    extends FormService<LaundryServiceModel, PressingServiceFormController> {
   PressingServicesFormService({
     required super.seedService,
     required super.controllerFactory,
@@ -22,15 +23,15 @@ class PressingServicesFormService
   final PressingArticleFormService articleFormService;
 
   @override
-  Future<PressingServiceModel> generateModel() {
+  Future<LaundryServiceModel> generateModel() {
     return seedService.getGeneratedPressingService();
   }
 
   @override
-  PressingServiceModel getDefaultModel() {
-    return PressingServiceModel(
+  LaundryServiceModel getDefaultModel() {
+    return LaundryServiceModel(
       id: Uuid().v4(),
-      serviceType: PressingServiceTypeModel(
+      serviceType: LaundryServiceTypeModel(
         id: PricingType.fixed.id,
         name: 'default',
         description: 'default',
@@ -45,7 +46,7 @@ class PressingServicesFormService
       basePrice: 0.0,
       name: 'default',
       createdAt: DateTime.now(),
-      product: PressingArticleModel(
+      product: LaundryProductModel(
         id: Uuid().v4(),
         name: 'default',
         createdAt: DateTime.now(),
@@ -56,16 +57,18 @@ class PressingServicesFormService
         isAvailable: false,
         currency: 'GNF',
         description: '',
+        establishmentCategory: EstablishmentCategory.laundry_etablishment,
       ),
       description: '',
+       establishmentCategory: EstablishmentCategory.laundry_etablishment,
     );
   }
 
   @override
-  Future<PressingServiceModel> getModel(
+  Future<LaundryServiceModel> getModel(
     PressingServiceFormController controller,
   ) async {
-    return PressingServiceModel(
+    return LaundryServiceModel(
       id: controller.id ?? Uuid().v4(),
       serviceType:
           controller.serviceType ??
@@ -86,7 +89,8 @@ class PressingServicesFormService
         hours: int.parse(controller.processingTime.text),
       ),
       isActive: controller.active,
-      currency: controller.currency,
+      currency: controller.currency, 
+      establishmentCategory: EstablishmentCategory.laundry_etablishment,
     );
   }
 }

@@ -10,10 +10,10 @@ import 'package:movegui_core/formController/product_form_controller.dart';
 import 'package:movegui_core/formController/user_form_controller.dart';
 import 'package:movegui_core/models/establishment/establishment_members_model.dart';
 import 'package:movegui_core/models/patisserie_model.dart';
-import 'package:movegui_core/models/pressing/pressing_article_model.dart';
-import 'package:movegui_core/models/pressing/pressing_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model%20copy.dart';
+import 'package:movegui_core/models/laundry/laundry_product_model.dart';
+import 'package:movegui_core/models/laundry/laundry_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/models/professional_model.dart';
 import 'package:movegui_core/models/restaurant_model.dart';
 import 'package:movegui_core/models/super_markt_model.dart';
@@ -70,9 +70,9 @@ void initServices(Env env) {
   getIt.registerLazySingleton<PressingService>(
     () => PressingService(
       api: api,
-      fromJson: PressingModel.fromJson,
+      fromJson: LaundryModel.fromJson,
       userService: UserService(api: api, fromJson: UserModel.fromJson),
-      fromJsonService: PressingServiceModel.fromJson,
+      fromJsonService: LaundryServiceModel.fromJson,
       establishmentMembersService: EstablishmentMembersService(
         fromJson: EstablishmentMembersModel.fromJson,
         api: api,
@@ -85,7 +85,7 @@ void initServices(Env env) {
   getIt.registerLazySingleton<PressingServicesTypesService>(
     () => PressingServicesTypesService(
       api: api,
-      fromJson: PressingServiceTypeModel.fromJson,
+      fromJson: LaundryServiceTypeModel.fromJson,
     ),
   );
   getIt.registerLazySingleton<UserService>(
@@ -144,7 +144,7 @@ void initServices(Env env) {
     () => PressingArticleFormService(
       seedService: getIt<SeedService>(),
       controllerFactory: () {
-        return ProductFormController<PressingArticleModel>();
+        return ProductFormController<LaundryProductModel>();
       },
       api: api,
     ),

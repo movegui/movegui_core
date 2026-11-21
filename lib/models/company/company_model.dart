@@ -1,7 +1,15 @@
-import 'package:movegui_core/models/company_model.dart';
+import 'package:movegui_core/enum/enum_establishment_category.dart';
+import 'package:movegui_core/enum/enum_establishment_type.dart';
+import 'package:movegui_core/models/adress_model.dart';
+import 'package:movegui_core/models/establishment/establishment_model.dart';
+import 'package:movegui_core/models/open_hours_model.dart';
+import 'package:movegui_core/models/supplier_model.dart';
+import 'package:movegui_core/models/model.dart';
 
-class PressingModel extends CompanyModel {
-  PressingModel({
+
+class CompanyModel extends EstablishmentModel {
+  final List<SupplierModel> suppliers;
+   CompanyModel({
     required super.id,
     required super.name,
     required super.createdAt,
@@ -11,23 +19,19 @@ class PressingModel extends CompanyModel {
     required super.imageUrl,
     required super.phone,
     required super.weeklyHours,
-    required super.establishmentType,
+    super.establishmentType = EstablishmentType.other,
     required super.rating,
     required super.reviewCount,
     required super.establishmentCategory,
-    super.isComplete,
-    super.isActive,
-     required super.suppliers,
+    required super.isComplete,
+    required super.isActive,
+    required this.suppliers
   });
 
   @override
   Map<String, dynamic> toJson() => {...super.toJson()};
 
-  factory PressingModel.fromJson(Map<String, dynamic> json) => CompanyModel.fromJson(json) as PressingModel;
-  
-  
-  /*
-  {
+  factory CompanyModel.fromJson(Map<String, dynamic> json) {
     final addressJson = json['address'];
     if (addressJson is! Map) {
       throw FormatException(
@@ -35,12 +39,9 @@ class PressingModel extends CompanyModel {
       );
     }
 
-    final rawStoreType = json['establishmentType'];
-    final String normalizedStoreTypeId = rawStoreType is Map
-        ? (rawStoreType['id'] as String? ?? rawStoreType['name'] as String? ?? 'other')
-        : (rawStoreType is String ? rawStoreType : 'other');
 
-    return PressingModel(
+
+    return CompanyModel(
       id: json['id'],
       name: json['name'],
       description: json['description'],
@@ -49,23 +50,21 @@ class PressingModel extends CompanyModel {
       email: json['email'] ?? '',
       phone: json['telephon'] ?? '',
       createdAt: json['createdAt'] != null
-          ? json['createdAt'].toDate()
+          ? Model.parseDateTime(json['createdAt'])
           : DateTime.now(),
       weeklyHours: (json['weeklyHours'] as List? ?? [])
           .map((e) => OpenHoursModel.fromJson(e))
           .toList(),
-      establishmentType: EstablishmentType.values.firstWhere(
-          (store) => store.id == normalizedStoreTypeId || store.name == normalizedStoreTypeId,
-          orElse: () => EstablishmentType.other,
-        ),
+      establishmentType: EstablishmentType.fromJson(json['establishmentType']),
+      
       rating: (json['rating'] as num?)?.toDouble() ?? 0.0,
       reviewCount: json['reviewCount'] as int? ?? 0,
       isComplete: json['isComplete'] is bool
           ? json['isComplete'] as bool
           : false,
       isActive: json['isActive'] is bool ? json['isActive'] as bool : false,
-      establishmentCategory: EstablishmentCategory.fromJson(json['establishmentCategory'])
+      establishmentCategory: EstablishmentCategory.fromJson(json['establishmentCategory']), 
+      suppliers: (json['suppliers'] as List? ?? []).map((elem) => SupplierModel.fromJson(elem)).toList(),
     );
   }
-  */
 }

@@ -3,9 +3,9 @@ import 'package:intl/intl.dart';
 import 'package:movegui_core/consts/app_constants.dart';
 import 'package:movegui_core/models/user/user_model.dart';
 import 'package:movegui_core/responsive.dart';
-import 'package:movegui_core/widgets/util/display_widget.dart';
-import 'package:movegui_core/widgets/util/status_widget.dart';
-import 'package:movegui_core/widgets/util/text_widget.dart';
+import 'package:movegui_core/ui/util/display_widget.dart';
+import 'package:movegui_core/ui/util/status_widget.dart';
+import 'package:movegui_core/ui/util/text_widget.dart';
 
 
 class GlobalMethods {

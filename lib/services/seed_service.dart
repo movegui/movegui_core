@@ -8,10 +8,10 @@ import 'package:movegui_core/models/adress_model.dart';
 import 'package:movegui_core/models/geo_cordinates_model.dart';
 import 'package:movegui_core/models/open_hours_model.dart';
 import 'package:movegui_core/models/person_model.dart';
-import 'package:movegui_core/models/pressing/pressing_article_model.dart';
-import 'package:movegui_core/models/pressing/pressing_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model.dart';
+import 'package:movegui_core/models/laundry/laundry_product_model.dart';
+import 'package:movegui_core/models/laundry/laundry_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/models/user/user_model.dart';
 import 'package:movegui_core/services/api_service.dart';
 import 'package:uuid/uuid.dart';
@@ -23,7 +23,7 @@ class SeedService {
 
   SeedService({required this.api, required this.faker});
 
-  Future<PressingModel> generatePressing() async => PressingModel(
+  Future<LaundryModel> generatePressing() async => LaundryModel(
     id: Uuid().v4(),
     name: faker.company.name(),
     createdAt: DateTime.now(),
@@ -106,14 +106,14 @@ class SeedService {
     rating: 0,
     reviewCount: 0,
     establishmentType: EstablishmentType.laundry,
-    establishmentCategory: EstablishmentCategory.pressing_etablishment, suppliers: [],
+    establishmentCategory: EstablishmentCategory.laundry_etablishment, suppliers: [],
   );
 
-  Future<PressingServiceModel> getGeneratedPressingService() async =>
-      PressingServiceModel(
+  Future<LaundryServiceModel> getGeneratedPressingService() async =>
+      LaundryServiceModel(
         id: Uuid().v4(),
         product: await generatePressingArticle(),
-        serviceType: PressingServiceTypeModel(
+        serviceType: LaundryServiceTypeModel(
           id: '003',
           name: 'Nettoyage à sec',
           description: 'Nettoyage spécial pour tissus délicats',
@@ -131,6 +131,7 @@ class SeedService {
         createdAt: DateTime.now(),
         description: faker.person.name(),
         isActive: true,
+         establishmentCategory: EstablishmentCategory.laundry_etablishment,
       );
 
   Future<PersonModel> getGeneratedPerson() async => PersonModel(
@@ -188,8 +189,8 @@ class SeedService {
     isActive: true,
   );
 
-  Future<PressingServiceTypeModel>
-  generatePressingTypeModel() async => PressingServiceTypeModel(
+  Future<LaundryServiceTypeModel>
+  generatePressingTypeModel() async => LaundryServiceTypeModel(
     id: Uuid().v4(),
     name: faker.company.name(),
     description: faker.randomGenerator.fromPattern([
@@ -203,8 +204,8 @@ class SeedService {
     isActive: true,
   );
 
-  Future<PressingArticleModel> generatePressingArticle() async =>
-      PressingArticleModel(
+  Future<LaundryProductModel> generatePressingArticle() async =>
+      LaundryProductModel(
         id: Uuid().v4(),
         name: faker.lorem.word(),
         createdAt: DateTime.now(),
@@ -214,6 +215,7 @@ class SeedService {
         category: faker.company.name(),
         isAvailable: true,
         currency: 'GNF',
-        description: faker.company.name(),
+        description: faker.company.name(), 
+        establishmentCategory: EstablishmentCategory.laundry_etablishment,
       );
 }

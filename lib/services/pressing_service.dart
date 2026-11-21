@@ -1,14 +1,14 @@
 
 
 import 'package:movegui_core/consts/movegui_collections.dart';
-import 'package:movegui_core/models/pressing/pressing_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model.dart';
+import 'package:movegui_core/models/laundry/laundry_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/services/establishment_service.dart';
 import 'package:movegui_core/services/interfaces/i_pressing_services.dart';
 
 class PressingService
-    extends EstablishmentService<PressingModel, PressingServiceModel>
+    extends EstablishmentService<LaundryModel, LaundryServiceModel>
     implements IPressingServices {
   PressingService({
     required super.api,
@@ -23,9 +23,9 @@ class PressingService
     return MoveGuiCollections.COLLECTION_PRESSINGS;
   }
 
-  List<PressingServiceModel> getServicesByType(
-    List<PressingServiceModel> services,
-    PressingServiceTypeModel? selectedServiceType,
+  List<LaundryServiceModel> getServicesByType(
+    List<LaundryServiceModel> services,
+    LaundryServiceTypeModel? selectedServiceType,
   ) {
     return services
         .where((service) => service.serviceType.id == selectedServiceType?.id)

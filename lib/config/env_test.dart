@@ -1,4 +1,6 @@
-import 'package:movegui_admin_panel/config/env.dart';
+
+
+import 'package:movegui_core/config/env.dart';
 
 class EnvTest extends Env {
   @override

@@ -1,16 +1,16 @@
 
 
-import 'package:movegui_core/models/pressing/pressing_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
 
 abstract class IPressingServices  {
-  Future<List<PressingServiceModel>> getAllServices(String id);
-    Future<PressingModel> addServices(
-    PressingModel pressing,
-    List<PressingServiceModel>? services,
+  Future<List<LaundryServiceModel>> getAllServices(String id);
+    Future<LaundryModel> addServices(
+    LaundryModel laundry,
+    List<LaundryServiceModel>? services,
   );
     Future<void> deleteServices(
-    PressingModel pressing,
-    List<PressingServiceModel>? services,
+    LaundryModel laundry,
+    List<LaundryServiceModel>? services,
   );
  }

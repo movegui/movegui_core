@@ -1,5 +1,13 @@
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/foundation.dart';
+import 'package:movegui_core/config/env.dart';
+import 'package:movegui_core/config/environment.dart';
+
 class FirebaseConfig {
   static Future<void> init(Env env) async {
     await Firebase.initializeApp();

@@ -2,13 +2,13 @@
 
 import 'package:movegui_core/enum/enum_user_role.dart';
 import 'package:movegui_core/models/open_hours_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
 import 'package:movegui_core/models/user/user_model.dart';
 
 abstract final class PressingCompletion {
   static bool isComplete({
     required List<UserModel>? staff,
-    required List<PressingServiceModel>? services,
+    required List<LaundryServiceModel>? services,
     required List<OpenHoursModel> weeklyHours,
   }) =>
       hasConfiguredStaff(staff) &&
@@ -20,7 +20,7 @@ abstract final class PressingCompletion {
       hasRole(staff, UserRole.Manager) &&
       hasRole(staff, UserRole.Employe);
 
-  static bool hasActiveService(List<PressingServiceModel>? services) =>
+  static bool hasActiveService(List<LaundryServiceModel>? services) =>
       services?.any((service) => service.isActive == true) ?? false;
 
   static bool hasOpenHours(List<OpenHoursModel> weeklyHours) =>

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movegui_core/l10n/app_localizations.dart';
 import 'package:movegui_core/responsive.dart';
-import 'package:movegui_core/widgets/web/subtitle_text.dart';
-import 'package:movegui_core/widgets/web/title_text.dart';
+import 'package:movegui_core/ui/web/subtitle_text.dart';
+import 'package:movegui_core/ui/web/title_text.dart';
 import 'assets_manager.dart';
 
 class MyAppFunctions {

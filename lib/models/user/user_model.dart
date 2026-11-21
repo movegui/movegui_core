@@ -29,7 +29,7 @@ class UserModel extends Model {
     ...super.toJson(),
     'username': username,
     'updatedAt': updatedAt,
-    'person': personModel!.toJson(),
+    'personModel': personModel?.toJson(),
     'isVerified': isVerified,
     'role': role.name,
   };
@@ -37,11 +37,11 @@ class UserModel extends Model {
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
     id: json['id'] ?? '',
     name: json['name'] ?? '',
-    createdAt: json['createdAt']?.toDate(),
+    createdAt: Model.parseDateTime(json['createdAt']),
     username: json['username'] ?? '',
-    updatedAt: json['updatedAt']?.toDate(),
-    personModel: json['person'] != null
-        ? PersonModel.fromJson(json['person'])
+    updatedAt: Model.parseDateTime(json['updatedAt']),
+    personModel: json['personModel'] != null
+        ? PersonModel.fromJson(json['personModel'])
         : null,
     isVerified: json['isVerified'] ?? false,
     role: UserRole.values.firstWhere(
@@ -50,4 +50,6 @@ class UserModel extends Model {
     ),
     isActive: json['isActive'] ?? false,
   );
+
+
 }

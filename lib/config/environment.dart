@@ -1,4 +1,6 @@
 
+import 'package:movegui_core/config/env.dart';
+
 class Environment {
   static const String envName = String.fromEnvironment(
     'ENV',

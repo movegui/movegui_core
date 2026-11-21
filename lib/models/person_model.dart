@@ -53,7 +53,7 @@ class PersonModel extends Model {
   factory PersonModel.fromJson(Map<String, dynamic> json) => PersonModel(
     id: json['id'],
     name: json['name'],
-    createdAt: json['createdAt'].toDate(),
+    createdAt: Model.parseDateTime(json['createdAt']),
     firstName: json['firstName'],
     lastName: json['lastName'],
     middleName: json['middleName'],

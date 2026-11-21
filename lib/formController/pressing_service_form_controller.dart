@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:movegui_core/formController/form_controller.dart';
 import 'package:movegui_core/formController/pressing_service_type_form_controller.dart';
 import 'package:movegui_core/formController/product_form_controller.dart';
-import 'package:movegui_core/models/pressing/pressing_article_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model.dart';
+import 'package:movegui_core/models/laundry/laundry_product_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 
 
 class PressingServiceFormController
-    extends FormController<PressingServiceModel> {
+    extends FormController<LaundryServiceModel> {
   final formKey = GlobalKey<FormState>();
   final description = TextEditingController();
   final processingTime = TextEditingController();
@@ -19,10 +19,10 @@ class PressingServiceFormController
   final minPriceFocusNode = FocusNode();
   final maxPrice = TextEditingController();
   final maxPriceFocusNode = FocusNode();
-  PressingServiceTypeModel? serviceType;
+  LaundryServiceTypeModel? serviceType;
   Duration? estimatedDuration;
   final serviceTypeFormController = PressingServiceTypeFormController();
-  final articleFormController = ProductFormController<PressingArticleModel>();
+  final articleFormController = ProductFormController<LaundryProductModel>();
   String? id;
   double? basePrice;
   DateTime? createdAt;
@@ -50,7 +50,7 @@ class PressingServiceFormController
   }
 
   @override
-  Future<void> setData(PressingServiceModel model) async {
+  Future<void> setData(LaundryServiceModel model) async {
     id = model.id;
     minPrice.text = model.minPrice.toString();
     maxPrice.text = model.maxPrice.toString();

@@ -1,5 +1,5 @@
 import 'package:movegui_core/enum/enum_establishment_type.dart';
-import 'package:movegui_core/models/company_model.dart';
+import 'package:movegui_core/models/company/company_model.dart';
 
 class RestaurantModel extends CompanyModel {
   RestaurantModel({

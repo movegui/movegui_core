@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:movegui_core/models/order_model.dart';
+import 'package:movegui_core/models/order/order_model.dart';
 
 
 class ShoppingProvider with ChangeNotifier {

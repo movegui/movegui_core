@@ -58,12 +58,7 @@ class EstablishmentDiscoveryModel extends Model {
           json['createdAt'] != null
               ? json['createdAt'].toDate()
               : DateTime.now(),
-      establishmentType: EstablishmentType.values.firstWhere(
-        (store) =>
-            store.id == normalizedStoreTypeId ||
-            store.name == normalizedStoreTypeId,
-        orElse: () => EstablishmentType.other,
-      ),
+      establishmentType: EstablishmentType.fromJson(json['establishmentType']),
       rating: (json['rating'] as num?)?.toDouble() ?? 0.0,
       isActive: json['isActive'] is bool ? json['isActive'] as bool : false,
     );

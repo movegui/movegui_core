@@ -5,9 +5,9 @@ import 'package:movegui_core/formController/pressing_form_controller.dart';
 import 'package:movegui_core/formController/store_submit_hadler.dart';
 import 'package:movegui_core/l10n/app_localizations.dart';
 import 'package:movegui_core/models/establishment/establishment_members_model.dart';
-import 'package:movegui_core/models/pressing/pressing_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model.dart';
+import 'package:movegui_core/models/laundry/laundry_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/services/form_services/pressing_form_service.dart';
 import 'package:movegui_core/services/message_service.dart';
 import 'package:movegui_core/services/pressing_service.dart';
@@ -18,7 +18,7 @@ import 'package:uuid/uuid.dart';
 class PressingSubmitHandler
     extends
         StoreSubmitHadler<
-          PressingModel,
+          LaundryModel,
           PressingService,
           PressingFormController,
           PressingFormService
@@ -54,7 +54,7 @@ class PressingSubmitHandler
         .adressFormService
         .getModel(form.addressForm);
 
-    final pressing = PressingModel(
+    final pressing = LaundryModel(
       id: form.id ?? Uuid().v4(),
       name: form.name.text,
       description: form.description.text,
@@ -75,7 +75,7 @@ class PressingSubmitHandler
 
     final previousServices = form.editMode && form.id != null
         ? await service.getAllServices(form.id!)
-        : <PressingServiceModel>[];
+        : <LaundryServiceModel>[];
     final currentServices = form.services ?? [];
     final savedPressing = await service.addModel(pressing);
     final currentServicesById = {
@@ -95,7 +95,7 @@ class PressingSubmitHandler
     final previousCounts = _countServicesByTypeId(previousServices);
     final currentCounts = _countServicesByTypeId(currentServices);
     final affectedTypeIds = {...previousCounts.keys, ...currentCounts.keys};
-    final typesById = <String, PressingServiceTypeModel>{
+    final typesById = <String, LaundryServiceTypeModel>{
       for (final pressingService in previousServices)
         pressingService.serviceType.id: pressingService.serviceType,
       for (final pressingService in currentServices)
@@ -188,7 +188,7 @@ class PressingSubmitHandler
   }
 
   Map<String, int> _countServicesByTypeId(
-    Iterable<PressingServiceModel> services,
+    Iterable<LaundryServiceModel> services,
   ) {
     final counts = <String, int>{};
     for (final pressingService in services) {

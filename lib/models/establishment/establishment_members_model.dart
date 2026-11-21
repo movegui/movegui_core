@@ -45,12 +45,7 @@ class EstablishmentMembersModel extends Model {
     return EstablishmentMembersModel(
       userId: json['userId'],
       storeId: json['storeId'],
-      establishmentType: EstablishmentType.values.firstWhere(
-        (store) =>
-            store.id == normalizedStoreTypeId ||
-            store.name == normalizedStoreTypeId,
-        orElse: () => EstablishmentType.other,
-      ),
+      establishmentType: EstablishmentType.fromJson(json['establishmentType']),
       roles: json['roles'] != null
           ? (json['roles'] as List)
                 .map<EstablishmentRole>(

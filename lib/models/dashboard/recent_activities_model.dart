@@ -3,9 +3,6 @@ import 'package:movegui_core/enum/enum_activity_type.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/model.dart';
 
-
-
-
 class RecentActivitiesModel extends Model {
   final EstablishmentType establishmentType;
   final ActivityCategory category;
@@ -38,7 +35,11 @@ class RecentActivitiesModel extends Model {
 
     return RecentActivitiesModel(
       id: document.id,
-      establishmentType: EstablishmentType.values.firstWhere((type) => type.name == (data['establishmentType'] as EstablishmentType).name, orElse: () => EstablishmentType.other),
+      establishmentType: EstablishmentType.values.firstWhere(
+        (type) =>
+            type.name == (data['establishmentType'] as EstablishmentType).name,
+        orElse: () => EstablishmentType.other,
+      ),
       category: ActivityCategory.values.firstWhere(
         (category) => category.name == data['category'],
         orElse: () => ActivityCategory.system,
@@ -57,32 +58,52 @@ class RecentActivitiesModel extends Model {
     );
   }
 
-  factory RecentActivitiesModel.fromjson(Map<String, dynamic> json) =>
-      RecentActivitiesModel(
-        establishmentType: EstablishmentType.values.firstWhere(
-          (store) => store.name == (json['establishmentType'] as EstablishmentType).name,
-          orElse: () => EstablishmentType.other,
-        ),
-        category: ActivityCategory.values.firstWhere(
-          (category) => category.name == json['category'],
-          orElse: () => ActivityCategory.system,
-        ),
-        title: json['title'],
-        metadata: Map<String, dynamic>.from(json['metadata'] as Map? ?? {}),
-        id: json['id'],
-        name: json['name'],
-        createdAt: json['createdAt'] != null
-            ? json['createdAt'].toDate()
-            : DateTime.now(),
+  factory RecentActivitiesModel.fromjson(Map<String, dynamic> json) {
+
+    final rawActivityType = json['activityType'];
+    final String normalizedActivityTypeId = rawActivityType is Map
+        ? (rawActivityType['id'] as String? ??
+              rawActivityType['name'] as String? ??
+              'other')
+        : (rawActivityType is String ? rawActivityType : 'other');
+
+    return RecentActivitiesModel(
+      establishmentType: EstablishmentType.fromJson(json['establishmentType']),
+      
+      category: ActivityCategory.values.firstWhere(
+        (category) => category.name == json['category'],
+        orElse: () => ActivityCategory.system,
+      ),
+      title: json['title'],
+      metadata: Map<String, dynamic>.from(json['metadata'] as Map? ?? {}),
+      id: json['id'],
+      name: json['name'],
+      createdAt: json['createdAt'] != null
+          ? Model.parseDateTime(json['createdAt'])
+          : DateTime.now(),
+
+      activityType: ActivityType.values.firstWhere(
+        (store) =>
+            store.id == normalizedActivityTypeId ||
+            store.name == normalizedActivityTypeId,
+        orElse: () => ActivityType.other,
+      ),
+      userId: json['userId'],
+      orderId: json['orderId'],
+      establishmentId: json['establishmentId']
+
+      /*
         activityType: ActivityType.values.firstWhere(
           (value) => value.name == json['activityType'].name,
         ),
-      );
+        */
+    );
+  }
 
   @override
   Map<String, dynamic> toJson() => {
     ...super.toJson(),
-    'type': establishmentType.toJson(),
+    'establishmentType': establishmentType.toJson(),
     'category': category,
     'title': title,
     'metadata': metadata,
@@ -91,6 +112,4 @@ class RecentActivitiesModel extends Model {
     'orderId': orderId,
     'activityType': activityType,
   };
-
-
 }

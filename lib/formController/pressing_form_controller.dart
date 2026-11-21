@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:movegui_core/enum/enum_establishment_category.dart';
 import 'package:movegui_core/formController/pressing_completion.dart';
 import 'package:movegui_core/formController/store_form_controller.dart';
-import 'package:movegui_core/models/pressing/pressing_model.dart';
-import 'package:movegui_core/models/pressing/pressing_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_model.dart';
 
 
-class PressingFormController extends StoreFormController<PressingModel> {
+class PressingFormController extends StoreFormController<LaundryModel> {
      final formKey = GlobalKey<FormState>();
- final List<PressingServiceModel>? services = [];
+ final List<LaundryServiceModel>? services = [];
 
         bool get isPressingCompleted => PressingCompletion.isComplete(
         staff: staff,
@@ -16,11 +16,11 @@ class PressingFormController extends StoreFormController<PressingModel> {
         weeklyHours: weeklyHours,
         );
   EstablishmentCategory establishmentCategory =
-      EstablishmentCategory.pressing_etablishment;
+      EstablishmentCategory.laundry_etablishment;
   
 
   @override
-  Future<void> setData(PressingModel model) async {
+  Future<void> setData(LaundryModel model) async {
     await super.setData(model);
   }
 

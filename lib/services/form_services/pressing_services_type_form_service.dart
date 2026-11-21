@@ -1,13 +1,13 @@
 
 import 'package:movegui_core/formController/pressing_service_type_form_controller.dart';
-import 'package:movegui_core/models/pressing/pressing_service_type_model.dart';
+import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/services/form_services/form_service.dart';
 import 'package:uuid/uuid.dart';
 
 class PressingServicesTypeFormService
     extends
         FormService<
-          PressingServiceTypeModel,
+          LaundryServiceTypeModel,
           PressingServiceTypeFormController
         > {
   PressingServicesTypeFormService({
@@ -17,13 +17,13 @@ class PressingServicesTypeFormService
   });
 
   @override
-  Future<PressingServiceTypeModel> generateModel() {
+  Future<LaundryServiceTypeModel> generateModel() {
     return seedService.generatePressingTypeModel();
   }
 
   @override
-  PressingServiceTypeModel getDefaultModel() {
-    return PressingServiceTypeModel(
+  LaundryServiceTypeModel getDefaultModel() {
+    return LaundryServiceTypeModel(
       id: Uuid().v4(),
       name: 'default',
       description: 'default',
@@ -36,10 +36,10 @@ class PressingServicesTypeFormService
   }
 
   @override
-  Future<PressingServiceTypeModel> getModel(
+  Future<LaundryServiceTypeModel> getModel(
     PressingServiceTypeFormController controller,
   ) async {
-    return PressingServiceTypeModel(
+    return LaundryServiceTypeModel(
       id: controller.id ?? Uuid().v4(),
       name: controller.name.text,
       description: controller.description.text,

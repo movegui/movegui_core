@@ -56,7 +56,7 @@ class AdressModel extends Model {
     id: json['id'] ?? '',
     name: json['name'] ?? '',
     createdAt: json['createdAt'] != null
-        ? json['createdAt'].toDate()
+        ? Model.parseDateTime(json['createdAt'])
         : DateTime.now(),
     geoCordinates: json['geoCordinates'] != null
         ? GeoCordinatesModel.fromJson(json['geoCordinates'])
@@ -68,9 +68,9 @@ class AdressModel extends Model {
       (adressType) => adressType.name == json['adressType'],
       orElse: () => AdressType.other,
     ),
-    zipCode: json['zipCode'] ?? '',
-    ville: json['ville'] ?? '',
-    pays: json['pays'] ?? '',
+    zipCode: json['zipCode'] ?? '00000',
+    ville: json['ville'] ?? 'Conakry',
+    pays: json['pays'] ?? 'Guinee',
     isDefault: json['isDefault'] ?? false,
     appartementNumber: json['appartementNumber'] ?? 0,
     floor: json['floor'] ?? 0,

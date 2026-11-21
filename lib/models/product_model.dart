@@ -34,7 +34,7 @@ abstract class ProductModel extends Model {
     'isAvailable': isAvailable,
     'imageUrl': imageUrl ?? '',
     'category': category ?? '',
-    'currency': currency,
+    'currency': currency ?? 'GNF',
     'description': description ?? '',
     'materials' : materials?.map( (e) => e != null ? e.toJson(): '').toList()
   };

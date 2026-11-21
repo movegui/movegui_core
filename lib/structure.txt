@@ -1,0 +1,24 @@
+movegui_core/
+└── lib/
+    ├── domain/
+    │   ├── models/
+    │   │   ├── establishment_model.dart
+    │   │   ├── establishment_discovery_model.dart
+    │   │   └── module_item.dart
+    │   │
+    │   └── enums/
+    │       ├── establishment_type.dart
+    │       └── module_type.dart
+    │
+    ├── viewmodels/
+    │   ├── establishment_discovery_view_model.dart
+    │   └── module_item_view_model.dart
+    │
+    └── ui/
+        ├── extensions/
+        │   ├── module_type_ui_extension.dart
+        │   └── establishment_type_ui_extension.dart
+        │
+        └── widgets/
+            ├── establishment_discovery_card.dart
+            └── module_card.dart

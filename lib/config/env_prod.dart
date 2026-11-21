@@ -1,5 +1,6 @@
 
-import 'package:movegui/config/env.dart';
+
+import 'package:movegui_core/config/env.dart';
 
 class EnvProd extends Env {
   @override

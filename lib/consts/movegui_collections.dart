@@ -30,5 +30,6 @@ class MoveGuiCollections {
   static final String COLLECTION_ESTABLISHMENT_DISCOVERY =
       'establishment_dicovery';
   static final String COLLECTION_USER_CART = 'cart';
+  static final String COLLECTION_DELIVERIES = 'deliveries';
   
 }

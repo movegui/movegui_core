@@ -3,8 +3,8 @@ import 'package:movegui_core/formController/address_form_controller.dart';
 import 'package:movegui_core/formController/form_controller.dart';
 import 'package:movegui_core/models/adress_model.dart';
 import 'package:movegui_core/models/establishment/establishment_model.dart';
-import 'package:movegui_core/models/order_item_model.dart';
-import 'package:movegui_core/models/order_model.dart';
+import 'package:movegui_core/models/order/order_item_model.dart';
+import 'package:movegui_core/models/order/order_model.dart';
 import 'package:movegui_core/models/user/user_model.dart';
 import 'package:movegui_core/services/form_services/form_service.dart';
 
