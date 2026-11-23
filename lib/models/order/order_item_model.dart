@@ -1,7 +1,7 @@
 import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/catalog_model.dart';
 
-abstract class OrderItemModel<S extends ServiceModel> extends Model {
+abstract class OrderItemModel<S extends CatalogModel> extends Model {
   final S service;
    int qty;
    double total;
