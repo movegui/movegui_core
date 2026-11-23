@@ -1,7 +1,5 @@
 import 'package:movegui_core/enum/enum_establishment_category.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
-import 'package:movegui_core/models/establishment/establishment_category_model.dart';
-import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/product_model.dart';
 
 abstract class EstablishmentProductModel extends ProductModel {

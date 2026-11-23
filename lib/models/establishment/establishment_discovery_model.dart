@@ -40,14 +40,6 @@ class EstablishmentDiscoveryModel extends Model {
       );
     }
 
-    final rawStoreType = json['establishmentType'];
-    final String normalizedStoreTypeId =
-        rawStoreType is Map
-            ? (rawStoreType['id'] as String? ??
-                rawStoreType['name'] as String? ??
-                'other')
-            : (rawStoreType is String ? rawStoreType : 'other');
-
     return EstablishmentDiscoveryModel(
       id: json['id'],
       name: json['name'],

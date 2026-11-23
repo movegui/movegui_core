@@ -35,12 +35,6 @@ class EstablishmentMembersModel extends Model {
   };
 
   factory EstablishmentMembersModel.fromJson(Map<String, dynamic> json) {
-    final rawStoreType = json['establishmentType'];
-    final String normalizedStoreTypeId = rawStoreType is Map
-        ? (rawStoreType['id'] as String? ??
-              rawStoreType['name'] as String? ??
-              'other')
-        : (rawStoreType is String ? rawStoreType : 'other');
 
     return EstablishmentMembersModel(
       userId: json['userId'],

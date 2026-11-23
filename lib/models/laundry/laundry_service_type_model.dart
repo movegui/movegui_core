@@ -15,8 +15,6 @@ class LaundryServiceTypeModel extends TypesModel {
     required super.createdAt,
     required super.description,
     required super.isActive,
-    required super.iconName,
-    required super.colorValue,
   });
 
   @override
@@ -48,8 +46,6 @@ class LaundryServiceTypeModel extends TypesModel {
         createdAt: json['createdAt'] != null
             ? Model.parseDateTime(json['createdAt'])
             : DateTime.now(),
-        iconName: json['iconName'] ?? json['iconName'] ?? 'dry_cleaning',
-        colorValue: json['colorValue'] ?? json['colorValue'] ?? 'disabled',
         servicesCount: json['servicesCount'] ?? 0,
         isActive: json['isActive'] ?? false,
       );
@@ -69,8 +65,6 @@ class LaundryServiceTypeModel extends TypesModel {
       id: id,
       name: name ?? this.name,
       description: description ?? this.description,
-      iconName: iconName ?? this.iconName,
-      colorValue: colorValue ?? this.colorValue,
       isActive: isActive ?? this.isActive,
       servicesCount: servicesCount ?? this.servicesCount,
       pricingType: pricingType ?? this.pricingType,

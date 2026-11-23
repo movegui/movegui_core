@@ -2,9 +2,9 @@ import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/establishment/establishment_order_item_model.dart';
 import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/product_model.dart';
-import 'package:movegui_core/models/service_model.dart';
+import 'package:movegui_core/models/catalog_model.dart';
 
-class CompanyOrderItemModel<P extends ProductModel, S extends ServiceModel<P>>
+class CompanyOrderItemModel<P extends ProductModel, S extends CatalogModel<P>>
     extends EstablishmentOrderItemModel<P, S> {
   CompanyOrderItemModel({
     required super.id,

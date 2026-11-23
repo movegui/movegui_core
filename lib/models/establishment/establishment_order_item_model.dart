@@ -1,9 +1,9 @@
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/order/order_item_model.dart';
 import 'package:movegui_core/models/product_model.dart';
-import 'package:movegui_core/models/service_model.dart';
+import 'package:movegui_core/models/catalog_model.dart';
 
-abstract class EstablishmentOrderItemModel<P extends ProductModel, S extends ServiceModel<P>>
+abstract class EstablishmentOrderItemModel<P extends ProductModel, S extends CatalogModel<P>>
     extends OrderItemModel<S> {
   final EstablishmentType establishmentType;
   EstablishmentOrderItemModel({

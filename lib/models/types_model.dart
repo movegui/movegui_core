@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:movegui_core/consts/app_colors.dart';
 import 'package:movegui_core/models/model.dart';
 import 'package:uuid/uuid.dart';
 
@@ -10,8 +8,6 @@ class TypesModel extends Model {
     required super.createdAt,
     required super.description,
     required super.isActive,
-    required super.iconName,
-    required super.colorValue,
   });
 
   @override
@@ -24,8 +20,6 @@ class TypesModel extends Model {
     createdAt: json['createdAt'] != null
         ? json['createdAt'].toDate()
         : DateTime.now(),
-    iconName: json['iconName'] ?? 'dry_cleaning',
-    colorValue: json['colorValue'] ?? AppColors.disabled,
     isActive: json['isActive'] ?? false,
   );
 
@@ -35,10 +29,9 @@ class TypesModel extends Model {
     createdAt: DateTime.now(),
     description: '',
     isActive: false,
-    iconName: '',
-    colorValue: '',
   );
 
+/*
   IconData get icon {
     switch (iconName) {
       case 'home':
@@ -100,4 +93,5 @@ class TypesModel extends Model {
         return AppColors.disabled;
     }
   }
+  */
 }

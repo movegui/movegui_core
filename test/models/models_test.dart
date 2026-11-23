@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:movegui_core/consts/app_colors.dart';
 import 'package:movegui_core/models/widget_info.dart';
 import 'package:movegui_core/models/footer_config_model.dart';
 import 'package:movegui_core/models/model.dart';
@@ -48,12 +47,10 @@ void main() {
         createdAt: _createdAt,
         description: '',
         isActive: true,
-        iconName: 'home',
-        colorValue: 'disabled',
+
       );
 
       //  expect(type.icon, Icons.home);
-      expect(type.color, AppColors.disabled);
       expect(type.toJson()['name'], 'Laundry');
     });
   });

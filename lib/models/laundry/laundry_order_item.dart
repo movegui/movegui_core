@@ -1,11 +1,11 @@
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/laundry/laundry_product_model.dart';
 import 'package:movegui_core/models/company/company_order_item_model.dart';
-import 'package:movegui_core/models/laundry/laundry_service_model.dart';
+import 'package:movegui_core/models/laundry/laundry_catalog_model.dart';
 
 
 class LaundryOrderItem
-    extends CompanyOrderItemModel<LaundryProductModel, LaundryServiceModel> {
+    extends CompanyOrderItemModel<LaundryProductModel, LaundryCatalogModel> {
   LaundryOrderItem({
     required super.id,
     required super.name,
@@ -23,7 +23,7 @@ class LaundryOrderItem
   factory LaundryOrderItem.fromJson(Map<String, dynamic> json) {
     final companyOrderItem = CompanyOrderItemModel.fromJson(
       json,
-      serviceFromJson: LaundryServiceModel.fromJson,
+      serviceFromJson: LaundryCatalogModel.fromJson,
     );
 
     return LaundryOrderItem(

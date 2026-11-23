@@ -44,8 +44,6 @@ void main(){
 
       final company = CompanyModel.fromJson(json);
       expect(company.name, 'My_company');
-
     });
-
   });
 }

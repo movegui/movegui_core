@@ -1,0 +1,75 @@
+name: Finish MoveGui Core Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+concurrency:
+  group: movegui-core-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Tag and publish release
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout merged commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
+          fetch-depth: 0
+
+      - name: Validate release version
+        id: version
+        shell: bash
+        env:
+          RELEASE_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          set -euo pipefail
+          BRANCH_VERSION="${RELEASE_BRANCH#release/}"
+          PUBSPEC_VERSION="$(sed -n 's/^version:[[:space:]]*//p' pubspec.yaml | head -n 1)"
+          [[ "$BRANCH_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || exit 1
+          [[ "$PUBSPEC_VERSION" == "$BRANCH_VERSION" ]] || { echo "Branch/pubspec version mismatch"; exit 1; }
+          if git rev-parse "v$PUBSPEC_VERSION" >/dev/null 2>&1; then
+            echo "Tag v$PUBSPEC_VERSION already exists"
+            exit 1
+          fi
+          echo "version=$PUBSPEC_VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$PUBSPEC_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Final validation
+        run: |
+          flutter pub get
+          dart format --output=none --set-exit-if-changed .
+          flutter analyze --fatal-infos
+          flutter test
+
+      - name: Create tag
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a "$TAG" -m "MoveGui Core $VERSION"
+          git push origin "$TAG"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          gh release create "$TAG" --title "MoveGui Core $VERSION" --generate-notes --target "${{ github.event.pull_request.merge_commit_sha }}"

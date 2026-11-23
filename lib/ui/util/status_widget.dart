@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:movegui_core/consts/app_colors.dart';
 import 'package:movegui_core/l10n/app_localizations.dart';
 
-
 class StatusWidget extends StatelessWidget {
-  const StatusWidget({super.key, required this.isActive, this.textAlign = TextAlign.center, this.icon});
+  const StatusWidget({
+    super.key,
+    required this.isActive,
+    required this.activColor,
+    required this.disabledColor,
+    this.textAlign = TextAlign.center,
+    this.icon,
+  });
   final bool isActive;
   final TextAlign? textAlign;
   final IconData? icon;
+  final Color activColor;
+  final Color disabledColor;
 
   @override
   Widget build(BuildContext context) {
-    final color = isActive
-        ? AppColors.active
-        : AppColors.disabled;
+    final color = isActive ? activColor : disabledColor;
     final alignment = switch (textAlign) {
       TextAlign.center => Alignment.center,
       TextAlign.end => AlignmentDirectional.centerEnd,
@@ -27,7 +32,7 @@ class StatusWidget extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-           Icon( icon ?? Icons.work, color: color),
+          Icon(icon ?? Icons.work, color: color),
           const SizedBox(width: 8),
           Text(
             isActive

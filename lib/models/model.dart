@@ -7,8 +7,6 @@ class Model extends HiveObject {
   final DateTime createdAt;
   final String? description;
   bool? isActive;
-  String? iconName;
-  String? colorValue;
 
   Model({
     required this.id,
@@ -16,8 +14,6 @@ class Model extends HiveObject {
     required this.createdAt,
     this.description,
     this.isActive,
-    this.iconName,
-    this.colorValue,
   });
 
   Map<String, dynamic> toJson() => {
@@ -26,8 +22,6 @@ class Model extends HiveObject {
     'createdAt': createdAt,
     'description': description ?? '',
     'isActive': isActive ?? false,
-    'iconName': iconName,
-    'colorValue': colorValue,
   };
 
   static DateTime parseDateTime(dynamic value) {

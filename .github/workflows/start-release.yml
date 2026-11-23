@@ -1,0 +1,96 @@
+name: Start MoveGui Core Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: 'Stable version, for example 1.2.0'
+        required: true
+        type: string
+
+concurrency:
+  group: movegui-core-release
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Prepare release
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout develop
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          fetch-depth: 0
+
+      - name: Validate release version
+        id: version
+        shell: bash
+        env:
+          VERSION: ${{ inputs.release_version }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Version must use X.Y.Z, for example 1.2.0"
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/v$VERSION" >/dev/null 2>&1; then
+            echo "Tag v$VERSION already exists"
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "branch=release/$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Validate develop
+        run: |
+          dart format --output=none --set-exit-if-changed .
+          flutter analyze --fatal-infos
+          flutter test
+
+      - name: Update pubspec version
+        shell: bash
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, re
+          from pathlib import Path
+          path = Path('pubspec.yaml')
+          text = path.read_text(encoding='utf-8')
+          text, count = re.subn(r'(?m)^version:\s*\S+\s*$', f"version: {os.environ['VERSION']}", text, count=1)
+          if count != 1:
+              raise SystemExit('Exactly one top-level version entry is required in pubspec.yaml')
+          path.write_text(text, encoding='utf-8')
+          PY
+          git diff --check
+
+      - name: Create release branch and PR to master
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ github.token }}
+          base: master
+          branch: ${{ steps.version.outputs.branch }}
+          delete-branch: true
+          commit-message: 'chore(release): prepare ${{ steps.version.outputs.version }}'
+          title: 'Release MoveGui Core ${{ steps.version.outputs.version }}'
+          body: |
+            Automated MoveGui Core release preparation.
+
+            - Source: develop
+            - Version: ${{ steps.version.outputs.version }}
+            - Target: master

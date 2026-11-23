@@ -1,5 +1,5 @@
 import 'package:movegui_core/models/model.dart';
-import 'package:movegui_core/models/service_model.dart';
+import 'package:movegui_core/models/catalog_model.dart';
 
 abstract class OrderItemModel<S extends ServiceModel> extends Model {
   final S service;
