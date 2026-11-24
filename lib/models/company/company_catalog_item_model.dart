@@ -1,12 +1,12 @@
 import 'package:movegui_core/enum/enum_establishment_category.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/company/company_product_model.dart';
-import 'package:movegui_core/models/establishment/establishment_catalog_model.dart';
+import 'package:movegui_core/models/establishment/establishment_catalog_item_model.dart';
 import 'package:movegui_core/models/model.dart';
 
-class CompanyCatalogModel<P extends CompanyProductModel>
-    extends EstablishmentCatalogModel<P> {
-  CompanyCatalogModel({
+class CompanyCatalogItemModel<P extends CompanyProductModel>
+    extends EstablishmentCatalogItemModel<P> {
+  CompanyCatalogItemModel({
     required super.id,
     required super.minPrice,
     required super.maxPrice,
@@ -15,7 +15,7 @@ class CompanyCatalogModel<P extends CompanyProductModel>
     super.estimatedDuration,
     required super.name,
     required super.createdAt,
-    required super.product,
+    required super.productId,
     required super.description,
     super.currency = 'GNF',
     required super.establishmentCategory,
@@ -28,23 +28,19 @@ class CompanyCatalogModel<P extends CompanyProductModel>
 
   @override
   Map<String, dynamic> toJson() => {
-        ...super.toJson(),
-        'estimatedDurationInMinutes': estimatedDuration?.inMinutes,
-      };
+    ...super.toJson(),
+    'estimatedDurationInMinutes': estimatedDuration?.inMinutes,
+  };
 
-  factory CompanyCatalogModel.fromJson(
-    Map<String, dynamic> json, {
-    required P Function(Map<String, dynamic> json) productFromJson,
-  }) {
-    return CompanyCatalogModel<P>(
+  factory CompanyCatalogItemModel.fromJson(
+    Map<String, dynamic> json,) {
+    return CompanyCatalogItemModel<P>(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
       createdAt: json['createdAt'] != null
           ? Model.parseDateTime(json['createdAt'])
           : DateTime.now(),
-      product: productFromJson(
-        requiredJsonMap(json['product'], 'product'),
-      ),
+      productId: json['productId'],
       minPrice: _toDouble(json['minPrice']),
       maxPrice: _toDouble(json['maxPrice']),
       basePrice: _toDouble(json['basePrice']),
@@ -52,12 +48,8 @@ class CompanyCatalogModel<P extends CompanyProductModel>
       description: json['description'] as String? ?? '',
       currency: json['currency'] as String? ?? 'GNF',
       isActive: json['isActive'] as bool? ?? true,
-      establishmentCategory: EstablishmentCategory.fromJson(
-        json['establishmentCategory'],
-      ),
-      establishmentType: EstablishmentType.fromJson(
-        json['establishmentType'],
-      ),
+      establishmentCategory: EstablishmentCategory.fromJson(json['establishmentCategory']),
+      establishmentType: EstablishmentType.fromJson(json['establishmentType']),
     );
   }
 }
@@ -93,9 +85,7 @@ Duration? _parseDuration(Map<String, dynamic> json) {
     }
   }
 
-  throw const FormatException(
-    'Invalid "estimatedDurationInMinutes" value.',
-  );
+  throw const FormatException('Invalid "estimatedDurationInMinutes" value.');
 }
 
 Map<String, dynamic> requiredJsonMap(Object? value, String field) {
@@ -107,7 +97,5 @@ Map<String, dynamic> requiredJsonMap(Object? value, String field) {
     return Map<String, dynamic>.from(value);
   }
 
-  throw FormatException(
-    'Missing or invalid "$field" map in company service.',
-  );
+  throw FormatException('Missing or invalid "$field" map in company service.');
 }

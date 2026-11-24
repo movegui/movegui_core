@@ -21,23 +21,11 @@ void main() {
             'id': '001',
             'name': 'item1',
             'createdAt': _createdAt, //
-            'service': {
+            'catalogItem': {
               'id': '001',
               'name': 'service1',
               'createdAt': _createdAt, //
-              'product': {
-                'id': '001',
-                'name': 'item1',
-                'createdAt': _createdAt, //
-                'supplierId': 'supp001',
-                'price': 100.0,
-                'isAvailable': true,
-                'imageUrl': '',
-                'category': '',
-                'currency': 'GNF',
-                'description': '',
-                'materials': [],
-              },
+              'productId': "product-001",
               'minPrice': 1000.0,
               'maxPrice': 1000.0,
               'basePrice': 1000.0,
@@ -72,8 +60,8 @@ void main() {
       expect(cart.storeId, 'store_1');
       expect(cart.userId, 'user_1');
       expect(cart.items, hasLength(1));
-      expect(cart.items[0].service.name, 'service1');
-      expect(cart.items[0].service.serviceType.name, 'type1');
+      expect(cart.items[0].catalogItem.name, 'service1');
+      expect(cart.items[0].catalogItem.serviceType.name, 'type1');
     });
   });
 }

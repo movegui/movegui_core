@@ -34,7 +34,6 @@ class Model extends HiveObject {
     }
 
     if (value is String) {
-      print('la valeur:  $value');
       return DateTime.parse(value);
     }
 

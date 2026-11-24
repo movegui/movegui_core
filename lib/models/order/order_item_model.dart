@@ -1,28 +1,35 @@
 import 'package:movegui_core/models/model.dart';
-import 'package:movegui_core/models/catalog_model.dart';
+import 'package:movegui_core/models/catalog_item_model.dart';
 
-abstract class OrderItemModel<S extends CatalogModel> extends Model {
-  final S service;
-   int qty;
-   double total;
-     final Map<String, dynamic>? options;
+abstract class OrderItemModel<S extends CatalogItemModel> extends Model {
+  final S catalogItem;
+  final int qty;
+  final double unitPrice;
+  final Map<String, dynamic>? options;
+  final String currency;
+  final double discount;
+  final String? note;
 
   OrderItemModel({
     required super.id,
     required super.name,
     required super.createdAt,
-    required this.service,
+    required this.catalogItem,
     required this.qty,
-    required this.total,
-    this.options
+    required this.unitPrice,
+    required this.currency,
+    required this.discount,
+    this.note,
+    this.options,
   });
 
   @override
   Map<String, dynamic> toJson() => {
     ...super.toJson(),
-    'service': service.toJson(),
+    'catalogItem': catalogItem.toJson(),
     'qty': qty,
-    'total': total,
-    'options': options
+    'options': options,
   };
+
+  double get total => qty * (catalogItem.basePrice ?? 0);
 }

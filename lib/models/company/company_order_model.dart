@@ -1,7 +1,7 @@
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/enum/enum_order_status.dart';
 import 'package:movegui_core/models/company/company_product_model.dart';
-import 'package:movegui_core/models/company/company_catolog_model.dart';
+import 'package:movegui_core/models/company/company_catalog_item_model.dart';
 import 'package:movegui_core/models/company/company_model.dart';
 import 'package:movegui_core/models/establishment/establishment_order_model.dart';
 import 'package:movegui_core/models/model.dart';
@@ -11,7 +11,7 @@ import 'package:movegui_core/models/company/company_order_item_model.dart';
 class CompanyOrderModel<
   M extends CompanyModel,
   P extends CompanyProductModel,
-  S extends CompanyCatalogModel<P>,
+  S extends CompanyCatalogItemModel<P>,
   I extends CompanyOrderItemModel<P, S>
 >
     extends EstablishmentOrderModel<M, I> {
