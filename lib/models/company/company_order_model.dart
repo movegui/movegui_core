@@ -6,6 +6,7 @@ import 'package:movegui_core/models/company/company_model.dart';
 import 'package:movegui_core/models/establishment/establishment_order_model.dart';
 import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/company/company_order_item_model.dart';
+import 'package:movegui_core/models/adress_model.dart';
 
 
 class CompanyOrderModel<
@@ -53,8 +54,8 @@ class CompanyOrderModel<
     storeId: json['storeId'],
     deliveryDate: json['deliveryDate'],
     pickupDate: json['pickupDate'],
-    pickupAdress: json['pickupAdress'],
-    deliveryAdress: json['deliveryAdress'],
+    pickupAdress:  AdressModel.fromJson(Map<String, dynamic>.from(json['pickupAdress'])),
+    deliveryAdress: AdressModel.fromJson(Map<String, dynamic>.from(json['deliveryAdress'])),
     establishmentType: EstablishmentType.fromJson(json['establishmentType']),
     status: OrderStatus.values.firstWhere(
       (status) => status.name == (json['status'] as String?),

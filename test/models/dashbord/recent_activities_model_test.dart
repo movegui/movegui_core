@@ -10,7 +10,7 @@ void main() {
         'name': 'Recent',
         'createdAt': _createdAt,
         'establishmentType': {
-          'id': 'laundry',
+          'module': 'laundry',
           'nameKey': 'module_pressing_name',
         },
         'activityType': {
@@ -24,14 +24,14 @@ void main() {
           'id': 'laundry',
           'name': 'Etablishment',
           'establishmentType': {
-            'id': 'laundry',
+            'module': 'laundry',
             'nameKey': 'module_pressing_name',
           },
         },
         'title': 'Creation Laundry',
         'establishmentId': 'pressing-001',
         'userId': 'user-001',
-        'orderId': 'orderId-001'
+        'orderId': 'orderId-001',
       };
 
       final recent = RecentActivitiesModel.fromjson(json);

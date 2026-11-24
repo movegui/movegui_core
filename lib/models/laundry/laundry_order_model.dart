@@ -1,13 +1,12 @@
-
-
-import 'package:movegui_core/enum/enum_establishment_type.dart';
-import 'package:movegui_core/models/adress_model.dart';
-import 'package:movegui_core/models/establishment/establishment_order_model.dart';
+import 'package:movegui_core/models/company/company_order_model.dart';
+import 'package:movegui_core/models/laundry/laundry_catalog_item_model.dart';
 import 'package:movegui_core/models/laundry/laundry_model.dart';
 import 'package:movegui_core/models/laundry/laundry_order_item.dart';
+import 'package:movegui_core/models/laundry/laundry_product_model.dart';
+
 
 class LaundryOrderModel
-    extends EstablishmentOrderModel<LaundryModel, LaundryOrderItem> {
+    extends CompanyOrderModel<LaundryModel, LaundryProductModel, LaundryCatalogItemModel, LaundryOrderItem> {
   LaundryOrderModel({
     required super.id,
     required super.name,
@@ -31,31 +30,35 @@ class LaundryOrderModel
 
   factory LaundryOrderModel.fromJson(
     Map<String, dynamic> json,
-  ) => LaundryOrderModel(
-    items:
-        (json['items'] as List? ?? [])
-            .map((e) => LaundryOrderItem.fromJson(e))
-            .toList(),
-    pickupDate:
-        json['pickupDate'] != null ? DateTime.parse(json['pickupDate']) : null,
-    deliveryDate:
-        json['deliveryDate'] != null
-            ? DateTime.parse(json['deliveryDate'])
-            : null,
-    total: json['total'],
-    id: json['id'],
-    name: json['name'],
-    createdAt:
-        json['createdAt'] != null ? json['createdAt'].toDate() : DateTime.now(),
-    pickupAdress: AdressModel.fromJson(json['pickupAdress']),
-    deliveryAdress: AdressModel.fromJson(json['deliveryAdress']),
-    status: json['status'],
-    currency: json['currency'],
-    orderId: json['orderId'],
-    customerId: json['customerId'],
-    storeId: json['storeId'],
-    establishmentType: EstablishmentType.values.firstWhere(
-      (type) => type.name == (json['establishmentType'] as Map)['name'],
-    ),
-  );
+  ) {
+    final companyOrder = CompanyOrderModel<
+      LaundryModel,
+      LaundryProductModel,
+      LaundryCatalogItemModel,
+      LaundryOrderItem
+    >.fromJson(
+      json,
+      orderItemFormJson: (itemJson) => LaundryOrderItem.fromJson(
+        itemJson,
+      ),
+    );
+
+    return LaundryOrderModel(
+      id: companyOrder.id,
+      name: companyOrder.name,
+      createdAt: companyOrder.createdAt,
+      customerId: companyOrder.customerId,
+      total: companyOrder.total,
+      items: companyOrder.items,
+      storeId: companyOrder.storeId,
+      deliveryDate: companyOrder.deliveryDate,
+      pickupDate: companyOrder.pickupDate,
+      pickupAdress: companyOrder.pickupAdress,
+      deliveryAdress: companyOrder.deliveryAdress,
+      status: companyOrder.status,
+      currency: companyOrder.currency,
+      orderId: companyOrder.orderId,
+      establishmentType: companyOrder.establishmentType,
+    );
+  }
 }

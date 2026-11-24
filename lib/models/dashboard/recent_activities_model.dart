@@ -35,11 +35,7 @@ class RecentActivitiesModel extends Model {
 
     return RecentActivitiesModel(
       id: document.id,
-      establishmentType: EstablishmentType.values.firstWhere(
-        (type) =>
-            type.name == (data['establishmentType'] as EstablishmentType).name,
-        orElse: () => EstablishmentType.other,
-      ),
+      establishmentType: EstablishmentType.fromJson(data['establishmentType']),
       category: ActivityCategory.values.firstWhere(
         (category) => category.name == data['category'],
         orElse: () => ActivityCategory.system,

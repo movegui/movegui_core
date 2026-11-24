@@ -19,8 +19,6 @@ void main() {
         'createdAt': _createdAt,
         'description': '',
         'isActive': false,
-        'iconName': null,
-        'colorValue': null,
       });
     });
   });
@@ -28,13 +26,17 @@ void main() {
 
 
   group('button_info_test', () {
-    final widgetInfo = WidgetInfo(
+    test('button test model', (){
+          final widgetInfo = WidgetInfo(
       title: 'my Button',
       enabled: true,
       routeName: '/home',
     );
     expect(widgetInfo.enabled, true);
     expect(widgetInfo.subtitle, null);
+
+    });
+
   });
 
 

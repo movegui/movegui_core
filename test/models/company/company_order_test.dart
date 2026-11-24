@@ -1,6 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movegui_core/enum/enum_order_status.dart';
-import 'package:movegui_core/models/laundry/laundry_order_model.dart';
+import 'package:movegui_core/models/company/company_catalog_item_model.dart';
+import 'package:movegui_core/models/company/company_order_model.dart';
+import 'package:movegui_core/models/company/company_order_item_model.dart';
+import 'package:movegui_core/models/company/company_product_model.dart';
 
 void main() {
   group('Order test', () {
@@ -94,10 +97,19 @@ void main() {
           'nameKey': 'module_pressing_name',
         },
       };
-/*
-      final order = CompanyOrderModel.fromJson(json);
+
+      final order = CompanyOrderModel.fromJson(
+        json,
+        orderItemFormJson: (itemJson) =>
+            CompanyOrderItemModel<CompanyProductModel,
+                CompanyCatalogItemModel<CompanyProductModel>>.fromJson(
+          itemJson,
+          catalogFromJson:
+              CompanyCatalogItemModel<CompanyProductModel>.fromJson,
+        ),
+      );
       expect(order.status, OrderStatus.pending);
-      */
+      
 
     });
   });
