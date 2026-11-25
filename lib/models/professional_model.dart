@@ -12,7 +12,7 @@ class ProfessionalModel extends CompanyModel {
     required super.imageUrl,
     required super.phone,
     required super.weeklyHours,
-     super.establishmentType = EstablishmentType.professional,
+    super.establishmentType = EstablishmentType.professional,
     required super.isActive,
     required super.establishmentCategory,
     required super.rating,
@@ -24,9 +24,10 @@ class ProfessionalModel extends CompanyModel {
   @override
   Map<String, dynamic> toJson() => {...super.toJson()};
 
-  factory ProfessionalModel.fromJson(Map<String, dynamic> json) =>  CompanyModel.fromJson(json) as ProfessionalModel;
+  factory ProfessionalModel.fromJson(Map<String, dynamic> json) =>
+      CompanyModel.fromJson(json) as ProfessionalModel;
 
-/*
+  /*
       ProfessionnelModel(
         id: json['id'],
         name: json['name'],

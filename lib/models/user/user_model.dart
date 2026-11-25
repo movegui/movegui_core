@@ -1,4 +1,3 @@
-
 import 'package:movegui_core/enum/enum_user_role.dart';
 import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/person_model.dart';
@@ -21,7 +20,7 @@ class UserModel extends Model {
     required this.isVerified,
     required this.role,
     this.resetLink = '',
-    required super.isActive ,
+    required super.isActive,
   });
 
   @override
@@ -50,6 +49,4 @@ class UserModel extends Model {
     ),
     isActive: json['isActive'] ?? false,
   );
-
-
 }

@@ -12,7 +12,7 @@ class RestaurantModel extends CompanyModel {
     required super.imageUrl,
     required super.phone,
     required super.weeklyHours,
-     super.establishmentType = EstablishmentType.restaurant,
+    super.establishmentType = EstablishmentType.restaurant,
     required super.isActive,
     required super.establishmentCategory,
     required super.rating,
@@ -24,9 +24,10 @@ class RestaurantModel extends CompanyModel {
   @override
   Map<String, dynamic> toJson() => {...super.toJson()};
 
-  factory RestaurantModel.fromJson(Map<String, dynamic> json) => CompanyModel.fromJson(json) as RestaurantModel;
+  factory RestaurantModel.fromJson(Map<String, dynamic> json) =>
+      CompanyModel.fromJson(json) as RestaurantModel;
 
-/*
+  /*
       RestaurantModel(
         id: json['id'],
         name: json['name'],

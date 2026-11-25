@@ -12,21 +12,22 @@ class PatisserieModel extends CompanyModel {
     required super.imageUrl,
     required super.phone,
     required super.weeklyHours,
-     super.establishmentType = EstablishmentType.pastry,
+    super.establishmentType = EstablishmentType.pastry,
     required super.isActive,
     required super.establishmentCategory,
     required super.rating,
     required super.reviewCount,
-    required super.isComplete, 
+    required super.isComplete,
     required super.suppliers,
   });
 
   @override
   Map<String, dynamic> toJson() => {...super.toJson()};
 
-  factory PatisserieModel.fromJson(Map<String, dynamic> json) => CompanyModel.fromJson(json) as PatisserieModel;
+  factory PatisserieModel.fromJson(Map<String, dynamic> json) =>
+      CompanyModel.fromJson(json) as PatisserieModel;
 
-/*
+  /*
       PatisserieModel(
         id: json['id'],
         name: json['name'],

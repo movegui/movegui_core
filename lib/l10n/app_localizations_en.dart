@@ -21,22 +21,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get service_deactive_title => 'Service disabled';
 
   @override
-  String get service_active_descrip => 'The service will be visible and available for ordering.';
+  String get service_active_descrip =>
+      'The service will be visible and available for ordering.';
 
   @override
-  String get service_deactive_descrip => 'The service will not be visible and will not be available for ordering.';
+  String get service_deactive_descrip =>
+      'The service will not be visible and will not be available for ordering.';
 
   @override
   String get delete_pressing_service_title => 'Delete Service';
 
   @override
-  String get delete_pressing_service_question => 'Would you like to delete this Service ?';
+  String get delete_pressing_service_question =>
+      'Would you like to delete this Service ?';
 
   @override
   String get delete_pressing_title => 'Delete Dry Cleaner';
 
   @override
-  String get delete_pressing_question => 'Would you like to delete this Dry Cleaner ?';
+  String get delete_pressing_question =>
+      'Would you like to delete this Dry Cleaner ?';
 
   @override
   String get commune_title => 'City';
@@ -51,7 +55,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get open_hours_title => 'Open Hours';
 
   @override
-  String get open_hours_sub_title => 'Specify the days and times when the dry cleaner accepts orders.';
+  String get open_hours_sub_title =>
+      'Specify the days and times when the dry cleaner accepts orders.';
 
   @override
   String open_hours_open_title(Object category) {
@@ -82,7 +87,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get admin_add_dashboard_title => 'Administrator Informations';
 
   @override
-  String get admin_add_dashboard_sub_title => 'Add Administrators Informations details';
+  String get admin_add_dashboard_sub_title =>
+      'Add Administrators Informations details';
 
   @override
   String get employe_bar_title => 'Employe Configuration';
@@ -106,7 +112,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get employe_add_dashboard_title => 'Employe Informations';
 
   @override
-  String get employe_add_dashboard_sub_title => 'Add Employes Informations details';
+  String get employe_add_dashboard_sub_title =>
+      'Add Employes Informations details';
 
   @override
   String get manager_bar_title => 'Manager Configuration';
@@ -127,7 +134,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get manager_add_dashboard_title => 'Manager Informations';
 
   @override
-  String get manager_add_dashboard_sub_title => 'Add Manager Informations details';
+  String get manager_add_dashboard_sub_title =>
+      'Add Manager Informations details';
 
   @override
   String get driver_bar_title => 'Driver Configuration';
@@ -181,13 +189,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_service_washing_descrip => 'Washing clothes with water';
 
   @override
-  String get pressing_service_dry_cleaning_descrip => 'Special cleaning for delicate fabrics';
+  String get pressing_service_dry_cleaning_descrip =>
+      'Special cleaning for delicate fabrics';
 
   @override
-  String get pressing_service_ironing_descrip => 'Remove wrinkles with an iron or a press';
+  String get pressing_service_ironing_descrip =>
+      'Remove wrinkles with an iron or a press';
 
   @override
-  String get pressing_service_laundry_descrip => 'Full-service laundry and dry cleaning';
+  String get pressing_service_laundry_descrip =>
+      'Full-service laundry and dry cleaning';
 
   @override
   String get pressing_service_folding_descrip => 'Clothes folded after washing';
@@ -196,16 +207,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_service_stain_removal_descrip => 'Stain removal';
 
   @override
-  String get pressing_service_service_express_descrip => 'Same-day express cleaning';
+  String get pressing_service_service_express_descrip =>
+      'Same-day express cleaning';
 
   @override
-  String get pressing_service_home_laundry_descrip => 'Sheets, blankets, curtains, etc...';
+  String get pressing_service_home_laundry_descrip =>
+      'Sheets, blankets, curtains, etc...';
 
   @override
-  String get pressing_service_work_clothing_descrip => 'Uniforms, Suits, Work Clothes';
+  String get pressing_service_work_clothing_descrip =>
+      'Uniforms, Suits, Work Clothes';
 
   @override
-  String get pressing_service_delicate_fabrics_descrip => 'Silk, Wool, Leather, Evening gowns, etc...';
+  String get pressing_service_delicate_fabrics_descrip =>
+      'Silk, Wool, Leather, Evening gowns, etc...';
 
   @override
   String get pressing_service_labelText => 'Product';
@@ -238,7 +253,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_services_types_title => 'Types of Services';
 
   @override
-  String get pressing_services_types_subtitle => 'Define the available service categories';
+  String get pressing_services_types_subtitle =>
+      'Define the available service categories';
 
   @override
   String get pressing_services_types_all_title => 'All services types';
@@ -250,13 +266,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_service_empty_title => 'No Service found';
 
   @override
-  String get pressing_service_empty_subtitle => 'Please Create a new Service or update existing services.';
+  String get pressing_service_empty_subtitle =>
+      'Please Create a new Service or update existing services.';
 
   @override
-  String get pressing_problem_hours_non_configured => 'Schedules not configured';
+  String get pressing_problem_hours_non_configured =>
+      'Schedules not configured';
 
   @override
-  String get pressing_problem_service_non_configured => 'No services configured';
+  String get pressing_problem_service_non_configured =>
+      'No services configured';
 
   @override
   String get pressing_proble_staff_employe => 'No Employe assigned';
@@ -268,10 +287,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_proble_staff_owner => 'No Owner assigned';
 
   @override
-  String get pressing_problem_incomplete_infos => 'Incompleted Dry Cleaning Informations';
+  String get pressing_problem_incomplete_infos =>
+      'Incompleted Dry Cleaning Informations';
 
   @override
-  String get pressing_incomplete_no_problem_subtitle => 'All configurations are completed';
+  String get pressing_incomplete_no_problem_subtitle =>
+      'All configurations are completed';
 
   @override
   String get pressing_service_configured => 'Dry Cleaners configured';
@@ -304,7 +325,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_service_search_hinterText => 'Search for a service';
 
   @override
-  String get pressing_service_estimated_duration_labelText => 'Estimated Duration';
+  String get pressing_service_estimated_duration_labelText =>
+      'Estimated Duration';
 
   @override
   String get pressing_service_estimated_duration_hinterText => 'Ex. 24h';
@@ -325,37 +347,43 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_dashboard_title => 'Dry Cleaner Management';
 
   @override
-  String get pressing_dashboard_sub_title => 'Global administration of MoveGui dry cleaners';
+  String get pressing_dashboard_sub_title =>
+      'Global administration of MoveGui dry cleaners';
 
   @override
   String get pressing_add_dashboard_title => 'Dry Cleaner Information';
 
   @override
-  String get pressing_add_dashboard_sub_title => 'Add the business details, contacts and services.';
+  String get pressing_add_dashboard_sub_title =>
+      'Add the business details, contacts and services.';
 
   @override
   String get pressing_all_dashboard_title => 'Dry Cleaners Liste';
 
   @override
-  String get pressing_all_dashboard_sub_title => 'View and manage registed Dry Cleaners';
+  String get pressing_all_dashboard_sub_title =>
+      'View and manage registed Dry Cleaners';
 
   @override
   String get pressing_services_dashboard_title => 'Laundry  Services';
 
   @override
-  String get pressing_services_dashboard_sub_title => 'Add the services, offerings, categories and tariffs proposed by the dry cleaner';
+  String get pressing_services_dashboard_sub_title =>
+      'Add the services, offerings, categories and tariffs proposed by the dry cleaner';
 
   @override
   String get pressing_service_add_dashboard_title => 'Add a Service';
 
   @override
-  String get pressing_service_add_dashboard_sub_title => 'Add the services, offerings, categories and tariffs proposed by the dry cleaner';
+  String get pressing_service_add_dashboard_sub_title =>
+      'Add the services, offerings, categories and tariffs proposed by the dry cleaner';
 
   @override
   String get pressing_service_type_add_dashboard_title => 'Add a Service Type';
 
   @override
-  String get pressing_service_type_add_dashboard_sub_title => 'Add the types of services offered by your dry cleaner';
+  String get pressing_service_type_add_dashboard_sub_title =>
+      'Add the types of services offered by your dry cleaner';
 
   @override
   String get pressing_hours_open_sub_text => 'Dry Cleaner is open today';
@@ -487,7 +515,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get success_send_message_message => 'Thank you for your message';
 
   @override
-  String get success_registration_new_user => 'Your account has been successfully created';
+  String get success_registration_new_user =>
+      'Your account has been successfully created';
 
   @override
   String get success_login_message => 'Login successful';
@@ -496,19 +525,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get success_login_reset_password => 'Lien envoyé avec Succes';
 
   @override
-  String get login_forget_password_txt => 'Enter your email address and we will send you a link to reset your password ';
+  String get login_forget_password_txt =>
+      'Enter your email address and we will send you a link to reset your password ';
 
   @override
   String get error_send_mail_title => 'Authentication Error';
 
   @override
-  String get error_send_mail_message => 'You must sign before using this functionnality';
+  String get error_send_mail_message =>
+      'You must sign before using this functionnality';
 
   @override
   String get error_input_hint_message => 'Please write your message.';
 
   @override
-  String get error_firebase_initialisation => 'FirebaseAuth initialization failed:';
+  String get error_firebase_initialisation =>
+      'FirebaseAuth initialization failed:';
 
   @override
   String get error_login_message => 'Login failed';
@@ -517,13 +549,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get error_register_title => 'Registration Error';
 
   @override
-  String get error_register_with_phone_message => 'We were unable to register your phone number. Please try again !';
+  String get error_register_with_phone_message =>
+      'We were unable to register your phone number. Please try again !';
 
   @override
   String get error_application => 'We have more then one Super Admin';
 
   @override
-  String get error_register_with_email_message => 'We were unable to register your email. Please try again !';
+  String get error_register_with_email_message =>
+      'We were unable to register your email. Please try again !';
 
   @override
   String get error_authorization => 'Not Authorize';
@@ -544,7 +578,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get error_no_user_connected_title => 'Authentication Error';
 
   @override
-  String get error_no_user_connected_message => 'No user is currently signed in.';
+  String get error_no_user_connected_message =>
+      'No user is currently signed in.';
 
   @override
   String get error_duree_invalide => 'Invalid duration';
@@ -688,7 +723,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get input_hint_pressing_name => 'Dry Cleaner Name';
 
   @override
-  String get input_hint_description_pressing => 'Description of the Dry Cleaner';
+  String get input_hint_description_pressing =>
+      'Description of the Dry Cleaner';
 
   @override
   String get input_hint_birthdate_error_msg => 'Please select your birthdate.';
@@ -700,16 +736,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get input_hint_select_birthdate => 'Please select your birthdate';
 
   @override
-  String get movegui_info_title => 'MoveGui – Motorcycle Delivery & Transport in Guinea';
+  String get movegui_info_title =>
+      'MoveGui – Motorcycle Delivery & Transport in Guinea';
 
   @override
-  String get movegui_info_text_1 => 'MoveGui is an innovative company specialising in food delivery and motorcycle transport in Guinea.Our mission is to make delivery more accessible, more transparent and more affordable for everyone.';
+  String get movegui_info_text_1 =>
+      'MoveGui is an innovative company specialising in food delivery and motorcycle transport in Guinea.Our mission is to make delivery more accessible, more transparent and more affordable for everyone.';
 
   @override
-  String get movegui_info_text_2 => 'We offer a fixed price for every journey, regardless of the distance, ensuring complete transparency for our customers.No more price surprises – just a fast, reliable and straightforward service..';
+  String get movegui_info_text_2 =>
+      'We offer a fixed price for every journey, regardless of the distance, ensuring complete transparency for our customers.No more price surprises – just a fast, reliable and straightforward service..';
 
   @override
-  String get movegui_info_text_3 => 'Thanks to our partnerships with local restaurants, we offer low-cost deliveries whilst supporting the local economy.MoveGui is the perfect blend of technology, accessibility and efficiency.';
+  String get movegui_info_text_3 =>
+      'Thanks to our partnerships with local restaurants, we offer low-cost deliveries whilst supporting the local economy.MoveGui is the perfect blend of technology, accessibility and efficiency.';
 
   @override
   String get movegui_panel => 'Movegui Configuration Panel';
@@ -826,10 +866,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get module_configuration_title => 'Configuration Modules';
 
   @override
-  String get module_configuration_subtitle => 'Configure the global settings related to MoveGui pressings.';
+  String get module_configuration_subtitle =>
+      'Configure the global settings related to MoveGui pressings.';
 
   @override
-  String get module_configuration_to_complete_title => 'Configuration to complete';
+  String get module_configuration_to_complete_title =>
+      'Configuration to complete';
 
   @override
   String module_configuration_to_complete_subtitle(Object pressings) {
@@ -840,25 +882,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get module_configuration_item_pressing_title => 'Dry Cleaners';
 
   @override
-  String get module_configuration_item_pressing_subtitle => 'Manage information and the status of dry cleaners.';
+  String get module_configuration_item_pressing_subtitle =>
+      'Manage information and the status of dry cleaners.';
 
   @override
-  String get module_configuration_item_pressing_type_service_title => 'Services Types Configured';
+  String get module_configuration_item_pressing_type_service_title =>
+      'Services Types Configured';
 
   @override
-  String get module_configuration_item_pressing_type_service_subtitle => 'View the types of services that have been configured.';
+  String get module_configuration_item_pressing_type_service_subtitle =>
+      'View the types of services that have been configured.';
 
   @override
-  String get module_configuration_item_pressing_open_hours_title => 'Open Hours';
+  String get module_configuration_item_pressing_open_hours_title =>
+      'Open Hours';
 
   @override
-  String get module_configuration_item_pressing_open_hours_subtitle => 'Manage the dry cleaners\' hours of operation.';
+  String get module_configuration_item_pressing_open_hours_subtitle =>
+      'Manage the dry cleaners\' hours of operation.';
 
   @override
-  String get module_configuration_item_pressing_configured_services_title => 'Configured Services';
+  String get module_configuration_item_pressing_configured_services_title =>
+      'Configured Services';
 
   @override
-  String get module_configuration_item_pressing_configured_services_subtitle => 'Number of services offered by dry cleaners.';
+  String get module_configuration_item_pressing_configured_services_subtitle =>
+      'Number of services offered by dry cleaners.';
 
   @override
   String get tooltip_add => 'Clic here to Add ';
@@ -1203,7 +1252,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get label_birthdate => 'Birthdate';
 
   @override
-  String get exception_login_message => 'The Supplied User credential is incorrect, Please check your email address and password';
+  String get exception_login_message =>
+      'The Supplied User credential is incorrect, Please check your email address and password';
 
   @override
   String get tooltip_sign_in_with_google => 'Sign in with Google';
@@ -1359,7 +1409,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dashbord_movegui_title => 'Dashboard MoveGui';
 
   @override
-  String get dashbord_movegui_sub_title => 'Overview of orders, revenue and users';
+  String get dashbord_movegui_sub_title =>
+      'Overview of orders, revenue and users';
 
   @override
   String get dashbord_orders_state_title => 'Order Status';
@@ -1410,7 +1461,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get max_adress_title => 'Maximum Adresses';
 
   @override
-  String get max_adress_message => 'The maximum number of addresses is 5 per user. Please delete any others.';
+  String get max_adress_message =>
+      'The maximum number of addresses is 5 per user. Please delete any others.';
 
   @override
   String get current_position => 'Current Position';
@@ -1422,7 +1474,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get owner_add_dashboard_title => 'Owners Informations';
 
   @override
-  String get owner_add_dashboard_sub_title => 'Add the Owners informations details';
+  String get owner_add_dashboard_sub_title =>
+      'Add the Owners informations details';
 
   @override
   String get add_slot_title => 'Add a time slot';
@@ -1437,37 +1490,47 @@ class AppLocalizationsEn extends AppLocalizations {
   String get static_module_item_pressing_actifs_title => 'Actives';
 
   @override
-  String get static_module_item_pressing_actifs_subtitle => 'Actives dry Cleaners';
+  String get static_module_item_pressing_actifs_subtitle =>
+      'Actives dry Cleaners';
 
   @override
   String get static_module_item_pressing_inactifs_title => 'Inactives';
 
   @override
-  String get static_module_item_pressing_inactifs_subtitle => 'Inactives Dry Cleaners';
+  String get static_module_item_pressing_inactifs_subtitle =>
+      'Inactives Dry Cleaners';
 
   @override
-  String get static_module_item_pressing_configured_services_title => 'Configured Services';
+  String get static_module_item_pressing_configured_services_title =>
+      'Configured Services';
 
   @override
-  String get static_module_item_pressing_configured_services_subtitle => 'Total of services';
+  String get static_module_item_pressing_configured_services_subtitle =>
+      'Total of services';
 
   @override
-  String get static_module_item_pressing_incomplete_open_hours_title => 'Incomplete Open hours';
+  String get static_module_item_pressing_incomplete_open_hours_title =>
+      'Incomplete Open hours';
 
   @override
-  String get static_module_item_pressing_incomplete_open_hours_subtitle => 'Dry Cleaners to complete';
+  String get static_module_item_pressing_incomplete_open_hours_subtitle =>
+      'Dry Cleaners to complete';
 
   @override
-  String get static_module_item_pressing_services_types_title => 'Services Types';
+  String get static_module_item_pressing_services_types_title =>
+      'Services Types';
 
   @override
-  String get static_module_item_pressing_services_types_subtitle => ' Total Services Types';
+  String get static_module_item_pressing_services_types_subtitle =>
+      ' Total Services Types';
 
   @override
-  String get static_module_item_pressing_services_types_actifs_subtitle => 'Active Services Types';
+  String get static_module_item_pressing_services_types_actifs_subtitle =>
+      'Active Services Types';
 
   @override
-  String get static_module_item_pressing_services_types_inactifs_subtitle => 'Inactive Services Types';
+  String get static_module_item_pressing_services_types_inactifs_subtitle =>
+      'Inactive Services Types';
 
   @override
   String get static_module_item_pressing_owners_title => 'Owners';
@@ -1479,25 +1542,30 @@ class AppLocalizationsEn extends AppLocalizations {
   String get static_module_item_pressing_managers_title => 'Managers';
 
   @override
-  String get static_module_item_pressing_managers_subtitle => 'Manager in total';
+  String get static_module_item_pressing_managers_subtitle =>
+      'Manager in total';
 
   @override
   String get static_module_item_pressing_employes_title => 'Employees';
 
   @override
-  String get static_module_item_pressing_employes_subtitle => 'Employees in total';
+  String get static_module_item_pressing_employes_subtitle =>
+      'Employees in total';
 
   @override
   String get static_module_item_pressing_total_services_title => 'Services';
 
   @override
-  String get static_module_item_pressing_total_services_subtitle => 'Registed Services';
+  String get static_module_item_pressing_total_services_subtitle =>
+      'Registed Services';
 
   @override
-  String get static_module_item_pressing_services_actifs_subtitle => 'Services in total';
+  String get static_module_item_pressing_services_actifs_subtitle =>
+      'Services in total';
 
   @override
-  String get static_module_item_pressing_services_inactifs_subtitle => 'Services in total';
+  String get static_module_item_pressing_services_inactifs_subtitle =>
+      'Services in total';
 
   @override
   String get image_chose_image_text => 'Choose an Image';
@@ -1576,7 +1644,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_title => 'Dry Cleaning';
 
   @override
-  String get pressing_subtitle => 'Manage your dry cleaning business, services, and orders with ease.';
+  String get pressing_subtitle =>
+      'Manage your dry cleaning business, services, and orders with ease.';
 
   @override
   String get pressing_order_title => 'Dry Cleaning Order';
@@ -1597,8 +1666,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pressing_detail_title => 'Dry Cleaning Detail';
 
   @override
-  String get pressing_detail_text_1 => 'Please note: Price to be confirmed by text message before washing!!!';
+  String get pressing_detail_text_1 =>
+      'Please note: Price to be confirmed by text message before washing!!!';
 
   @override
-  String get pressing_detail_text_2 => 'The final price may vary depending on the condition of the clothes. Washing will begin once confirmation has been received via text message';
+  String get pressing_detail_text_2 =>
+      'The final price may vary depending on the condition of the clothes. Washing will begin once confirmation has been received via text message';
 }

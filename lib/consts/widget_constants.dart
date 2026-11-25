@@ -8,7 +8,7 @@ class WidgetConstants {
   static const subtitle_line = 13.0;
   static const crossAxisCountMobil = 2;
   static const crossAxisCountDesktop = 2;
-  static const childAspectRatio = 1.2; 
+  static const childAspectRatio = 1.2;
   static const mainAxisSpacing = 6.0;
   static const crossAxisSpacing = 6.0;
 }

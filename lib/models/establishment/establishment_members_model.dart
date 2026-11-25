@@ -1,4 +1,3 @@
-
 import 'package:movegui_core/enum/enum_establishment_role.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/model.dart';
@@ -19,8 +18,7 @@ class EstablishmentMembersModel extends Model {
     required super.name,
     required super.createdAt,
     required super.isActive,
-    required this.isVerified
-    
+    required this.isVerified,
   });
 
   @override
@@ -30,12 +28,10 @@ class EstablishmentMembersModel extends Model {
     'storeId': storeId,
     'establishmentType': establishmentType.toJson(),
     'roles': roles.map((role) => role.name).toList(),
-    'isVerified': isVerified
-
+    'isVerified': isVerified,
   };
 
   factory EstablishmentMembersModel.fromJson(Map<String, dynamic> json) {
-
     return EstablishmentMembersModel(
       userId: json['userId'],
       storeId: json['storeId'],
@@ -51,9 +47,11 @@ class EstablishmentMembersModel extends Model {
           : <EstablishmentRole>[],
       id: json['id'],
       name: json['name'],
-      createdAt: json['createdAt'] != null ? json['createdAt'].toDate() : DateTime.now(),
+      createdAt: json['createdAt'] != null
+          ? json['createdAt'].toDate()
+          : DateTime.now(),
       isActive: json['isActive'] ?? false,
-      isVerified: json['isVerified'] ?? false
+      isVerified: json['isVerified'] ?? false,
     );
   }
 }

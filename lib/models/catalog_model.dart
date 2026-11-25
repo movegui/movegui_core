@@ -1,43 +1,21 @@
-
-
 import 'package:movegui_core/models/model.dart';
-import 'package:movegui_core/models/product_model.dart';
+import 'package:movegui_core/models/catalog_item_model.dart';
 
-abstract class CatalogModel<M extends ProductModel> extends Model {
-  final double? minPrice;
-  final double? maxPrice;
-  final double? basePrice;
-  final Duration? estimatedDuration;
-  final M product;
-  final String? currency;
-
+abstract class CatalogModel<T extends CatalogItemModel> extends Model {
+  final List<T> items;
 
   CatalogModel({
     required super.id,
     required super.name,
     required super.createdAt,
     required super.isActive,
-    required this.minPrice,
-    required this.maxPrice,
-    required this.basePrice,
-    required this.estimatedDuration,
-    required this.product,
     required super.description,
-    this.currency,
+    required this.items,
   });
-
 
   @override
   Map<String, dynamic> toJson() => {
     ...super.toJson(),
-    'product': product.toJson(),
-    'minPrice': minPrice,
-    'maxPrice': maxPrice,
-    'basePrice': basePrice,
-    'estimatedDuration': estimatedDuration != null
-        ? estimatedDuration!.inMicroseconds
-        : 0,
-    'description': description,
-    'currency': currency ?? 'GNF'
+    'items': items.map((item) => item.toJson()).toList(),
   };
 }

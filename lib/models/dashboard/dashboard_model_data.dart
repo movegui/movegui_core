@@ -1,5 +1,4 @@
 class DashboardModelData {
-
   final int totalOrders;
   final int pendingOrders;
   final int preparingOrders;
@@ -51,4 +50,3 @@ class DashboardModelData {
     );
   }
 }
-

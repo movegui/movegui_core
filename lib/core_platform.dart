@@ -14,5 +14,3 @@ class CorePlatform {
     return EnumCorePlatform.DESKTOP;
   }
 }
-
-

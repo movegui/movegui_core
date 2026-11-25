@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/types_model.dart';
 
-
 class LaundryServiceTypeModel extends TypesModel {
   PricingType? pricingType;
-   int? servicesCount;
+  int? servicesCount;
 
   LaundryServiceTypeModel({
     required this.pricingType,

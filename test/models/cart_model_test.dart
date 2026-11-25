@@ -18,47 +18,61 @@ void main() {
         'createdAt': _createdAt, // DateTime.now().toIso8601String(),
         'items': [
           {
-            'id': '001',
-            'name': 'item1',
-            'createdAt': _createdAt, //
-            'service': {
-              'id': '001',
-              'name': 'service1',
-              'createdAt': _createdAt, //
-              'product': {
-                'id': '001',
-                'name': 'item1',
-                'createdAt': _createdAt, //
-                'supplierId': 'supp001',
-                'price': 100.0,
-                'isAvailable': true,
-                'imageUrl': '',
-                'category': '',
-                'currency': 'GNF',
-                'description': '',
-                'materials': [],
-              },
+            'id': 'item-001',
+            'name': 'item-001',
+            'createdAt': DateTime.now().toIso8601String(),
+            'description': 'item description',
+            'isActive': true,
+            'catalogItem': {
+              'id': 'catalogItem-001',
+              'name': 'catalogItem-001',
+              'createdAt': DateTime.now().toIso8601String(),
+              'description': 'catalog description',
+              'isActive': true,
+              'productId': 'product-001',
               'minPrice': 1000.0,
               'maxPrice': 1000.0,
               'basePrice': 1000.0,
-              'estimatedDuration': 100,
-              'description': 'my description',
+              'estimatedDuration': 3600,
               'currency': 'GNF',
+              'establishmentCategory': {
+                'id': 'laundry',
+                'name': 'Establishment',
+                'establishmentType': {
+                  'module': 'laundry',
+                  'nameKey': 'module_pressing_name',
+                },
+              },
+              'establishmentType': {
+                'module': 'laundry',
+                'nameKey': 'module_pressing_name',
+              },
               'serviceType': {
-                'id': '001',
-                'name': 'type1',
-                'createdAt': _createdAt, //
-                'description': '',
+                'id': 'servie-001',
+                'name': 'service-001',
+                'createdAt': DateTime.now().toIso8601String(),
+                'description': 'service description',
                 'isActive': true,
-                'iconName': null,
-                'colorValue': null,
                 'pricingType': PricingType.perItem.name,
                 'servicesCount': 1,
               },
             },
-            'qty': 1,
-            'total': 1000.0,
+
+            'qty': 5,
             'options': {},
+            'establishmentCategory': {
+              'id': 'laundry',
+              'name': 'Establishment',
+              'establishmentType': {
+                'module': 'laundry',
+                'nameKey': 'module_pressing_name',
+              },
+            },
+            'establishmentType': {
+              'module': 'laundry',
+              'nameKey': 'module_pressing_name',
+            },
+            'unitPrice': 500.0,
           },
         ],
       };
@@ -72,8 +86,8 @@ void main() {
       expect(cart.storeId, 'store_1');
       expect(cart.userId, 'user_1');
       expect(cart.items, hasLength(1));
-      expect(cart.items[0].service.name, 'service1');
-      expect(cart.items[0].service.serviceType.name, 'type1');
+      expect(cart.items[0].catalogItem.name, 'catalogItem-001');
+      expect(cart.items[0].catalogItem.serviceType.name, 'service-001');
     });
   });
 }

@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:movegui_core/models/dashboard/module_item.dart';
 import 'package:movegui_core/models/model.dart';
-
 
 class ModuleConfigurationItemModel<M extends Model> {
   const ModuleConfigurationItemModel({
@@ -10,7 +8,7 @@ class ModuleConfigurationItemModel<M extends Model> {
     required this.valueLabel,
     required this.buttonLabel,
     this.onPressed,
-    this.options
+    this.options,
   });
 
   final ModuleItem<M> item;

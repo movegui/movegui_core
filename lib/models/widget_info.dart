@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/models/widget_item.dart';
 
 class WidgetInfo extends WidgetItem {

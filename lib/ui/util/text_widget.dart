@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class TextWidget extends StatelessWidget {
-  
   TextWidget({
     super.key,
     required this.text,
@@ -22,10 +21,11 @@ class TextWidget extends StatelessWidget {
       text,
       maxLines: maxLines,
       style: TextStyle(
-          fontSize: textSize,
-          color: color,
-          overflow: TextOverflow.ellipsis,
-          fontWeight: isTitle ? FontWeight.w600 : FontWeight.w400),
+        fontSize: textSize,
+        color: color,
+        overflow: TextOverflow.ellipsis,
+        fontWeight: isTitle ? FontWeight.w600 : FontWeight.w400,
+      ),
     );
   }
 }

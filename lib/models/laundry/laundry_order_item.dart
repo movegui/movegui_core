@@ -1,20 +1,23 @@
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/laundry/laundry_product_model.dart';
 import 'package:movegui_core/models/company/company_order_item_model.dart';
-import 'package:movegui_core/models/laundry/laundry_catalog_model.dart';
-
+import 'package:movegui_core/models/laundry/laundry_catalog_item_model.dart';
 
 class LaundryOrderItem
-    extends CompanyOrderItemModel<LaundryProductModel, LaundryCatalogModel> {
+    extends
+        CompanyOrderItemModel<LaundryProductModel, LaundryCatalogItemModel> {
   LaundryOrderItem({
     required super.id,
     required super.name,
     required super.createdAt,
-    required super.service,
+    required super.catalogItem,
     required super.qty,
-    required super.total,
     required super.options,
     super.establishmentType = EstablishmentType.laundry,
+    required super.establishmentCategory,
+    required super.unitPrice,
+    required super.currency,
+    required super.discount,
   });
 
   @override
@@ -23,17 +26,20 @@ class LaundryOrderItem
   factory LaundryOrderItem.fromJson(Map<String, dynamic> json) {
     final companyOrderItem = CompanyOrderItemModel.fromJson(
       json,
-      serviceFromJson: LaundryCatalogModel.fromJson,
+      catalogFromJson: LaundryCatalogItemModel.fromJson,
     );
 
     return LaundryOrderItem(
       id: companyOrderItem.id,
       name: companyOrderItem.name,
       createdAt: companyOrderItem.createdAt,
-      service: companyOrderItem.service,
+      catalogItem: companyOrderItem.catalogItem,
       qty: companyOrderItem.qty,
-      total: companyOrderItem.total,
       options: companyOrderItem.options,
+      establishmentCategory: companyOrderItem.establishmentCategory,
+      unitPrice: companyOrderItem.unitPrice,
+      currency: companyOrderItem.currency,
+      discount: companyOrderItem.discount,
     );
   }
 }

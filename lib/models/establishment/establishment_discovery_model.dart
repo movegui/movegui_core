@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/adress_model.dart';
 import 'package:movegui_core/models/model.dart';
@@ -46,16 +44,12 @@ class EstablishmentDiscoveryModel extends Model {
       description: json['description'],
       imageUrl: json['imageUrl'] ?? '',
       address: AdressModel.fromJson(Map<String, dynamic>.from(addressJson)),
-      createdAt:
-          json['createdAt'] != null
-              ? json['createdAt'].toDate()
-              : DateTime.now(),
+      createdAt: json['createdAt'] != null
+          ? json['createdAt'].toDate()
+          : DateTime.now(),
       establishmentType: EstablishmentType.fromJson(json['establishmentType']),
       rating: (json['rating'] as num?)?.toDouble() ?? 0.0,
       isActive: json['isActive'] is bool ? json['isActive'] as bool : false,
     );
   }
-
-  
-
 }

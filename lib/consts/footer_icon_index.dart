@@ -3,5 +3,4 @@ class FooterIconIndex {
   static final int commandIndex = 1;
   static final int deliveryIndex = 2;
   static final int courseIndex = 3;
-
 }

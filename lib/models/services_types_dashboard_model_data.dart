@@ -1,20 +1,17 @@
-
-
 import 'package:movegui_core/models/types_dashboard_model_data.dart';
 
-class ServicesTypesDashboardModelData  extends TypesdahboardModeldata{
+class ServicesTypesDashboardModelData extends TypesdahboardModeldata {
   const ServicesTypesDashboardModelData({
     required super.totalTypes,
-     required super.totalActiveTypes, 
-     required super.totalInactiveTypes
+    required super.totalActiveTypes,
+    required super.totalInactiveTypes,
   });
 
-    factory ServicesTypesDashboardModelData.empty() {
+  factory ServicesTypesDashboardModelData.empty() {
     return ServicesTypesDashboardModelData(
       totalTypes: 0,
       totalActiveTypes: 0,
       totalInactiveTypes: 0,
     );
   }
-
 }

@@ -1,4 +1,3 @@
-
 import 'package:movegui_core/config/env.dart';
 
 class Environment {

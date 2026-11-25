@@ -1,12 +1,11 @@
-
 import 'package:movegui_core/enum/enum_order_status.dart';
 import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/order/order_item_model.dart';
 
 abstract class OrderModel<T extends OrderItemModel> extends Model {
-   List<T> items;
-   double total;
-   OrderStatus status;
+  List<T> items;
+  double total;
+  OrderStatus status;
   final String currency;
   String orderId;
   String customerId;
@@ -19,7 +18,7 @@ abstract class OrderModel<T extends OrderItemModel> extends Model {
     required this.status,
     required this.currency,
     required this.orderId,
-    required this.customerId
+    required this.customerId,
   });
 
   @override
@@ -30,8 +29,6 @@ abstract class OrderModel<T extends OrderItemModel> extends Model {
     'total': total,
     'status': status.name,
     'orderId': orderId,
-    'currency': currency
+    'currency': currency,
   };
-
 }
-

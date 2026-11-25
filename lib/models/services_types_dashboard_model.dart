@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/models/types_dahboard_model.dart';
 
