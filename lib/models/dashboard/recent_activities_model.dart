@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:movegui_core/enum/enum_activity_type.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/model.dart';
@@ -27,32 +26,6 @@ class RecentActivitiesModel extends Model {
     super.description,
     required this.activityType,
   });
-
-  factory RecentActivitiesModel.fromFirestore(
-    DocumentSnapshot<Map<String, dynamic>> document,
-  ) {
-    final data = document.data()!;
-
-    return RecentActivitiesModel(
-      id: document.id,
-      establishmentType: EstablishmentType.fromJson(data['establishmentType']),
-      category: ActivityCategory.values.firstWhere(
-        (category) => category.name == data['category'],
-        orElse: () => ActivityCategory.system,
-      ),
-      title: data['title'] as String? ?? '',
-      description: data['description'] as String? ?? '',
-      establishmentId: data['establishmentId'] as String?,
-      userId: data['userId'] as String?,
-      orderId: data['orderId'] as String?,
-      createdAt: (data['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
-      metadata: Map<String, dynamic>.from(data['metadata'] as Map? ?? {}),
-      name: data['name'],
-      activityType: ActivityType.values.firstWhere(
-        (value) => value.name == data['activityType'].name,
-      ),
-    );
-  }
 
   factory RecentActivitiesModel.fromjson(Map<String, dynamic> json) {
     final rawActivityType = json['activityType'];

@@ -1,9 +1,9 @@
-import 'package:intl/intl.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/adress_model.dart';
 import 'package:movegui_core/models/establishment/establishment_model.dart';
 import 'package:movegui_core/models/order/order_item_model.dart';
 import 'package:movegui_core/models/order/order_model.dart';
+import 'package:intl/intl.dart';
 
 abstract class EstablishmentOrderModel<
   S extends EstablishmentModel,
