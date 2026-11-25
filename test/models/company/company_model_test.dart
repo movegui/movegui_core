@@ -1,10 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movegui_core/models/company/company_model.dart';
 
-void main(){
-  group('company test', (){
-    test('Company model test', (){
-
+void main() {
+  group('company test', () {
+    test('Company model test', () {
       final json = {
         'id': 'company001',
         'name': 'My_company',
@@ -14,10 +13,10 @@ void main(){
         'imageUrl': '/assets/image.png',
         'phone': '0022485695874',
         'weeklyHours': [],
-            'establishmentType': {
-            'module': 'other',
-            'nameKey': 'module_other_name',
-          },
+        'establishmentType': {
+          'module': 'other',
+          'nameKey': 'module_other_name',
+        },
         'address': {
           'id': 'address-1',
           'name': 'Home',
@@ -39,7 +38,7 @@ void main(){
             'nameKey': 'module_other_name',
           },
         },
-        'suppliers': []
+        'suppliers': [],
       };
 
       final company = CompanyModel.fromJson(json);

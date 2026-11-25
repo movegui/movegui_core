@@ -48,9 +48,7 @@ class ModuleItem<T extends Model> extends Model {
       ),
 
       model: json['model'] != null && modelFromJson != null
-          ? modelFromJson(
-              Map<String, dynamic>.from(json['model'] as Map),
-            )
+          ? modelFromJson(Map<String, dynamic>.from(json['model'] as Map))
           : null,
     );
   }

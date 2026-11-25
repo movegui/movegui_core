@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/models/adress_model.dart';
 import 'package:movegui_core/models/model.dart';
 import 'package:uuid/uuid.dart';
@@ -13,7 +11,7 @@ class PersonModel extends Model {
   final String? phone;
   final String gender;
   final DateTime? birthDate;
-   List<AdressModel?>? addresses;
+  List<AdressModel?>? addresses;
   final String? nationality;
 
   PersonModel({

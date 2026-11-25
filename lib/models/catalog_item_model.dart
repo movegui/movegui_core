@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/models/model.dart';
 import 'package:movegui_core/models/product_model.dart';
 
@@ -10,8 +8,6 @@ abstract class CatalogItemModel<M extends ProductModel> extends Model {
   final Duration? estimatedDuration;
   final String? currency;
   final String productId;
-
-
 
   CatalogItemModel({
     required super.id,
@@ -27,7 +23,6 @@ abstract class CatalogItemModel<M extends ProductModel> extends Model {
     this.currency,
   });
 
-
   @override
   Map<String, dynamic> toJson() => {
     ...super.toJson(),
@@ -38,6 +33,6 @@ abstract class CatalogItemModel<M extends ProductModel> extends Model {
     'estimatedDuration': estimatedDuration != null
         ? estimatedDuration!.inSeconds
         : 0,
-    'currency': currency ?? 'GNF'
+    'currency': currency ?? 'GNF',
   };
 }

@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movegui_core/models/company/company_catalog_item_model.dart';
 
-
 void main() {
   group('company catalog item test', () {
     test('model test', () {
@@ -30,7 +29,7 @@ void main() {
           'nameKey': 'module_pressing_name',
         },
       };
-      final catalog = CompanyCatalogItemModel.fromJson(json,);
+      final catalog = CompanyCatalogItemModel.fromJson(json);
       expect(catalog.minPrice, 1000.0);
     });
   });

@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/models/model.dart';
 
 abstract class ProductModel extends Model {
@@ -10,7 +8,6 @@ abstract class ProductModel extends Model {
   final String? category;
   final String currency;
   final List<String?>? materials;
-
 
   ProductModel({
     required super.id,
@@ -35,12 +32,10 @@ abstract class ProductModel extends Model {
     'imageUrl': imageUrl ?? '',
     'category': category ?? '',
     'currency': currency,
-    'materials' : materials?.map( (e) => e != null ? e.toJson(): '').toList()
+    'materials': materials?.map((e) => e != null ? e.toJson() : '').toList(),
   };
 }
 
 extension on String {
   void toJson() {}
 }
-
- 

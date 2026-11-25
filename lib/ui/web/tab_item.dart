@@ -5,5 +5,10 @@ class TabItem {
   final IconData icon;
   final String routeName;
   final bool enabled;
-  TabItem({required this.title, required this.icon, required this.routeName, required this.enabled});
+  TabItem({
+    required this.title,
+    required this.icon,
+    required this.routeName,
+    required this.enabled,
+  });
 }

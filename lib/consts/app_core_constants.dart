@@ -4,13 +4,9 @@ import 'package:movegui_core/l10n/app_localizations.dart';
 import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 import 'package:movegui_core/ui/web/tab_item.dart';
 
-
-
 class AppCoreConstants {
   static const String imageUrl = 'https://i.ibb.co/JM0KMG0/riz-gras.jpg';
   //  'https://i.ibb.co/8r1Ny2n/20-Nike-Air-Force-1-07.png';
-
-
 
   static const name = "MoveGui";
   static const Adresse = "Ratoma";
@@ -62,12 +58,11 @@ class AppCoreConstants {
       enabled: false,
     ),
   ];
-  
+
   static Future<List<LaundryServiceTypeModel>> getPressingServicesTypes(
     BuildContext context, {
     AppLocalizations? localizations,
-  }
-  ) async {
+  }) async {
     final strings = localizations ?? AppLocalizations.of(context)!;
     return [
       LaundryServiceTypeModel(
@@ -791,4 +786,3 @@ class LoginConstatnts {
     return "Enregistrez-vous";
   }
 }
-

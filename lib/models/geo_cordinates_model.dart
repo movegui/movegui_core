@@ -17,7 +17,6 @@ class GeoCordinatesModel {
         latitude: json['latitude'],
       );
 
-      
   GeoPoint get geoPoint {
     return GeoPoint(latitude ?? 0.0, longitude ?? 0.0);
   }

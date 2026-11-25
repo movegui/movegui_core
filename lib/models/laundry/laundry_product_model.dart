@@ -33,7 +33,7 @@ class LaundryProductModel extends CompanyProductModel {
       isAvailable: companyArticle.isAvailable,
       currency: companyArticle.currency,
       description: companyArticle.description,
-      establishmentCategory: companyArticle.establishmentCategory, 
+      establishmentCategory: companyArticle.establishmentCategory,
     );
   }
 }

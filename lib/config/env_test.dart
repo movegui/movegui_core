@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/config/env.dart';
 
 class EnvTest extends Env {
@@ -8,12 +6,10 @@ class EnvTest extends Env {
 
   @override
   bool get enableLogs => true;
-  
+
   @override
   AppEnv get currentEnv => AppEnv.test;
-  
+
   @override
   String get port => "5000";
-  
-  
 }

@@ -4,8 +4,7 @@ import 'package:movegui_core/models/person_model.dart';
 import 'package:movegui_core/models/user/user_model.dart';
 
 final _createdAt = DateTime.utc(2025, 1, 2, 3, 4);
-void main(){
-  
+void main() {
   group('PersonModel', () {
     test('serializes optional addresses and birth date', () {
       final person = PersonModel(
@@ -65,5 +64,4 @@ void main(){
       );
     });
   });
-
 }

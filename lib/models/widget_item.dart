@@ -12,6 +12,6 @@ abstract class WidgetItem {
     this.subtitle,
     this.titleTextStyle,
     this.subtitleTextStyle,
-    this.imageUrl
+    this.imageUrl,
   });
 }

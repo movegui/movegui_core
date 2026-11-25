@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:movegui_core/responsive.dart';
 
-
 class DisplayWidget extends StatelessWidget {
   final String? text;
   final TextAlign? textAlign;
   final double? fontSize;
   final FontWeight? fontWeight;
-
 
   const DisplayWidget({
     super.key,

@@ -32,8 +32,7 @@ class CompanyCatalogItemModel<P extends CompanyProductModel>
     'estimatedDurationInMinutes': estimatedDuration?.inMinutes,
   };
 
-  factory CompanyCatalogItemModel.fromJson(
-    Map<String, dynamic> json,) {
+  factory CompanyCatalogItemModel.fromJson(Map<String, dynamic> json) {
     return CompanyCatalogItemModel<P>(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
@@ -48,7 +47,9 @@ class CompanyCatalogItemModel<P extends CompanyProductModel>
       description: json['description'] as String? ?? '',
       currency: json['currency'] as String? ?? 'GNF',
       isActive: json['isActive'] as bool? ?? true,
-      establishmentCategory: EstablishmentCategory.fromJson(json['establishmentCategory']),
+      establishmentCategory: EstablishmentCategory.fromJson(
+        json['establishmentCategory'],
+      ),
       establishmentType: EstablishmentType.fromJson(json['establishmentType']),
     );
   }

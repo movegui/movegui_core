@@ -3,7 +3,8 @@ import 'package:movegui_core/models/company/company_catalog_item_model.dart';
 import 'package:movegui_core/models/laundry/laundry_product_model.dart';
 import 'package:movegui_core/models/laundry/laundry_service_type_model.dart';
 
-class LaundryCatalogItemModel extends CompanyCatalogItemModel<LaundryProductModel> {
+class LaundryCatalogItemModel
+    extends CompanyCatalogItemModel<LaundryProductModel> {
   final LaundryServiceTypeModel serviceType;
 
   LaundryCatalogItemModel({
@@ -30,9 +31,8 @@ class LaundryCatalogItemModel extends CompanyCatalogItemModel<LaundryProductMode
   };
 
   factory LaundryCatalogItemModel.fromJson(Map<String, dynamic> json) {
-    final companyCatalogItem = CompanyCatalogItemModel<LaundryProductModel>.fromJson(
-      json,
-    );
+    final companyCatalogItem =
+        CompanyCatalogItemModel<LaundryProductModel>.fromJson(json);
 
     return LaundryCatalogItemModel(
       id: companyCatalogItem.id,

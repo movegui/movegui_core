@@ -31,7 +31,7 @@ class TypesModel extends Model {
     isActive: false,
   );
 
-/*
+  /*
   IconData get icon {
     switch (iconName) {
       case 'home':

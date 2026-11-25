@@ -37,7 +37,11 @@ class CompanyProductModel extends EstablishmentProductModel {
         price: json['price'] as double? ?? 0.0,
         currency: json['currency'] ?? 'GNF',
         description: json['description'] ?? '',
-        establishmentCategory: EstablishmentCategory.fromJson(json['establishmentCategory']),
-        establishmentType: EstablishmentType.fromJson(json['establishmentType'])
+        establishmentCategory: EstablishmentCategory.fromJson(
+          json['establishmentCategory'],
+        ),
+        establishmentType: EstablishmentType.fromJson(
+          json['establishmentType'],
+        ),
       );
 }

@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/enum/enum_establishment_category.dart';
 import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/adress_model.dart';
@@ -41,12 +39,11 @@ abstract class EstablishmentModel extends Model {
     'email': email,
     'imageUrl': imageUrl,
     'phone': phone,
-    'weeklyHours':
-        weeklyHours.map((weekHour) {
-          return (weekHour.closeTime != null && weekHour.openTime != null)
-              ? weekHour.toJson()
-              : {};
-        }).toList(),
+    'weeklyHours': weeklyHours.map((weekHour) {
+      return (weekHour.closeTime != null && weekHour.openTime != null)
+          ? weekHour.toJson()
+          : {};
+    }).toList(),
     'establishmentType': establishmentType.toJson(),
     'address': address.toJson(),
     'rating': rating,
@@ -55,7 +52,3 @@ abstract class EstablishmentModel extends Model {
     'establishmentCategory': establishmentCategory.toJson(),
   };
 }
-
-
-
-

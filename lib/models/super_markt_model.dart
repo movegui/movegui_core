@@ -12,7 +12,7 @@ class SuperMarktModel extends CompanyModel {
     required super.imageUrl,
     required super.phone,
     required super.weeklyHours,
-     super.establishmentType = EstablishmentType.superMarket,
+    super.establishmentType = EstablishmentType.superMarket,
     required super.isActive,
     required super.establishmentCategory,
     required super.rating,
@@ -24,10 +24,10 @@ class SuperMarktModel extends CompanyModel {
   @override
   Map<String, dynamic> toJson() => {...super.toJson()};
 
-  factory SuperMarktModel.fromJson(Map<String, dynamic> json) =>  CompanyModel.fromJson(json) as SuperMarktModel;
+  factory SuperMarktModel.fromJson(Map<String, dynamic> json) =>
+      CompanyModel.fromJson(json) as SuperMarktModel;
 
-
-/*
+  /*
       SuperMarktModel(
         id: json['id'],
         name: json['name'],

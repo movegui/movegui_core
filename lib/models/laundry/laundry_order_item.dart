@@ -4,7 +4,8 @@ import 'package:movegui_core/models/company/company_order_item_model.dart';
 import 'package:movegui_core/models/laundry/laundry_catalog_item_model.dart';
 
 class LaundryOrderItem
-    extends CompanyOrderItemModel<LaundryProductModel, LaundryCatalogItemModel> {
+    extends
+        CompanyOrderItemModel<LaundryProductModel, LaundryCatalogItemModel> {
   LaundryOrderItem({
     required super.id,
     required super.name,

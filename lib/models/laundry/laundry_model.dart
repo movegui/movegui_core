@@ -21,9 +21,7 @@ class LaundryModel extends CompanyModel {
   });
 
   @override
-  Map<String, dynamic> toJson() => {
-        ...super.toJson(),
-      };
+  Map<String, dynamic> toJson() => {...super.toJson()};
 
   factory LaundryModel.fromJson(Map<String, dynamic> json) {
     final company = CompanyModel.fromJson(json);

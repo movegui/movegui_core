@@ -60,10 +60,7 @@ void main() {
           'nameKey': 'module_pressing_name',
         },
       };
-      final catalog =
-          LaundryCatalogModel.fromJson(
-            json,
-          );
+      final catalog = LaundryCatalogModel.fromJson(json);
       expect(catalog.name, 'catalog-001');
       expect(catalog.items.first.name, 'catalogItem-001');
       expect(catalog.items.first.serviceType.name, 'service-001');

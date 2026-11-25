@@ -3,7 +3,9 @@ import 'package:movegui_core/enum/enum_establishment_type.dart';
 import 'package:movegui_core/models/establishment/establishment_product_model.dart';
 import 'package:movegui_core/models/catalog_item_model.dart';
 
-abstract class EstablishmentCatalogItemModel<M extends EstablishmentProductModel>
+abstract class EstablishmentCatalogItemModel<
+  M extends EstablishmentProductModel
+>
     extends CatalogItemModel<M> {
   final EstablishmentCategory establishmentCategory;
   final EstablishmentType establishmentType;

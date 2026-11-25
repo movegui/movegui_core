@@ -101,16 +101,16 @@ void main() {
       final order = CompanyOrderModel.fromJson(
         json,
         orderItemFormJson: (itemJson) =>
-            CompanyOrderItemModel<CompanyProductModel,
-                CompanyCatalogItemModel<CompanyProductModel>>.fromJson(
-          itemJson,
-          catalogFromJson:
-              CompanyCatalogItemModel<CompanyProductModel>.fromJson,
-        ),
+            CompanyOrderItemModel<
+              CompanyProductModel,
+              CompanyCatalogItemModel<CompanyProductModel>
+            >.fromJson(
+              itemJson,
+              catalogFromJson:
+                  CompanyCatalogItemModel<CompanyProductModel>.fromJson,
+            ),
       );
       expect(order.status, OrderStatus.pending);
-      
-
     });
   });
 }

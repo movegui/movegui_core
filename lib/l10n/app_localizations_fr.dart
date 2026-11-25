@@ -21,22 +21,26 @@ class AppLocalizationsFr extends AppLocalizations {
   String get service_deactive_title => 'Service desactivé';
 
   @override
-  String get service_active_descrip => 'Le service sera visible et disponible à la commande.';
+  String get service_active_descrip =>
+      'Le service sera visible et disponible à la commande.';
 
   @override
-  String get service_deactive_descrip => 'Le service ne sera pas visible et non disponible à la commande.';
+  String get service_deactive_descrip =>
+      'Le service ne sera pas visible et non disponible à la commande.';
 
   @override
   String get delete_pressing_service_title => 'Supprimer Service';
 
   @override
-  String get delete_pressing_service_question => 'Voulez-vous vraiment supprimer ce service ?';
+  String get delete_pressing_service_question =>
+      'Voulez-vous vraiment supprimer ce service ?';
 
   @override
   String get delete_pressing_title => 'Supprimer Pressing';
 
   @override
-  String get delete_pressing_question => 'Voulez-vous vraiment supprimer ce Pressing ?';
+  String get delete_pressing_question =>
+      'Voulez-vous vraiment supprimer ce Pressing ?';
 
   @override
   String get commune_title => 'Commune';
@@ -51,7 +55,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get open_hours_title => 'Horaires d\'ouverture';
 
   @override
-  String get open_hours_sub_title => 'Définir les jours et heures pendant lesquels le pressing accepte les commandes.';
+  String get open_hours_sub_title =>
+      'Définir les jours et heures pendant lesquels le pressing accepte les commandes.';
 
   @override
   String open_hours_open_title(Object category) {
@@ -82,7 +87,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get admin_add_dashboard_title => 'Informations Administrateur';
 
   @override
-  String get admin_add_dashboard_sub_title => 'Ajouter les détails des Administrateurs';
+  String get admin_add_dashboard_sub_title =>
+      'Ajouter les détails des Administrateurs';
 
   @override
   String get employe_bar_title => 'Configuration Employé';
@@ -106,7 +112,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get employe_add_dashboard_title => 'Informations Employé';
 
   @override
-  String get employe_add_dashboard_sub_title => 'Ajouter les détails des Employers';
+  String get employe_add_dashboard_sub_title =>
+      'Ajouter les détails des Employers';
 
   @override
   String get manager_bar_title => 'Configuration Manager';
@@ -127,7 +134,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get manager_add_dashboard_title => 'Informations Manager';
 
   @override
-  String get manager_add_dashboard_sub_title => 'Ajouter les détails des Managers';
+  String get manager_add_dashboard_sub_title =>
+      'Ajouter les détails des Managers';
 
   @override
   String get driver_bar_title => 'Configuration Livreur';
@@ -172,40 +180,51 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pressing_service_home_laundry => 'Nettoyage du linge de maison';
 
   @override
-  String get pressing_service_work_clothing => 'Entretien des vêtements professionnels';
+  String get pressing_service_work_clothing =>
+      'Entretien des vêtements professionnels';
 
   @override
-  String get pressing_service_delicate_fabrics => 'Traitement des textiles délicats';
+  String get pressing_service_delicate_fabrics =>
+      'Traitement des textiles délicats';
 
   @override
-  String get pressing_service_washing_descrip => 'Nettoyage des vêtements à l’eau';
+  String get pressing_service_washing_descrip =>
+      'Nettoyage des vêtements à l’eau';
 
   @override
-  String get pressing_service_dry_cleaning_descrip => 'Nettoyage spécial pour tissus délicats';
+  String get pressing_service_dry_cleaning_descrip =>
+      'Nettoyage spécial pour tissus délicats';
 
   @override
-  String get pressing_service_ironing_descrip => ' Enlever les plis avec un fer ou une presse';
+  String get pressing_service_ironing_descrip =>
+      ' Enlever les plis avec un fer ou une presse';
 
   @override
-  String get pressing_service_laundry_descrip => 'Service complet de lavage et séchage';
+  String get pressing_service_laundry_descrip =>
+      'Service complet de lavage et séchage';
 
   @override
-  String get pressing_service_folding_descrip => ' Vêtements pliés après lavage';
+  String get pressing_service_folding_descrip =>
+      ' Vêtements pliés après lavage';
 
   @override
   String get pressing_service_stain_removal_descrip => 'Enlèvement des taches';
 
   @override
-  String get pressing_service_service_express_descrip => 'Nettoyage rapide le jour même';
+  String get pressing_service_service_express_descrip =>
+      'Nettoyage rapide le jour même';
 
   @override
-  String get pressing_service_home_laundry_descrip => 'Draps, Couvertures, Rideaux, etc...';
+  String get pressing_service_home_laundry_descrip =>
+      'Draps, Couvertures, Rideaux, etc...';
 
   @override
-  String get pressing_service_work_clothing_descrip => 'Uniformes, Costumes, Vêtements de travail';
+  String get pressing_service_work_clothing_descrip =>
+      'Uniformes, Costumes, Vêtements de travail';
 
   @override
-  String get pressing_service_delicate_fabrics_descrip => 'Soie, Laine, Cuir, Robes de soirée, etc...';
+  String get pressing_service_delicate_fabrics_descrip =>
+      'Soie, Laine, Cuir, Robes de soirée, etc...';
 
   @override
   String get pressing_service_labelText => 'Produit';
@@ -238,25 +257,29 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pressing_services_types_title => 'Types de Services';
 
   @override
-  String get pressing_services_types_subtitle => 'Définissez les catégories de services disponibles';
+  String get pressing_services_types_subtitle =>
+      'Définissez les catégories de services disponibles';
 
   @override
   String get pressing_services_types_all_title => 'Tous les Types de services';
 
   @override
-  String get pressing_services_types_all_descrip => 'Tous les Types de services ';
+  String get pressing_services_types_all_descrip =>
+      'Tous les Types de services ';
 
   @override
   String get pressing_service_empty_title => 'Aucun service trouvé';
 
   @override
-  String get pressing_service_empty_subtitle => 'Créez un service ou modifiez vos critères de recherche.';
+  String get pressing_service_empty_subtitle =>
+      'Créez un service ou modifiez vos critères de recherche.';
 
   @override
   String get pressing_problem_hours_non_configured => 'Horaires non configurés';
 
   @override
-  String get pressing_problem_service_non_configured => 'Aucun service configuré';
+  String get pressing_problem_service_non_configured =>
+      'Aucun service configuré';
 
   @override
   String get pressing_proble_staff_employe => 'Aucun employé assigné';
@@ -268,10 +291,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pressing_proble_staff_owner => 'Aucun Propriétaire assigné';
 
   @override
-  String get pressing_problem_incomplete_infos => 'Informations du pressing incomplètes';
+  String get pressing_problem_incomplete_infos =>
+      'Informations du pressing incomplètes';
 
   @override
-  String get pressing_incomplete_no_problem_subtitle => 'Toutes les configurations sont complètes';
+  String get pressing_incomplete_no_problem_subtitle =>
+      'Toutes les configurations sont complètes';
 
   @override
   String get pressing_service_configured => 'pressings configurés';
@@ -304,7 +329,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pressing_service_search_hinterText => 'Rechercher un service';
 
   @override
-  String get pressing_service_estimated_duration_labelText => 'Durée de traitement';
+  String get pressing_service_estimated_duration_labelText =>
+      'Durée de traitement';
 
   @override
   String get pressing_service_estimated_duration_hinterText => 'Ex. 24h';
@@ -325,37 +351,44 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pressing_dashboard_title => 'Gestion des Pressings';
 
   @override
-  String get pressing_dashboard_sub_title => 'Administration globale des pressings MoveGui';
+  String get pressing_dashboard_sub_title =>
+      'Administration globale des pressings MoveGui';
 
   @override
   String get pressing_add_dashboard_title => 'Informations Pressing';
 
   @override
-  String get pressing_add_dashboard_sub_title => 'Ajouter les détails de l\'entreprise, les coordonnées et les services.';
+  String get pressing_add_dashboard_sub_title =>
+      'Ajouter les détails de l\'entreprise, les coordonnées et les services.';
 
   @override
   String get pressing_all_dashboard_title => 'Liste des Pressing';
 
   @override
-  String get pressing_all_dashboard_sub_title => 'Consultez et gérez les pressings enregistrés';
+  String get pressing_all_dashboard_sub_title =>
+      'Consultez et gérez les pressings enregistrés';
 
   @override
   String get pressing_services_dashboard_title => 'Services Pressing';
 
   @override
-  String get pressing_services_dashboard_sub_title => 'Ajouter les services, prestations, categories et tarifs proposés par le pressing';
+  String get pressing_services_dashboard_sub_title =>
+      'Ajouter les services, prestations, categories et tarifs proposés par le pressing';
 
   @override
   String get pressing_service_add_dashboard_title => 'Ajouter un Service';
 
   @override
-  String get pressing_service_add_dashboard_sub_title => 'Ajouter les services, prestations, categories et tarifs proposés par le pressing';
+  String get pressing_service_add_dashboard_sub_title =>
+      'Ajouter les services, prestations, categories et tarifs proposés par le pressing';
 
   @override
-  String get pressing_service_type_add_dashboard_title => 'Ajouter un Type de Service';
+  String get pressing_service_type_add_dashboard_title =>
+      'Ajouter un Type de Service';
 
   @override
-  String get pressing_service_type_add_dashboard_sub_title => 'Ajouter les type de services proposés par votre pressing';
+  String get pressing_service_type_add_dashboard_sub_title =>
+      'Ajouter les type de services proposés par votre pressing';
 
   @override
   String get pressing_hours_open_sub_text => 'Le pressing est ouvert ce jour';
@@ -487,7 +520,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get success_send_message_message => 'Merci pour votre message';
 
   @override
-  String get success_registration_new_user => 'Votre Compte a été créer avec succes';
+  String get success_registration_new_user =>
+      'Votre Compte a été créer avec succes';
 
   @override
   String get success_login_message => 'Connexion réussie';
@@ -496,19 +530,22 @@ class AppLocalizationsFr extends AppLocalizations {
   String get success_login_reset_password => 'Lien envoyé avec Succes';
 
   @override
-  String get login_forget_password_txt => 'Saisissez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe ';
+  String get login_forget_password_txt =>
+      'Saisissez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe ';
 
   @override
   String get error_send_mail_title => 'Erreur d\'Authentification';
 
   @override
-  String get error_send_mail_message => 'Vous devez être enregistrer pour utilisé cette fonctionnalité';
+  String get error_send_mail_message =>
+      'Vous devez être enregistrer pour utilisé cette fonctionnalité';
 
   @override
   String get error_input_hint_message => 'Veuillez entrer votre message.';
 
   @override
-  String get error_firebase_initialisation => 'Erreur Initialisation FirebaseAuth ';
+  String get error_firebase_initialisation =>
+      'Erreur Initialisation FirebaseAuth ';
 
   @override
   String get error_login_message => 'Échec de la connexion';
@@ -517,13 +554,15 @@ class AppLocalizationsFr extends AppLocalizations {
   String get error_register_title => 'Erreur d\'enregistrement';
 
   @override
-  String get error_register_with_phone_message => 'Echec d\'enregistrement de votre numéro de téléphone, Veuillez réessayer svp !';
+  String get error_register_with_phone_message =>
+      'Echec d\'enregistrement de votre numéro de téléphone, Veuillez réessayer svp !';
 
   @override
   String get error_application => 'Il y a plus d\'un Super Admin';
 
   @override
-  String get error_register_with_email_message => 'Echec d\'enregistrement de votre email, Veuillez réessayer svp !';
+  String get error_register_with_email_message =>
+      'Echec d\'enregistrement de votre email, Veuillez réessayer svp !';
 
   @override
   String get error_authorization => 'Access Non Autorisé';
@@ -538,7 +577,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get error_show_formular_title => 'Erreur Page';
 
   @override
-  String get error_show_formular => 'Une Erreur s\'est produite lors du chargement de la page';
+  String get error_show_formular =>
+      'Une Erreur s\'est produite lors du chargement de la page';
 
   @override
   String get error_no_user_connected_title => 'Erreur d\'Authentification';
@@ -691,25 +731,31 @@ class AppLocalizationsFr extends AppLocalizations {
   String get input_hint_description_pressing => 'Description du Pressing';
 
   @override
-  String get input_hint_birthdate_error_msg => 'Veuillez sélectionner votre date de naissance.';
+  String get input_hint_birthdate_error_msg =>
+      'Veuillez sélectionner votre date de naissance.';
 
   @override
   String get input_hint_birthdate => 'Selectionner Date de Naissance';
 
   @override
-  String get input_hint_select_birthdate => 'Selectionner votre date de Naissance';
+  String get input_hint_select_birthdate =>
+      'Selectionner votre date de Naissance';
 
   @override
-  String get movegui_info_title => 'MoveGui – Livraison & Transport à Moto en Guinée';
+  String get movegui_info_title =>
+      'MoveGui – Livraison & Transport à Moto en Guinée';
 
   @override
-  String get movegui_info_text_1 => 'MoveGui est une entreprise innovante spécialisée dans la livraison de nourriture et le transport à moto en Guinée.Notre mission est de rendre la livraison plus accessible, plus transparente et plus économique pour tous.';
+  String get movegui_info_text_1 =>
+      'MoveGui est une entreprise innovante spécialisée dans la livraison de nourriture et le transport à moto en Guinée.Notre mission est de rendre la livraison plus accessible, plus transparente et plus économique pour tous.';
 
   @override
-  String get movegui_info_text_2 => 'Nous proposons un tarif fixe pour chaque course, quelle que soit la distance, garantissant une transparence totale pour nos clients.Plus de surprises sur le prix, juste un service rapide, fiable et simple.';
+  String get movegui_info_text_2 =>
+      'Nous proposons un tarif fixe pour chaque course, quelle que soit la distance, garantissant une transparence totale pour nos clients.Plus de surprises sur le prix, juste un service rapide, fiable et simple.';
 
   @override
-  String get movegui_info_text_3 => 'Grâce à nos partenariats avec des restaurants locaux, nous offrons des livraisons à moindre coût tout en soutenant l’économie locale.MoveGui, c’est la fusion parfaite entre technologie, accessibilité et efficacité.';
+  String get movegui_info_text_3 =>
+      'Grâce à nos partenariats avec des restaurants locaux, nous offrons des livraisons à moindre coût tout en soutenant l’économie locale.MoveGui, c’est la fusion parfaite entre technologie, accessibilité et efficacité.';
 
   @override
   String get movegui_panel => 'Paneau de Configuration Movegui';
@@ -826,10 +872,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get module_configuration_title => 'Modules de configuration';
 
   @override
-  String get module_configuration_subtitle => 'Paramétrez les éléments globaux liés aux pressings MoveGui.';
+  String get module_configuration_subtitle =>
+      'Paramétrez les éléments globaux liés aux pressings MoveGui.';
 
   @override
-  String get module_configuration_to_complete_title => 'Configuration à compléter';
+  String get module_configuration_to_complete_title =>
+      'Configuration à compléter';
 
   @override
   String module_configuration_to_complete_subtitle(Object pressings) {
@@ -840,25 +888,32 @@ class AppLocalizationsFr extends AppLocalizations {
   String get module_configuration_item_pressing_title => 'Pressings';
 
   @override
-  String get module_configuration_item_pressing_subtitle => 'Gérez les informations et le statut des pressings.';
+  String get module_configuration_item_pressing_subtitle =>
+      'Gérez les informations et le statut des pressings.';
 
   @override
-  String get module_configuration_item_pressing_type_service_title => 'Types Services Configurés';
+  String get module_configuration_item_pressing_type_service_title =>
+      'Types Services Configurés';
 
   @override
-  String get module_configuration_item_pressing_type_service_subtitle => 'Consultez les types de services configurés..';
+  String get module_configuration_item_pressing_type_service_subtitle =>
+      'Consultez les types de services configurés..';
 
   @override
-  String get module_configuration_item_pressing_open_hours_title => 'Horaires d\'ouverture';
+  String get module_configuration_item_pressing_open_hours_title =>
+      'Horaires d\'ouverture';
 
   @override
-  String get module_configuration_item_pressing_open_hours_subtitle => 'Administrez les horaires d\'ouverture des pressings.';
+  String get module_configuration_item_pressing_open_hours_subtitle =>
+      'Administrez les horaires d\'ouverture des pressings.';
 
   @override
-  String get module_configuration_item_pressing_configured_services_title => 'Services configurés';
+  String get module_configuration_item_pressing_configured_services_title =>
+      'Services configurés';
 
   @override
-  String get module_configuration_item_pressing_configured_services_subtitle => 'Nombre de services associés aux pressings.';
+  String get module_configuration_item_pressing_configured_services_subtitle =>
+      'Nombre de services associés aux pressings.';
 
   @override
   String get tooltip_add => 'Cliquez ici pour Ajouter';
@@ -1050,7 +1105,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get dashboard_menu_refunds => 'Remboursements';
 
   @override
-  String get dashboard_menu_subscriptions_billing => 'Abonnements et facturation';
+  String get dashboard_menu_subscriptions_billing =>
+      'Abonnements et facturation';
 
   @override
   String get dashboard_menu_general_overview => 'Vue générale';
@@ -1203,7 +1259,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get label_birthdate => 'Date de Naissance';
 
   @override
-  String get exception_login_message => 'Les identifiants utilisateur fournis sont incorrects, veuillez verifier votre email et mot de pass';
+  String get exception_login_message =>
+      'Les identifiants utilisateur fournis sont incorrects, veuillez verifier votre email et mot de pass';
 
   @override
   String get tooltip_sign_in_with_google => 'Se connecter avec Google';
@@ -1215,7 +1272,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get tooltip_sign_in => 'Cliquez ici pour se connecter';
 
   @override
-  String get tooltip_forget_password => 'Cliquez Ici pour réinitialiser votre mot de pass :)';
+  String get tooltip_forget_password =>
+      'Cliquez Ici pour réinitialiser votre mot de pass :)';
 
   @override
   String get tooltip_registration => 'Cliquez ici pour vous enregistrer :)';
@@ -1233,7 +1291,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get tooltip_search_pressing_service => 'Rechercher un service';
 
   @override
-  String get tooltip_all_pressing_services_types => 'Afficher tous les types de services';
+  String get tooltip_all_pressing_services_types =>
+      'Afficher tous les types de services';
 
   @override
   String get tooltip_btn_update => 'Modifier';
@@ -1353,13 +1412,15 @@ class AppLocalizationsFr extends AppLocalizations {
   String get message_movegui_link => 'Créer mon mot de passe';
 
   @override
-  String get message_movegui => 'Merci de nous faire confiance l\'équipe MoveGui';
+  String get message_movegui =>
+      'Merci de nous faire confiance l\'équipe MoveGui';
 
   @override
   String get dashbord_movegui_title => 'Tableau de Configuration MoveGui';
 
   @override
-  String get dashbord_movegui_sub_title => 'Vue globale des commandes, revenus et utilisateurs';
+  String get dashbord_movegui_sub_title =>
+      'Vue globale des commandes, revenus et utilisateurs';
 
   @override
   String get dashbord_orders_state_title => 'Etat des Commandes';
@@ -1410,7 +1471,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get max_adress_title => 'Maximum Adresse';
 
   @override
-  String get max_adress_message => 'Le nombre Maximal d\'adresse est de 5 par Utilisateur, Veuillez supprimer d\'autres';
+  String get max_adress_message =>
+      'Le nombre Maximal d\'adresse est de 5 par Utilisateur, Veuillez supprimer d\'autres';
 
   @override
   String get current_position => 'Actuelle Position';
@@ -1422,7 +1484,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get owner_add_dashboard_title => 'Informations Propriétaire';
 
   @override
-  String get owner_add_dashboard_sub_title => 'Ajouter les détails des propriétaires.';
+  String get owner_add_dashboard_sub_title =>
+      'Ajouter les détails des propriétaires.';
 
   @override
   String get add_slot_title => 'Ajouter un créneau';
@@ -1443,61 +1506,76 @@ class AppLocalizationsFr extends AppLocalizations {
   String get static_module_item_pressing_inactifs_title => 'Inactifs';
 
   @override
-  String get static_module_item_pressing_inactifs_subtitle => 'Pressing inactifs';
+  String get static_module_item_pressing_inactifs_subtitle =>
+      'Pressing inactifs';
 
   @override
-  String get static_module_item_pressing_configured_services_title => 'Services configurés';
+  String get static_module_item_pressing_configured_services_title =>
+      'Services configurés';
 
   @override
-  String get static_module_item_pressing_configured_services_subtitle => 'services au total';
+  String get static_module_item_pressing_configured_services_subtitle =>
+      'services au total';
 
   @override
-  String get static_module_item_pressing_incomplete_open_hours_title => 'Horaires Incomplets';
+  String get static_module_item_pressing_incomplete_open_hours_title =>
+      'Horaires Incomplets';
 
   @override
-  String get static_module_item_pressing_incomplete_open_hours_subtitle => 'Pressings à completer';
+  String get static_module_item_pressing_incomplete_open_hours_subtitle =>
+      'Pressings à completer';
 
   @override
-  String get static_module_item_pressing_services_types_title => 'Types de Service';
+  String get static_module_item_pressing_services_types_title =>
+      'Types de Service';
 
   @override
-  String get static_module_item_pressing_services_types_subtitle => 'Types de Services au total';
+  String get static_module_item_pressing_services_types_subtitle =>
+      'Types de Services au total';
 
   @override
-  String get static_module_item_pressing_services_types_actifs_subtitle => 'Services Types Actifs';
+  String get static_module_item_pressing_services_types_actifs_subtitle =>
+      'Services Types Actifs';
 
   @override
-  String get static_module_item_pressing_services_types_inactifs_subtitle => 'Services Types Inactifs';
+  String get static_module_item_pressing_services_types_inactifs_subtitle =>
+      'Services Types Inactifs';
 
   @override
   String get static_module_item_pressing_owners_title => 'Propriétaires';
 
   @override
-  String get static_module_item_pressing_owners_subtitle => 'Propriétaires au total';
+  String get static_module_item_pressing_owners_subtitle =>
+      'Propriétaires au total';
 
   @override
   String get static_module_item_pressing_managers_title => 'Managers';
 
   @override
-  String get static_module_item_pressing_managers_subtitle => 'Manager au total';
+  String get static_module_item_pressing_managers_subtitle =>
+      'Manager au total';
 
   @override
   String get static_module_item_pressing_employes_title => 'Employés';
 
   @override
-  String get static_module_item_pressing_employes_subtitle => 'Employés au total';
+  String get static_module_item_pressing_employes_subtitle =>
+      'Employés au total';
 
   @override
   String get static_module_item_pressing_total_services_title => 'Services';
 
   @override
-  String get static_module_item_pressing_total_services_subtitle => 'Services enregistrés';
+  String get static_module_item_pressing_total_services_subtitle =>
+      'Services enregistrés';
 
   @override
-  String get static_module_item_pressing_services_actifs_subtitle => 'Services au total';
+  String get static_module_item_pressing_services_actifs_subtitle =>
+      'Services au total';
 
   @override
-  String get static_module_item_pressing_services_inactifs_subtitle => 'Services au total';
+  String get static_module_item_pressing_services_inactifs_subtitle =>
+      'Services au total';
 
   @override
   String get image_chose_image_text => 'Choisir une image';
@@ -1515,7 +1593,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get informations_title => 'Informations';
 
   @override
-  String get informations_subtitle => 'Informations générales de votre pressing';
+  String get informations_subtitle =>
+      'Informations générales de votre pressing';
 
   @override
   String recent_activity_description_created(Object establishmentName) {
@@ -1576,7 +1655,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pressing_title => 'Pressing';
 
   @override
-  String get pressing_subtitle => 'Gérez votre pressing, vos services et vos commandes en toute simplicité.';
+  String get pressing_subtitle =>
+      'Gérez votre pressing, vos services et vos commandes en toute simplicité.';
 
   @override
   String get pressing_order_title => 'Pressing Commande';
@@ -1597,8 +1677,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pressing_detail_title => 'Pressing Detail';
 
   @override
-  String get pressing_detail_text_1 => 'Attention: Prix confirmé par SMS avant lavage !!!';
+  String get pressing_detail_text_1 =>
+      'Attention: Prix confirmé par SMS avant lavage !!!';
 
   @override
-  String get pressing_detail_text_2 => 'Le prix final peut varier selon l’état des vêtements.Le lavage commence après confirmation par SMS.';
+  String get pressing_detail_text_2 =>
+      'Le prix final peut varier selon l’état des vêtements.Le lavage commence après confirmation par SMS.';
 }

@@ -10,12 +10,12 @@ abstract class CatalogModel<T extends CatalogItemModel> extends Model {
     required super.createdAt,
     required super.isActive,
     required super.description,
-    required this.items ,
+    required this.items,
   });
 
   @override
   Map<String, dynamic> toJson() => {
-        ...super.toJson(),
-        'items': items.map((item) => item.toJson()).toList(),
-      };
+    ...super.toJson(),
+    'items': items.map((item) => item.toJson()).toList(),
+  };
 }

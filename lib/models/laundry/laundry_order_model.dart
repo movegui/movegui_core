@@ -4,9 +4,14 @@ import 'package:movegui_core/models/laundry/laundry_model.dart';
 import 'package:movegui_core/models/laundry/laundry_order_item.dart';
 import 'package:movegui_core/models/laundry/laundry_product_model.dart';
 
-
 class LaundryOrderModel
-    extends CompanyOrderModel<LaundryModel, LaundryProductModel, LaundryCatalogItemModel, LaundryOrderItem> {
+    extends
+        CompanyOrderModel<
+          LaundryModel,
+          LaundryProductModel,
+          LaundryCatalogItemModel,
+          LaundryOrderItem
+        > {
   LaundryOrderModel({
     required super.id,
     required super.name,
@@ -28,20 +33,17 @@ class LaundryOrderModel
   @override
   Map<String, dynamic> toJson() => {...super.toJson()};
 
-  factory LaundryOrderModel.fromJson(
-    Map<String, dynamic> json,
-  ) {
-    final companyOrder = CompanyOrderModel<
-      LaundryModel,
-      LaundryProductModel,
-      LaundryCatalogItemModel,
-      LaundryOrderItem
-    >.fromJson(
-      json,
-      orderItemFormJson: (itemJson) => LaundryOrderItem.fromJson(
-        itemJson,
-      ),
-    );
+  factory LaundryOrderModel.fromJson(Map<String, dynamic> json) {
+    final companyOrder =
+        CompanyOrderModel<
+          LaundryModel,
+          LaundryProductModel,
+          LaundryCatalogItemModel,
+          LaundryOrderItem
+        >.fromJson(
+          json,
+          orderItemFormJson: (itemJson) => LaundryOrderItem.fromJson(itemJson),
+        );
 
     return LaundryOrderModel(
       id: companyOrder.id,

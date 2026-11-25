@@ -11,7 +11,7 @@ abstract class EstablishmentOrderModel<
 >
     extends OrderModel<T> {
   final String storeId;
-   final EstablishmentType establishmentType;
+  final EstablishmentType establishmentType;
   DateTime? pickupDate;
   DateTime? deliveryDate;
   AdressModel? pickupAdress;
@@ -34,19 +34,20 @@ abstract class EstablishmentOrderModel<
     required super.status,
     required super.currency,
     required super.orderId,
-
   });
 
   @override
-  Map<String, dynamic> toJson() => {  
+  Map<String, dynamic> toJson() => {
     ...super.toJson(),
     'storeId': storeId,
-    'pickupDate':  pickupDate == null ? '' : DateFormat('dd MMM yyyy', 'fr').format(pickupDate!),
-    'deliveryDate': deliveryDate == null ? '' : DateFormat('dd MMM yyyy', 'fr').format(deliveryDate!),      
+    'pickupDate': pickupDate == null
+        ? ''
+        : DateFormat('dd MMM yyyy', 'fr').format(pickupDate!),
+    'deliveryDate': deliveryDate == null
+        ? ''
+        : DateFormat('dd MMM yyyy', 'fr').format(deliveryDate!),
     'pickupAdress': pickupAdress?.toJson(),
     'deliveryAdress': deliveryAdress?.toJson(),
     'establishmentType': establishmentType.toJson(),
   };
-
-
 }

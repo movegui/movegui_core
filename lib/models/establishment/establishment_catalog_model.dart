@@ -17,7 +17,7 @@ abstract class EstablishmentCatalogModel<
     required super.description,
     required this.establishmentCategory,
     required this.establishmentType,
-    required super.items
+    required super.items,
   });
 
   final EstablishmentCategory establishmentCategory;

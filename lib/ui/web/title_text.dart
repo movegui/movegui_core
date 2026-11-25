@@ -22,14 +22,14 @@ class TitlesTextWidget extends StatelessWidget {
       maxLines: maxLines,
       // textAlign: TextAlign.justify,
       style: TextStyle(
-          color: color,
-          fontSize: fontSize,
-          fontWeight: FontWeight.bold,
-          overflow: TextOverflow.ellipsis,
-          decoration: decoration,
-          decorationColor: color,
-          decorationStyle: TextDecorationStyle.double),
-         
+        color: color,
+        fontSize: fontSize,
+        fontWeight: FontWeight.bold,
+        overflow: TextOverflow.ellipsis,
+        decoration: decoration,
+        decorationColor: color,
+        decorationStyle: TextDecorationStyle.double,
+      ),
     );
   }
 }

@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/config/env.dart';
 
 class EnvProd extends Env {
@@ -8,11 +6,10 @@ class EnvProd extends Env {
 
   @override
   bool get enableLogs => true;
-  
+
   @override
   AppEnv get currentEnv => AppEnv.prod;
-  
+
   @override
   String get port => "5000";
-  
 }

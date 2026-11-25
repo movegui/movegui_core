@@ -3,8 +3,8 @@ import 'package:movegui_core/models/laundry/laundry_model.dart';
 
 final _createdAt = DateTime.utc(2025, 1, 2, 3, 4);
 
-void main () {
-    group('pressing_model_test', () {
+void main() {
+  group('pressing_model_test', () {
     test('test pressing model', () {
       final json = {
         'id': 'pressing001',
@@ -40,11 +40,11 @@ void main () {
             'nameKey': 'module_pressing_name',
           },
         },
-        'suppliers': []
+        'suppliers': [],
       };
 
       final pressing = LaundryModel.fromJson(json);
       expect(pressing.name, 'My_Pressing');
     });
-});
+  });
 }

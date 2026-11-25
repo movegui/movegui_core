@@ -6,10 +6,9 @@ import 'package:movegui_core/models/open_hours_model.dart';
 import 'package:movegui_core/models/supplier_model.dart';
 import 'package:movegui_core/models/model.dart';
 
-
 class CompanyModel extends EstablishmentModel {
   final List<SupplierModel> suppliers;
-   CompanyModel({
+  CompanyModel({
     required super.id,
     required super.name,
     required super.createdAt,
@@ -25,7 +24,7 @@ class CompanyModel extends EstablishmentModel {
     required super.establishmentCategory,
     required super.isComplete,
     required super.isActive,
-    required this.suppliers
+    required this.suppliers,
   });
 
   @override
@@ -38,8 +37,6 @@ class CompanyModel extends EstablishmentModel {
         'Missing or invalid "address" map in pressing "${json['id']}".',
       );
     }
-
-
 
     return CompanyModel(
       id: json['id'],
@@ -56,15 +53,19 @@ class CompanyModel extends EstablishmentModel {
           .map((e) => OpenHoursModel.fromJson(e))
           .toList(),
       establishmentType: EstablishmentType.fromJson(json['establishmentType']),
-      
+
       rating: (json['rating'] as num?)?.toDouble() ?? 0.0,
       reviewCount: json['reviewCount'] as int? ?? 0,
       isComplete: json['isComplete'] is bool
           ? json['isComplete'] as bool
           : false,
       isActive: json['isActive'] is bool ? json['isActive'] as bool : false,
-      establishmentCategory: EstablishmentCategory.fromJson(json['establishmentCategory']), 
-      suppliers: (json['suppliers'] as List? ?? []).map((elem) => SupplierModel.fromJson(elem)).toList(),
+      establishmentCategory: EstablishmentCategory.fromJson(
+        json['establishmentCategory'],
+      ),
+      suppliers: (json['suppliers'] as List? ?? [])
+          .map((elem) => SupplierModel.fromJson(elem))
+          .toList(),
     );
   }
 }

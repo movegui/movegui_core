@@ -44,6 +44,8 @@ class CartModel<
         .toList(),
     id: json['id'],
     name: json['name'],
-    createdAt: json['createdAt'] != null ? Model.parseDateTime(json['createdAt']) : DateTime.now(),
+    createdAt: json['createdAt'] != null
+        ? Model.parseDateTime(json['createdAt'])
+        : DateTime.now(),
   );
 }

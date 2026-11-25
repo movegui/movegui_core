@@ -55,7 +55,6 @@ class RecentActivitiesModel extends Model {
   }
 
   factory RecentActivitiesModel.fromjson(Map<String, dynamic> json) {
-
     final rawActivityType = json['activityType'];
     final String normalizedActivityTypeId = rawActivityType is Map
         ? (rawActivityType['id'] as String? ??
@@ -65,7 +64,7 @@ class RecentActivitiesModel extends Model {
 
     return RecentActivitiesModel(
       establishmentType: EstablishmentType.fromJson(json['establishmentType']),
-      
+
       category: ActivityCategory.values.firstWhere(
         (category) => category.name == json['category'],
         orElse: () => ActivityCategory.system,
@@ -86,7 +85,7 @@ class RecentActivitiesModel extends Model {
       ),
       userId: json['userId'],
       orderId: json['orderId'],
-      establishmentId: json['establishmentId']
+      establishmentId: json['establishmentId'],
 
       /*
         activityType: ActivityType.values.firstWhere(

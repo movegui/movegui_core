@@ -1,5 +1,3 @@
-
-
 import 'package:movegui_core/models/dashboard/module_item.dart';
 import 'package:movegui_core/models/module_configuration_item_model.dart';
 import 'package:movegui_core/models/types_model.dart';
@@ -11,7 +9,7 @@ class TypesDahboardModel<M extends TypesModel> {
 
   TypesDahboardModel({
     required this.staticsItems,
-     this.modules,
+    this.modules,
     required this.types,
   });
 }
