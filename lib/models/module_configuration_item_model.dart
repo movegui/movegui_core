@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:movegui_core/models/dashboard/module_item.dart';
 import 'package:movegui_core/models/model.dart';
 

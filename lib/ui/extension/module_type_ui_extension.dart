@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:movegui_core/enum/enum_module_type.dart';
 
 extension ModuleTypeUIExtension on ModuleType {
@@ -19,6 +19,8 @@ extension ModuleTypeUIExtension on ModuleType {
       ModuleType.professional => Icons.business_center_outlined,
 
       ModuleType.delivery => Icons.delivery_dining_outlined,
+
+      ModuleType.kpi => Icons.dashboard_rounded,
 
       ModuleType.other => Icons.apps_outlined,
     };
@@ -41,6 +43,8 @@ extension ModuleTypeUIExtension on ModuleType {
       ModuleType.professional => Colors.blueGrey,
 
       ModuleType.delivery => Colors.teal,
+
+      ModuleType.kpi => Colors.blue,
 
       ModuleType.other => Colors.grey,
     };

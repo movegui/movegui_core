@@ -7,5 +7,6 @@ enum ModuleType {
   professional,
   superMarket,
   restaurant,
+  kpi,
   other,
 }

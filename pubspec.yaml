@@ -93,6 +93,7 @@ dependencies:
   #geocoding: ^5.0.1 
   #fl_chart: ^1.1.0
   firebase_remote_config: ^6.7.1
+  material_ui: ^1.11.1
 
 dev_dependencies:
   flutter_test:

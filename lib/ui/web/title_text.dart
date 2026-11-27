@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:material_ui/material_ui.dart';
 
 class TitlesTextWidget extends StatelessWidget {
   const TitlesTextWidget({
